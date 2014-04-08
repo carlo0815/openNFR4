@@ -12,6 +12,8 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 IMAGE_INSTALL = "opennfr-base"
 
+
+
 export IMAGE_BASENAME = "opennfr-image"
 IMAGE_LINGUAS = ""
 

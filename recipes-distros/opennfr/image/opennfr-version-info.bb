@@ -1,11 +1,9 @@
 DESCRIPTION = "OpenNFR version info"
 SECTION = "base"
 PRIORITY = "required"
-MAINTAINER = "OPENNFR Support team"
 LICENSE = "proprietary"
-
+MAINTAINER = "OPENNFR Support team"
 require conf/license/license-gplv2.inc
-
 PV = "${IMAGE_VERSION}"
 PR = "${BUILD_VERSION}"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
@@ -25,6 +23,8 @@ do_install() {
 				BUILDTYPE="0"
 			fi
 
+			install -d ${D}/etc
+
 			# generate /etc/image-version
 			echo "box_type=${MACHINE}" > ${D}/etc/image-version
 			echo "build_type=${BUILDTYPE}" >> ${D}/etc/image-version
@@ -38,5 +38,5 @@ do_install() {
 			echo "catalog=${URL}" >> ${D}/etc/image-version
 }
 
-FILES_${PN} = "/etc/image-version"
+FILES_${PN} += "/etc/image-version"
 

@@ -11,7 +11,7 @@ PR = "r01"
 
 inherit packagegroup
 
-RRECOMMENDS = "\
+RRECOMMENDS_${PN} = "\
 	curlftpfs \
 	cdfs \
 	oe-alliance-skins \
