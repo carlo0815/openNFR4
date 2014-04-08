@@ -31,10 +31,6 @@ do_install() {
 	mkdir -p ${D}/media/usb2
 	mkdir -p ${D}/media/usb3
 
-	mkdir -p ${D}/usr/bin
-	cp -rp ${S}/usr/bin/* ${D}/usr/bin
-	chmod 755 ${D}/usr/bin/ntpdate
-
 	mkdir -p ${D}/usr/lib
 	cd ${D}/usr/lib
 	ln -s libbz2.so.0.0.0 libbz2.so.1.0 || true
