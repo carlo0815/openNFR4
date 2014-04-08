@@ -30,7 +30,6 @@ RDEPENDS_${PN} = "\
 	\
 	enigma2-plugin-skins-utopia-hd \
 	opennfr-base-files \
-	opennfr-settings \
 	 \
 	${@base_contains("MACHINE_BRAND", "UNiBOX", "${BASE_PLUGINS}" , "", d)} \
 	${@base_contains("MACHINE_BRAND", "GI", "${BASE_PLUGINS}" , "", d)} \
