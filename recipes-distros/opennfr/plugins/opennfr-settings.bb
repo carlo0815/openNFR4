@@ -24,7 +24,4 @@ do_install() {
 	mkdir -p ${D}/etc/enigma2
 	cp -rp ${S}/etc/enigma2/* ${D}/etc/enigma2
 
-	mkdir -p ${D}/etc/tuxbox
-	cp -rp ${S}/etc/tuxbox/* ${D}/etc/tuxbox
-
 }
