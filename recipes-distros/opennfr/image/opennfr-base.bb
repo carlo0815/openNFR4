@@ -16,6 +16,7 @@ RDEPENDS_${PN} = "\
     opennfr-bootlogo \
     opennfr-version-info \
     opennfr-base-files \
+    opennfr-settings \    
     openssh-sftp-server \
     ntfs-3g \
     hddtemp \
