@@ -31,9 +31,9 @@ do_install() {
 	mkdir -p ${D}/media/usb2
 	mkdir -p ${D}/media/usb3
 
-	#mkdir -p ${D}/usr/bin
-	#cp -rp ${S}/usr/bin/* ${D}/usr/bin
-	#chmod 755 ${D}/usr/bin/ntpdate
+	mkdir -p ${D}/usr/bin
+	cp -rp ${S}/usr/bin/ntpdate ${D}/usr/bin/ntpdate1
+	chmod 755 ${D}/usr/bin/ntpdate1
 
 	mkdir -p ${D}/usr/lib
 	cd ${D}/usr/lib
