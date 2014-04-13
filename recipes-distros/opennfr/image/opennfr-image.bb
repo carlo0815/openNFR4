@@ -28,9 +28,6 @@ rootfs_postprocess() {
 			# because we're so used to it
 			ln -s opkg usr/bin/ipkg || true
 			ln -s opkg-cl usr/bin/ipkg-cl || true
-			
-			rm /usr/bin/ntpdate
-			mv /usr/bin/ntpdate1 /usr/bin/ntpdate
 
 			cd $curdir
 }
