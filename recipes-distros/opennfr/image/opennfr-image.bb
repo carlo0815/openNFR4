@@ -53,5 +53,5 @@ generate_nfo() {
 }
 
 do_rootfs_append() {
-			generate_nfo
+generate_nfo
 }
