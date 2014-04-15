@@ -26,5 +26,7 @@ RDEPENDS_${PN} = "\
     libcrypto-compat-0.9.8 \
     python-gdata \
     dvbsnoop \
-    enigma2-plugin-drivers-usbserial \
     "
+ENIGMA2_INI_PLUGINS = "\
+enigma2-plugin-extensions-infopanel \
+"    
