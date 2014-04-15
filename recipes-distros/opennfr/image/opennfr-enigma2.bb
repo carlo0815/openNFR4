@@ -33,7 +33,5 @@ RDEPENDS_${PN} = "\
 	 \
 	${@base_contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
 	"
-BASE_PLUGINS = "\
-enigma2-plugin-extensions-accuweather \
-"
+
 
