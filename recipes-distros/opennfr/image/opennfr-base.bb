@@ -25,8 +25,10 @@ RDEPENDS_${PN} = "\
     ofgwrite \
     libcrypto-compat-0.9.8 \
     python-gdata \
+    libshowiframe \
     dvbsnoop \
     "
 ENIGMA2_INI_PLUGINS = "\
+enigma2-plugin-extensions-bmediacenter \
 enigma2-plugin-extensions-infopanel \
 "    
