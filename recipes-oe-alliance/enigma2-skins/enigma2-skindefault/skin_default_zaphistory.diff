@@ -25,3 +25,23 @@ diff --git/skin_default.xml
  						MultiContentEntryPixmapAlphaBlend(pos=(0, 5), size=(83, 50), png=6, flags = BT_SCALE)
  					],
  				 "fonts": [gFont("Regular", 22), gFont("Regular", 20), gFont("Regular", 17), gFont("Regular", 16)],
+@@ -2589,3 +2589,19 @@
+		<widget name="labstop" position="170,170" size="100,30" font="Regular;20" valign="center"  halign="center" backgroundColor="red"/>
+		<widget name="labrun" position="170,170" size="100,30" zPosition="1" font="Regular;20" valign="center"  halign="center" backgroundColor="green"/>
+	</screen>
++	<screen name="NetworkSABnzbd" position="center,center" size="340,310">
++		<panel name="MenuRed3Panel" />
++		<panel name="MenuGreen3Panel" />
++		<widget name="lab1" position="20,50" size="300,80" font="Regular;20" valign="center" transparent="1"/>
++		<widget name="lab2" position="20,170" size="150,30" font="Regular;20" valign="center" transparent="1"/>
++		<widget name="labstop" position="170,170" size="100,30" font="Regular;20" valign="center"  halign="center" backgroundColor="red"/>
++		<widget name="labrun" position="170,170" size="100,30" zPosition="1" font="Regular;20" valign="center"  halign="center" backgroundColor="green"/>
++	</screen>
++	<screen name="NetworkSamba" position="center,center" size="340,310">
++		<panel name="MenuRed3Panel" />
++		<panel name="MenuGreen3Panel" />
++		<widget name="lab1" position="20,50" size="300,80" font="Regular;20" valign="center" transparent="1"/>
++		<widget name="lab2" position="20,170" size="150,30" font="Regular;20" valign="center" transparent="1"/>
++		<widget name="labstop" position="170,170" size="100,30" font="Regular;20" valign="center"  halign="center" backgroundColor="red"/>
++		<widget name="labrun" position="170,170" size="100,30" zPosition="1" font="Regular;20" valign="center"  halign="center" backgroundColor="green"/>
++	</screen>   
