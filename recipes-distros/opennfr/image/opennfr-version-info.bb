@@ -8,7 +8,7 @@ PV = "${IMAGE_VERSION}"
 PR = "${BUILD_VERSION}"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-URL = "http://http://www.nachtfalke.biz"
+URL = "http://www.nachtfalke.biz"
 
 S = "${WORKDIR}"
 
