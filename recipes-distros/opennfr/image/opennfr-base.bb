@@ -28,7 +28,4 @@ RDEPENDS_${PN} = "\
     libshowiframe \
     dvbsnoop \
     "
-ENIGMA2_INI_PLUGINS = "\
-enigma2-plugin-extensions-bmediacenter \
-enigma2-plugin-extensions-infopanel \
-"    
+
