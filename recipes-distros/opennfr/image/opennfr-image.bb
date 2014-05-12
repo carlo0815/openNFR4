@@ -33,10 +33,6 @@ rootfs_postprocess() {
 			ln -s opkg usr/bin/ipkg || true
 			ln -s opkg-cl usr/bin/ipkg-cl || true
 
-			rm -r /usr/bin/ntpdate
-			cp -rp ${S}/usr/bin/* ${D}/usr/bin
-			chmod 755 ${D}/usr/bin/ntpdate
-
 			cd $curdir
 }
 
