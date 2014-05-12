@@ -21,9 +21,6 @@ IMAGE_FEATURES += "package-management"
 
 inherit image
 
-SRC_URI = "git://github.com/carlo0815/openNFR-base.git"
-S="${WORKDIR}/git/files"
-
 
 rootfs_postprocess() {
 			curdir=$PWD
