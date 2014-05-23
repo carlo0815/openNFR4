@@ -24,6 +24,9 @@ do_install() {
 	mkdir -p ${D}/etc/enigma2
 	cp -rp ${S}/etc/enigma2/* ${D}/etc/enigma2
 
-	mkdir -p ${D}/etc/init.d
-	cp -rp ${S}/etc/init.d/* ${D}etc/init.d
+    	install -d ${D}/etc/init.d
+    	for f in swap
+    	do
+        	install -m 755 ${f} ${D}/etc/init.d/${f}
+    	done	
 }
