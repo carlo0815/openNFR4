@@ -1,0 +1,15 @@
+#! /bin/sh 
+
+echo "gb800se" > /proc/stb/info/gbmodel
+
+mkdir -p /dev/loop /dev/sound /dev/vc /dev/tts
+
+mknod /dev/watchdog c 10 130
+
+mknod /dev/sound/dsp c 14 3
+mknod /dev/sound/mixer c 14 0
+mknod /dev/sound/mixer1 c 14 16
+
+mknod /dev/input/mouse0 c 13 32
+
+touch /dev/dbox/lcd0
