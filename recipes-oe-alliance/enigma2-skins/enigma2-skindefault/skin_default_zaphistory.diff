@@ -40,6 +40,8 @@ diff --git/skin_default.xml
 +	<screen name="NetworkSamba" position="center,center" size="340,310">
 +		<panel name="MenuRed3Panel" />
 +		<panel name="MenuGreen3Panel" />
++		<ePixmap pixmap="buttons/key_menu.png" position="0,220" size="140,40" alphatest="on" />
++		<widget name="key_menu" position="30,220" zPosition="1" size="180,40" font="Regular;20" halign="center" valign="center" backgroundColor="#141484" transparent="1" />
 +		<widget name="lab1" position="20,50" size="300,80" font="Regular;20" valign="center" transparent="1"/>
 +		<widget name="lab2" position="20,170" size="150,30" font="Regular;20" valign="center" transparent="1"/>
 +		<widget name="labstop" position="170,170" size="100,30" font="Regular;20" valign="center"  halign="center" backgroundColor="red"/>
