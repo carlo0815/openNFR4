@@ -118,7 +118,8 @@ do_deploy() {
     rm -f ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-multiquickbutton*.ipk || true
     rm -f ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-backupsuite*.ipk || true
     install -m 0644 ${S}/enigma2-plugin-extensions-et-portal*.ipk ${DEPLOY_DIR_IPK}/3rdparty || true
-    if [ ls -1 ${S}/*${MACHINE}.ipk | wc -l -gt 0 ]; then
+    Z1=$(ls -1 ${S}/*${MACHINE}.ipk | wc -l)
+    if [ $Z1 -gt 0 ]; then
         install -m 0644 ${S}/*${MACHINE}.ipk ${DEPLOY_DIR_IPK}/${MACHINE} #|| true
     fi    
     pkgdir=${DEPLOY_DIR_IPK}/3rdparty
