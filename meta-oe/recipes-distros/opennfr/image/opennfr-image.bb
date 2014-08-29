@@ -35,10 +35,10 @@ rootfs_postprocess() {
 			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe
 			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-3rdparty
 			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-all
-			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-inihde
-			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-inihde_3rdparty
+			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-${MACHINE}
+			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-${MACHINE}_3rdparty
 			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-mips32el
-			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-xpeedlx
+			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-${MACHINEBUILD}
 			cd $curdir
 	
 }
