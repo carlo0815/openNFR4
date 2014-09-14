@@ -2,7 +2,6 @@ SUMMARY = "Bootmanager for NFR4XBoot."
 MAINTAINER = "carlo0815"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://COPYING;md5=0636e73ff0215e8d672dc4c32c317bb3"
-DEPENDS = "freetype"
 
 inherit gitpkgv
 SRCREV = "${AUTOREV}"
@@ -13,10 +12,7 @@ PR = "r0"
 
 SRC_URI = "git://github.com/carlo0815/test_boot.git"
 
-inherit packagegroup pkgconfig
-EXTRA_OECONF = "\
---enable-freetype=yes \
-"
+inherit autotools-brokensep pkgconfig
 
 S = "${WORKDIR}/git"
 
@@ -24,6 +20,7 @@ EXTRA_OEMAKE = "'CC=${CC}' 'RANLIB=${RANLIB}' 'AR=${AR}' 'CFLAGS=${CFLAGS} -I${S
 
 do_install() {
     install -d ${D}/usr/lib/enigma/python/Plugins/Extensions/NFR4XBoot/bin
-    install -m 755 ${S}/nfr4xbm ${D}/usr/lib/enigma/python/Plugins/Extensions/NFR4XBoot/bin/
+    install -m 755 ${S}/nfr4xbm ${D}/usr/lib/enigma/python/Plugins/Extensions/NFR4XBoot/bin
 }
+ 
  
