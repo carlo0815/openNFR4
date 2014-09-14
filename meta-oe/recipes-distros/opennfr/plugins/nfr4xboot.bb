@@ -13,7 +13,7 @@ PR = "r0"
 
 SRC_URI = "git://github.com/carlo0815/test_boot.git"
 
-inherit autotools-brokensep pkgconfig
+inherit packagegroup pkgconfig
 EXTRA_OECONF = "\
 --enable-freetype=yes \
 "
