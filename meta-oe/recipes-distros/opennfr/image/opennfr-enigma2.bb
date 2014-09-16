@@ -31,7 +31,6 @@ RDEPENDS_${PN} = "\
 	\
 	enigma2-plugin-skins-utopia-hd \
 	opennfr-base-files \
-	nfr4xboot \
 	 \
 	${@base_contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
 	"
