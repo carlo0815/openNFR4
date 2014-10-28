@@ -7,7 +7,7 @@
 -    if [ $progress -gt 0 -a -e /proc/progress ]; then
 -        echo $(($progress / 2)) > /proc/progress
 +    if [ $progress -gt 0 -a -e /proc/vfd ]; then
-+        echo Load $(($progress / 2)) % > /proc/vfd
++        echo $(($progress / 2)) % > /proc/vfd
      fi
  }
  
