@@ -202,7 +202,6 @@ EXTRA_OECONF = " \
     STAGING_INCDIR=${STAGING_INCDIR} \
     STAGING_LIBDIR=${STAGING_LIBDIR} \
     --with-boxtype=${MACHINE} \
-    --with-po \
     --with-libsdl=no \
     --enable-dependency-tracking \
     --with-gstversion=1.0 \
