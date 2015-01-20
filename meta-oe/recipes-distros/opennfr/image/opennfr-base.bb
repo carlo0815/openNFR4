@@ -28,6 +28,6 @@ RDEPENDS_${PN} = "\
     libshowiframe \
     dvbsnoop \
     enigma2-plugin-drivers-usbserial \ 
-    enigma2-plugin-extensions-mediaportal-opennfr-mo_6.6.0 \
+    enigma2-plugin-extensions-mediaportal-opennfr-mod_6.6.0 \
     "
 
