@@ -15,7 +15,7 @@ DEPENDS = "opennfr-feeds opennfr-3rdparty-plugins 3rd-party-feed-configs"
 
 RDEPENDS_${PN} = "\
         enigma2-plugin-extensions-autotimer \
-        enigma2-plugin-extensions-mediaportal-opennfr-mod_6.6.0 \
+        enigma2-plugin-extensions-mediaportal-opennfr-mod \
 	enigma2-plugin-extensions-epgsearch \
 	enigma2-plugin-extensions-mediaplayer \
 	enigma2-plugin-extensions-cutlisteditor \
