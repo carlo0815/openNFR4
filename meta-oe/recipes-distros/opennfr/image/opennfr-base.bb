@@ -27,6 +27,7 @@ RDEPENDS_${PN} = "\
     python-gdata \
     libshowiframe \
     dvbsnoop \
-    enigma2-plugin-drivers-usbserial \    
+    enigma2-plugin-drivers-usbserial \ 
+    enigma2-plugin-extensions-mediaportal-opennfr-mo_6.6.0 \
     "
 
