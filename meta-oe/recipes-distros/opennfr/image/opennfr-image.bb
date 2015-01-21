@@ -10,9 +10,15 @@ PV = "${IMAGE_VERSION}"
 PR = "r${DATETIME}"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-IMAGE_INSTALL = "opennfr-base"
+IMAGE_INSTALL = " \
+    opennfr-base \
+    ${ENIGMA2_PLUGINS} \
+	"
 
-
+ENIGMA2_PLUGINS = "\
+    enigma2-plugin-extensions-openmultiboot \
+    enigma2-plugin-extensions-mediaportal \
+"
 
 export IMAGE_BASENAME = "opennfr-image"
 IMAGE_LINGUAS = ""
