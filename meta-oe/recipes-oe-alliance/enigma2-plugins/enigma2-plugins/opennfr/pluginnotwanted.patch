@@ -2,7 +2,16 @@ diff --git a/Makefile.am b/Makefile.am
 index d0f54e5..e535329 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -101,7 +101,6 @@ ACLOCAL_AMFLAGS = -I m4
+@@ -89,8 +89,6 @@
+ 	weatherplugin \
+ 	weathercomponent \
+ 	weathercomponenthandler \
+-	webadmin \
+-	webbouqueteditor \
+ 	webcamviewer \
+ 	werbezapper \
+ 	zaphistorybrowser \
+@@ -101,7 +99,6 @@
  	schiffe \
  	sudoku \
  	vierg \
@@ -10,3 +19,12 @@ index d0f54e5..e535329 100644
  	advancedmovieselection
  
  if DREAMBOX
+@@ -125,7 +122,6 @@
+ SUBDIRS += \
+ 	mytube \
+ 	yttrailer \
+-	webinterface \
+ 	menusort \
+ 	pluginhider \
+ 	pluginsort 
+
