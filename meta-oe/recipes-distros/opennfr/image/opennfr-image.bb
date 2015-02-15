@@ -16,7 +16,6 @@ IMAGE_INSTALL = " \
 	"
 
 ENIGMA2_PLUGINS = "\
-     enigma2-plugin-extensions-navibar \
      enigma2-plugin-extensions-mediaportal-opennfr-mod \
 "
 
