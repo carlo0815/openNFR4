@@ -10,7 +10,7 @@ SRC_URI += " \
     ${@base_contains("MACHINE_FEATURES", "vuprogress", "file://proc_progress_vuplus.patch", "", d)} \
     ${@base_contains("MACHINE", "inihdp", "file://proc_progress_ini.patch", "", d)} \
     ${@base_contains("MACHINE", "inihde", "file://proc_progress_inihde.patch", "", d)} \
-    ${@base_contains("MACHINE", "inihde2", "file://proc_progress_inihde2.patch", "", d)}" \
+    ${@base_contains("MACHINE", "inihde2", "file://proc_progress_inihde2.patch", "", d)} \
     ${@base_contains("MACHINE", "formuler1", "file://proc_progress_formuler.patch", "", d)}"
     
 SRC_URI_append_sh4 = " \
