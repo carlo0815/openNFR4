@@ -35,6 +35,7 @@ RDEPENDS_${PN} = "\
 	opennfr-base-files \
 	 \
 	${@base_contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
+        ${@base_contains("MACHINE", "formuler1", "enigma2-plugin-systemplugins-nfrledcontrol", "", d)} \
 	"
 
 
