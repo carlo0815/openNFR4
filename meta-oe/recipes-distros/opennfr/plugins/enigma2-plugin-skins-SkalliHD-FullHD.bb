@@ -1,5 +1,4 @@
-DESCRIPTION = "Enigma2 Skin OpenNFR-SkalliHD-FullHD
-"
+DESCRIPTION = "Enigma2 Skin OpenNFR-SkalliHD-FullHD"
 MAINTAINER = "opennfr"
 SECTION = "base"
 PRIORITY = "required"
