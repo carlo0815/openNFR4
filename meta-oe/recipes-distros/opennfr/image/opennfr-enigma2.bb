@@ -32,6 +32,7 @@ RDEPENDS_${PN} = "\
 	${@base_contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
 	\
 	enigma2-plugin-skins-utopia-hd \
+	enigma2-plugin-skins-SkalliHD-FullHD \	
 	opennfr-base-files \
 	 \
 	${@base_contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
