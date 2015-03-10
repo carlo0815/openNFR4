@@ -1,16 +1,19 @@
 SUMMARY = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+PR = "r1"
+
+inherit machine_kernel_pr
 
 KV = "3.14.21"
 SRCDATE = "20150218"
 
 SRC_URI[md5sum] = "c901589c619ace211d5e5d6ee6119f44"
 SRC_URI[sha256sum] = "65c473604ae2c68a62f8adedc26513ad752a8963ecdeb7946f9f3139783e39fd"
-
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-inherit kernel machine_kernel_pr
+MACHINE_KERNEL_PR_append = ".10"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
@@ -22,10 +25,12 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://unibox.to/feeds/eco/development/kernel/linux-${KV}-${SRCDATE}.tar.gz \
     file://defconfig \
+    file://nfs-max-rwsize-8k.patch \
     "
 	
 S = "${WORKDIR}/linux-${PV}"
-B = "${WORKDIR}/build"
+
+inherit kernel
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
@@ -34,6 +39,12 @@ KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
+
+do_configure_prepend() {
+    oe_machinstall -m 0644 ${WORKDIR}/defconfig ${S}/.config
+    oe_machinstall -m 0644 ${WORKDIR}/defconfig ${S}/.oldconfig
+    oe_runmake oldconfig
+}
 
 kernel_do_install_append() {
     ${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
@@ -51,4 +62,5 @@ pkg_postinst_kernel-image () {
     fi
     true
 }
+
 
