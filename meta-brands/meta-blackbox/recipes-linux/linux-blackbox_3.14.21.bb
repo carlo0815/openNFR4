@@ -4,7 +4,7 @@ LICENSE = "GPLv2"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 PR = "r1"
 
-inherit kernel machine_kernel_pr
+inherit machine_kernel_pr
 
 KV = "3.14.21"
 SRCDATE = "20150218"
@@ -37,9 +37,6 @@ KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
 
-do_configure() {
-    oe_machinstall -m 0644 ${WORKDIR}/defconfig ${B}/.config
- }
 
 kernel_do_install_append() {
     ${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
