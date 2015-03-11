@@ -247,7 +247,7 @@ PACKAGEFUNCS += "emit_depmod_pkgdata"
 
 do_shared_workdir () {
 	cd ${B}
-
+	oe_runmake -C $kerneldir CC="${KERNEL_CC}" LD="${KERNEL_LD}" clean _mrproper_scripts
 	kerneldir=${STAGING_KERNEL_BUILDDIR}
 	install -d $kerneldir
 
@@ -271,7 +271,7 @@ do_shared_workdir () {
 		mkdir -p $kerneldir/include/linux
 		cp include/linux/version.h $kerneldir/include/linux/version.h
 	fi
-	oe_runmake -C $kerneldir CC="${KERNEL_CC}" LD="${KERNEL_LD}" clean _mrproper_scripts
+
 	# As of Linux kernel version 3.0.1, the clean target removes
 	# arch/powerpc/lib/crtsavres.o which is present in
 	# KBUILD_LDFLAGS_MODULE, making it required to build external modules.
