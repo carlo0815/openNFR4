@@ -4,7 +4,7 @@ LICENSE = "GPLv2"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 PR = "r1"
 
-inherit machine_kernel_pr
+inherit kernel machine_kernel_pr
 
 KV = "3.14.21"
 SRCDATE = "20150218"
@@ -27,7 +27,7 @@ SRC_URI += "http://unibox.to/feeds/eco/development/kernel/linux-${KV}-${SRCDATE}
     "
 	
 S = "${WORKDIR}/linux-${PV}"
-B = "${WORKDIR}/build"
+#B = "${WORKDIR}/build"
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
@@ -36,7 +36,6 @@ KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
-
 
 kernel_do_install_append() {
     ${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
