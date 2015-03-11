@@ -37,7 +37,7 @@ KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
 
-do_configure_prepend() {
+do_configure() {
     oe_machinstall -m 0644 ${WORKDIR}/defconfig ${B}/.config
  }
 
