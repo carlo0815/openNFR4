@@ -39,7 +39,6 @@ FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
 
 do_configure_prepend() {
 oe_machinstall -m 0644 ${WORKDIR}/defconfig ${S}/.config
-make mrproper
 }
 
 do_shared_workdir() {
