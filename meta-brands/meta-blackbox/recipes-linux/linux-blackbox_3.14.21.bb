@@ -9,8 +9,8 @@ inherit kernel machine_kernel_pr
 KV = "3.14.21"
 SRCDATE = "20150218"
 
-SRC_URI[md5sum] = "c901589c619ace211d5e5d6ee6119f44"
-SRC_URI[sha256sum] = "65c473604ae2c68a62f8adedc26513ad752a8963ecdeb7946f9f3139783e39fd"
+SRC_URI[md5sum] = "0611cb1db01f50a6dc51d90a7e10f5d0"
+SRC_URI[sha256sum] = "a3dd1f956612f57108441458464679fdd47f8e86481c4e90da1ebc9f80ce7640"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
@@ -21,13 +21,13 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://unibox.to/feeds/eco/development/kernel/linux-${KV}-${SRCDATE}.tar.gz \
+SRC_URI += "http://dev.nachtfalke.biz/nfr/feeds/linux-${KV}-${SRCDATE}.tar.gz \
     file://defconfig \
     file://nfs-max-rwsize-8k.patch \
     "
 	
 S = "${WORKDIR}/linux-${PV}"
-#B = "${WORKDIR}/build"
+B = "${WORKDIR}/build"
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
