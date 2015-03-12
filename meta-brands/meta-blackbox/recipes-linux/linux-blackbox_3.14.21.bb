@@ -41,7 +41,7 @@ do_configure_prepend() {
 oe_machinstall -m 0644 ${WORKDIR}/defconfig ${S}/.config
 }
 
-do_shared_workdir() {
+do_compile() {
 oe_runmake mrproper
 }
 
