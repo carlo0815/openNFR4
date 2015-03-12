@@ -9,8 +9,8 @@ inherit kernel machine_kernel_pr
 KV = "3.14.21"
 SRCDATE = "20150218"
 
-SRC_URI[md5sum] = "0611cb1db01f50a6dc51d90a7e10f5d0"
-SRC_URI[sha256sum] = "a3dd1f956612f57108441458464679fdd47f8e86481c4e90da1ebc9f80ce7640"
+SRC_URI[md5sum] = "64ed6c8fb06a5d10ac232829e5b5f406"
+SRC_URI[sha256sum] = "856af18326d4fc5629f45c35aa651df7a1c6f26f4a4992c37f7791f3832df29e"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
@@ -36,14 +36,6 @@ KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
-
-do_configure_prepend() {
-oe_machinstall -m 0644 ${WORKDIR}/defconfig ${S}/.config
-}
-
-after shared_workdir() {
-oe_runmake mrproper
-}
 
 kernel_do_install_append() {
     ${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
