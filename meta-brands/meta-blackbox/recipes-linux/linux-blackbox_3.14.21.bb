@@ -42,6 +42,10 @@ oe_machinstall -m 0644 ${WORKDIR}/defconfig ${S}/.config
 make mrproper
 }
 
+do_shared_workdir() {
+oe_runmake mrproper
+}
+
 kernel_do_install_append() {
     ${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
     gzip -9c ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION} > ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
