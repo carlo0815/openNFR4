@@ -25,12 +25,6 @@ do_install() {
         install -m 755 ${f} ${D}/usr/lib/python2.7/site-packages/twisted/web/${f}
     done
 
-    install -d ${D}/usr/bin
-    for f in ntpdate
-    do
-        install -m 755 ${f} ${D}/usr/bin/${f}
-    done
-
     install -d ${D}/media
     mkdir -p ${D}/media/card
     mkdir -p ${D}/media/cf
