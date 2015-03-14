@@ -13,6 +13,8 @@ FILES_${PN} = "/usr/lib/python2.7/* /usr/lib/python2.7/site-packages/twisted/web
 S = "${WORKDIR}"
 
 do_install() {
+        rm -rf ${D}/usr/lib/python2.7/site-packages/twisted/web/client.p*
+        rm -rf ${D}/usr/lib/python2.7/argparse.p*
         install -d ${D}/usr/lib/python2.7
         install -m 0755 argparse.py ${D}/usr/lib/python2.7/argparse.py
         install -d ${D}/usr/lib/python2.7/site-packages/twisted/web
