@@ -14,9 +14,9 @@ S = "${WORKDIR}"
 
 do_install() {
         install -d ${D}/usr/lib/python2.7
-        install -m 0755 argparse.py ${D}/usr/lib/python2.7/argparse.py
+        install -mC 0755 argparse.py ${D}/usr/lib/python2.7/argparse.py
         install -d ${D}/usr/lib/python2.7/site-packages/twisted/web
-        install -m 0755 client.py ${D}/usr/lib/python2.7/site-packages/twisted/web/client.py
+        install -mC 0755 client.py ${D}/usr/lib/python2.7/site-packages/twisted/web/client.py
 
 
     install -d ${D}/media
