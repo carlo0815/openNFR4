@@ -9,21 +9,13 @@ SRCREV = "${AUTOREV}"
 
 SRC_URI = "file://*"
 
-FILES_${PN} = "/usr/bin/* /usr/lib/python2.7/* /usr/lib/python2.7/site-packages/twisted/web/*"
+FILES_${PN} = "/usr/lib/python2.7/* /usr/lib/python2.7/site-packages/twisted/web/*"
 S = "${WORKDIR}"
 
 do_install() {
-    install -d ${D}/usr/lib/python2.7
-    for f in argparse.py
-    do
-        install -m 755 ${f} ${D}/usr/lib/python2.7/${f}
-    done
+        install -C 755 argparse.py ${D}/usr/lib/python2.7/argparse.py
+        install -C 755 client.py ${D}/usr/lib/python2.7/site-packages/twisted/web/client.py
 
-    install -d ${D}/usr/lib/python2.7/site-packages/twisted/web
-    for f in client.py
-    do
-        install -m 755 ${f} ${D}/usr/lib/python2.7/site-packages/twisted/web/${f}
-    done
 
     install -d ${D}/media
     mkdir -p ${D}/media/card
