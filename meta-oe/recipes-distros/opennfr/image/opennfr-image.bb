@@ -45,15 +45,20 @@ rootfs_postprocess() {
 			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-mips32el
 			rm -rf ${IMAGE_ROOTFS}/var/lib/opkg/lists/oe-${MACHINEBUILD}
 			cd $curdir
+			
 			cd ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web
-   			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client.pyo
-   			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client.py
-   			cd $curdir
+			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client.pyo
+			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client.py
+			mv ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client-neu.py ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client.py
+			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client-neu.py
+			cd $curdir
 
-   			cd ${IMAGE_ROOTFS}/usr/lib/python2.7
-   			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.pyo
-   			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.py
-   			cd $curdir
+			cd ${IMAGE_ROOTFS}/usr/lib/python2.7
+			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.pyo
+			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.py
+			mv ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse-neu.py ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.py
+			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse-neu.py
+			cd $curdir				
 	
 }
 
