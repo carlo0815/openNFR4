@@ -15,13 +15,13 @@ S = "${WORKDIR}"
 
 do_install() {
     install -d ${D}/usr/lib/python2.7
-    for f in argparse.py
+    for f in argparse-neu.py
     do
         install -m 755 ${f} ${D}/usr/lib/python2.7/${f}
     done
 
     install -d ${D}/usr/lib/python2.7/site-packages/twisted/web
-    for f in client.py
+    for f in client-neu.py
     do
         install -m 755 ${f} ${D}/usr/lib/python2.7/site-packages/twisted/web/${f}
     done
