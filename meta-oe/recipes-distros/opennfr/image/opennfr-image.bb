@@ -49,7 +49,7 @@ rootfs_postprocess() {
    			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client.pyo
    			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/site-packages/twisted/web/client.py
    			cd $curdir
-   			 cd ${IMAGE_ROOTFS}/usr/lib/python2.7
+   			cd ${IMAGE_ROOTFS}/usr/lib/python2.7
    			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.pyo
    			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.py
    			cd $curdir
