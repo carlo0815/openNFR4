@@ -15,10 +15,6 @@ IMAGE_INSTALL = " \
     ${ENIGMA2_PLUGINS} \
 	"
 
-ENIGMA2_PLUGINS = "\
-     enigma2-plugin-extensions-mediaportal-opennfr-mod \
-"
-
 export IMAGE_BASENAME = "opennfr-image"
 IMAGE_LINGUAS = ""
 
