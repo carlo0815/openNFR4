@@ -12,8 +12,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 IMAGE_INSTALL = " \
     opennfr-base \
-    ${ENIGMA2_PLUGINS} \
-	"
+    	"
 
 export IMAGE_BASENAME = "opennfr-image"
 IMAGE_LINGUAS = ""
