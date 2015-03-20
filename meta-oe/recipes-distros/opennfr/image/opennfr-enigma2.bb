@@ -30,6 +30,7 @@ RDEPENDS_${PN} = "\
 	enigma2-plugin-systemplugins-softwaremanager \
 	enigma2-plugin-systemplugins-hotplug \
 	${@base_contains("MACHINE_FEATURES", "videoenhancement", "", "enigma2-plugin-systemplugins-videoenhancement", d)} \
+        ${@base_contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
 	\
 	enigma2-plugin-skins-utopia-hd \
 	enigma2-plugin-skins-skallihd-fullhd \	
