@@ -63,7 +63,9 @@ PYTHON_RDEPS = " \
     python-enum34 \
     python-pyasn1 \
     python-pycparser \
+    python-pycparser-native \    
     python-cffi \
+    python-cffi-native \    
     python-cryptography \   
     "
 
