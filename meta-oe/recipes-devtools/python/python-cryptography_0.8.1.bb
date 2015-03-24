@@ -4,7 +4,7 @@ LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8c3617db4fb6fae01f1d253ab91511e4"
 
 DEPENDS_${PN} = "python-cffi-native python-pycparser-native python-six python-enum34 python-pyasn1"
-RDEPENDS_${PN} = "python-six python-cffi python-pycparser"
+RDEPENDS_${PN} = "python-six python-cffi python-pycparser python-enum34"
 
 PR = "r1"
 
