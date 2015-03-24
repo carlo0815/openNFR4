@@ -60,10 +60,10 @@ PYTHON_RDEPS = " \
     python-subprocess \
     python-process \
     python-imaging \
-    python-enum34
-    python-pyasn1
-    python-pycparser
-    python-cffi
+    python-enum34 \
+    python-pyasn1 \
+    python-pycparser \
+    python-cffi \
     python-cryptography \   
     "
 
