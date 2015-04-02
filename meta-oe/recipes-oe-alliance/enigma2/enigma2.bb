@@ -62,7 +62,6 @@ PYTHON_RDEPS = " \
     python-imaging \
     python-enum34 \
     python-pyasn1 \
-    python-cryptography \   
     "
 
 GST_BASE_RDEPS = "  \
