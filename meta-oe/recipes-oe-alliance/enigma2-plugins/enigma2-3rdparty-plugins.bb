@@ -88,11 +88,11 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-systemtools-for-ppanels_0.83_mipsel.ipk \
     enigma2-plugin-extensions-thetvdb_0.7-20120607-r1_mips32el.ipk \
     enigma2-plugin-extensions-tmbd_6.1_mipsel.ipk \
-    enigma2-plugin-extensions-translator_0.9rc2_mips32el.ipk \
+    enigma2-plugin-extensions-translator_0.9rc3_mips32el.ipk \
     enigma2-plugin-extensions-transmission_2.83_mips32el.ipk \
     enigma2-plugin-extensions-tsmedia_8.9_all.ipk \
-    enigma2-plugin-extensions-tvspielfilm_6.3rc6_mips32el.ipk \
-    enigma2-plugin-extensions-verkehrsinfo_1.0rc1_mips32el.ipk \
+    enigma2-plugin-extensions-tvspielfilm_6.3rc7_mips32el.ipk \
+    enigma2-plugin-extensions-verkehrsinfo_1.0rc2_mips32el.ipk \
     enigma2-plugin-extensions-vhannibalautosettings_1.1_mips32el.ipk \
     enigma2-plugin-extensions-vuplusforum_0.7rc3_mips32el.ipk \
     enigma2-plugin-extensions-webmedia_10.0_r02_oe2.0_all.ipk \
