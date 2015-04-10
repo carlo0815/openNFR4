@@ -20,12 +20,9 @@ RDEPENDS_${PN} = "\
 	enigma2-plugin-extensions-cutlisteditor \
 	enigma2-plugin-extensions-menusort \
 	enigma2-plugin-extensions-customsubservices \
-	enigma2-plugin-extensions-webinterface-nfrmod \
 	enigma2-plugin-extensions-infopanel \
 	enigma2-plugin-extensions-nfr4xboot \	
-	enigma2-plugin-extensions-bmediacenter \
 	enigma2-plugin-extensions-imdb \
-	enigma2-plugin-extensions-mainmenu2 \	
 	\
 	enigma2-plugin-systemplugins-fastscan \
 	enigma2-plugin-systemplugins-softwaremanager \
@@ -34,7 +31,6 @@ RDEPENDS_${PN} = "\
         ${@base_contains("MACHINE_FEATURES", "uianimation", "enigma2-plugin-systemplugins-animationsetup" , "", d)} \
 	\
 	enigma2-plugin-skins-utopia-hd \
-	enigma2-plugin-skins-skallihd-fullhd \	
 	opennfr-base-files \
 	 \
 	${@base_contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
