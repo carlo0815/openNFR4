@@ -38,5 +38,14 @@ FILES_${PN}-dbg = "/usr/lib/enigma2/python/Plugins/Extensions/WebAdmin/.debug/"
 FILES_${PN}-src = "/usr/lib/enigma2/python/Plugins/Extensions/WebAdmin/*.py"
 FILES_${PN}-doc = "/usr/share/enigma2/README*"
 
+pkg_postinst_${PN}() {
+#!/bin/sh
+echo "Restarting Enigma2 to load Webinterface Plugin ..."
+init 4
+killall -9 enigma2 > /dev/null 2>&1
+init 3
+exit 0
+}
+
 do_install_append() {
 }
