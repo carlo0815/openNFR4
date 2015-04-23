@@ -14,7 +14,7 @@ PR = "r2"
 S = "${WORKDIR}"
 
 INITSCRIPT_NAME = "bootlogo"
-INITSCRIPT_PARAMS = "start 07 S ."
+INITSCRIPT_PARAMS = "start 07 S 3 ."
 
 inherit update-rc.d
 
