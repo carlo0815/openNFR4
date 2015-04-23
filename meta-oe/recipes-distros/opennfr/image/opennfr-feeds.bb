@@ -25,4 +25,8 @@ RRECOMMENDS_${PN} = "\
 	curlftpfs \
 	enigma2-plugin-extensions-enhancedmoviecenter \
 	enigma2-plugin-extensions-cooltvguide \
+	enigma2-plugin-extensions-webinterface-nfrmod \
+	enigma2-plugin-extensions-bmediacenter \
+	enigma2-plugin-extensions-mainmenu2 \	
+	enigma2-plugin-skins-skallihd-fullhd \
 "
