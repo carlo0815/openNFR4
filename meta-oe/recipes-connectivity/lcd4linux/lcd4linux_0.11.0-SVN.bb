@@ -42,6 +42,7 @@ do_install_append() {
     install -m 0600 ${S}/lcd4linux.conf.sample  ${D}/${sysconfdir}/lcd4linux.conf
     install -d ${D}/${INIT_D_DIR}
     install -m 0755 ${WORKDIR}/lcd4linux.init ${D}/${INIT_D_DIR}/lcd4linux
+    install -d ${D}/etc/enigma2
     install -m 0755 ${WORKDIR}/lcd4config ${D}/etc/enigma2/
 }
 
