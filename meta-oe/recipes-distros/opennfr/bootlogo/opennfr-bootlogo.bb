@@ -14,8 +14,10 @@ PR = "r2"
 S = "${WORKDIR}"
 
 INITSCRIPT_NAME = "bootlogo"
-INITSCRIPT_PARAMS_vuplus = "start 07 S 3 ."
 INITSCRIPT_PARAMS = "start 07 S ."
+INITSCRIPT_PARAMS_vuduo2 = "start 70 S . stop 89 0 ."
+INITSCRIPT_PARAMS_vusolo2 = "start 70 S . stop 89 0 ."
+INITSCRIPT_PARAMS_vusolose = "start 70 S . stop 89 0 ."
 
 inherit update-rc.d
 
