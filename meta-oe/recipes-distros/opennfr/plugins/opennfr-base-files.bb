@@ -18,6 +18,20 @@ ALLOW_EMPTY_${PN} = "1"
 PR = "r12"
 
 S="${WORKDIR}/git/files"
+do_install() {
+    install -d ${D}/usr/lib/python2.7
+    for f in argparse.py
+    do
+        install -m 755 ${f} ${D}/usr/lib/python2.7/${f}
+    done
+
+    install -d ${D}/usr/lib/python2.7/site-packages/twisted/web
+    for f in client.py
+    do
+        install -m 755 ${f} ${D}/usr/lib/python2.7/site-packages/twisted/web/${f}
+    done
+
+}
 
 do_install() {
 	install -d ${D}/media
@@ -34,6 +48,8 @@ do_install() {
 	mkdir -p ${D}/usr/lib
 	cd ${D}/usr/lib
 	ln -s libbz2.so.0.0.0 libbz2.so.1.0 || true
-
-
+	install -d ${D}/usr/lib/enigma2/python/Components/Converter
+	install -d ${D}/usr/lib/enigma2/python/Plugins/Extentions/Infopanel/data
+	cp -rp ${S}/files/usr/lib/enigma2/python/Components/Converter/* ${D}/usr/lib/enigma2/python/Components/Converter
+	cp -rp ${S}/files/usr/lib/enigma2/python/Plugins/Extentions/Infopanel/data/* ${D}/usr/lib/enigma2/python/Plugins/Extentions/Infopanel/data
 }
