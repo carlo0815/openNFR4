@@ -37,4 +37,5 @@ do_install() {
 	install -d ${D}/usr/lib/enigma2/python/Plugins/Extentions/Infopanel/data
 	cp -rp ${S}/usr/lib/enigma2/python/Components/Converter/* ${D}/usr/lib/enigma2/python/Components/Converter
 	cp -rp ${S}/usr/lib/enigma2/python/Plugins/Extentions/Infopanel/data/* ${D}/usr/lib/enigma2/python/Plugins/Extentions/Infopanel/data
+	mv ${D}/usr/lib/enigma2/python/Components/Converter/bitratecalc.so_mips ${D}/usr/lib/enigma2/python/Components/Converter/bitratecalc.so
 }
