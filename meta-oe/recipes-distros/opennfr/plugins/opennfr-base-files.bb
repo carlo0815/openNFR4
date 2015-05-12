@@ -9,7 +9,7 @@ SRCREV = "${AUTOREV}"
 
 SRC_URI = "git://github.com/carlo0815/openNFR-base.git"
 
-FILES_${PN} = "/media /usr"
+FILES_${PN} = "/*"
 
 INHIBIT_PACKAGE_STRIP = "1"
  
