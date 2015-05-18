@@ -90,7 +90,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-tmbd_6.1_mipsel.ipk \
     enigma2-plugin-extensions-translator_0.9rc3_mips32el.ipk \
     enigma2-plugin-extensions-transmission_2.83_mips32el.ipk \
-    enigma2-plugin-extensions-tsmedia_9.5_all.ipk \
+    enigma2-plugin-extensions-tsmedia_9.6_all.ipk \
     enigma2-plugin-extensions-tvspielfilm_6.3rc7_mips32el.ipk \
     enigma2-plugin-extensions-verkehrsinfo_1.0rc2_mips32el.ipk \
     enigma2-plugin-extensions-vhannibalautosettings_1.1_mips32el.ipk \
