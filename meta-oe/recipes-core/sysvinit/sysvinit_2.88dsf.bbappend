@@ -15,17 +15,9 @@ SRC_URI += " \
     ${@base_contains("MACHINE", "spark7162", "file://proc_progress_spark7162.patch", "", d)} \
     ${@base_contains("MACHINE", "spark", "file://proc_progress_spark.patch", "", d)} "
     
-SRC_URI_append_sh4 = " \
-    file://devinit \
-    "
 
 do_install_append() {
     rm ${D}${sysconfdir}/rc*.d/*bootlogd
-}
-
-do_install_append_sh4() {
-    install -d ${D}/bin
-    install -m 755 ${WORKDIR}/devinit ${D}/bin
 }
 
 do_install_append_spark7162() {
