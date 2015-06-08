@@ -42,9 +42,12 @@ RDEPENDS_${PN} = " \
     \
     ${@base_contains("MACHINE_FEATURES", "fullgraphiclcd", "lcdpicons-enigma2-meta" , "", d)} \
     \
+    ${@base_contains("MACHINE_FEATURES", "sdl", "snes9x-sdl" , "", d)} \
+    \
     autofs \
     autossh \
     avahi-ui \
+    binutils \
     ctorrent \
     cups \
     djmount \
@@ -54,7 +57,7 @@ RDEPENDS_${PN} = " \
     ${@base_contains("MACHINE_FEATURES", "legacykernel", "" , "evtest", d)} \
     exfat-utils \
     fuse-exfat \
-    gdb \
+    ${@base_contains("TARGET_ARCH", "sh4", "" , "gdb", d)} \
     hddtemp \
     hdparm \
     htop \
@@ -94,6 +97,7 @@ RDEPENDS_${PN} = " \
     ofgwrite \
     idle3-tools \
     pngquant \
+    streamproxy \
     "
 
 RRECOMMENDS_${PN}_append_vuuno = "enigma2-plugin-extensions-hbbtv"
@@ -102,3 +106,4 @@ RRECOMMENDS_${PN}_append_vusolo = "enigma2-plugin-extensions-hbbtv"
 RRECOMMENDS_${PN}_append_vusolo2 = "enigma2-plugin-extensions-hbbtv"
 RRECOMMENDS_${PN}_append_vuduo = "enigma2-plugin-extensions-hbbtv"
 RRECOMMENDS_${PN}_append_vuduo2 = "enigma2-plugin-extensions-hbbtv"
+RRECOMMENDS_${PN}_append_vuzero = "enigma2-plugin-extensions-hbbtv"
