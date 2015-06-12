@@ -35,7 +35,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-bildonline_3.1rc6_mips32el.ipk \
     enigma2-plugin-extensions-bluray_1.5c2_mips32el.ipk \
     enigma2-plugin-extensions-boblight-enigma2_0.8r7_mips32el.ipk \
-    enigma2-plugin-extensions-camofs_9.00_all.ipk \
+    enigma2-plugin-extensions-camofs_9.01_all.ipk \
     enigma2-plugin-extensions-chefkoch_1.4c4_mips32el.ipk \
     enigma2-plugin-extensions-clevertanken_0.5rc1_mips32el.ipk \
     enigma2-plugin-extensions-csfd_10-60-20150309_all.ipk \
@@ -90,13 +90,13 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-tmbd_6.1_mipsel.ipk \
     enigma2-plugin-extensions-translator_0.9rc3_mips32el.ipk \
     enigma2-plugin-extensions-transmission_2.83_mips32el.ipk \
-    enigma2-plugin-extensions-tsmedia_9.9_all.ipk \
+    enigma2-plugin-extensions-tsmedia_10.0_all.ipk \
     enigma2-plugin-extensions-tvspielfilm_6.3rc7_mips32el.ipk \
     enigma2-plugin-extensions-verkehrsinfo_1.0rc2_mips32el.ipk \
     enigma2-plugin-extensions-vhannibalautosettings_1.1_mips32el.ipk \
     enigma2-plugin-extensions-vuplusforum_0.7rc3_mips32el.ipk \
     enigma2-plugin-extensions-webmedia_10.0_r02_oe2.0_all.ipk \
-    enigma2-plugin-extensions-webradiofs_13.03_all.ipk \
+    enigma2-plugin-extensions-webradiofs_13.23_all.ipk \
     enigma2-plugin-extensions-wikipedia_2.2rc5_mips32el.ipk \
     enigma2-plugin-extensions-wwech_1.01_all.ipk \
     enigma2-plugin-extensions-xbmcaddons_8.1_r0_all.ipk \
