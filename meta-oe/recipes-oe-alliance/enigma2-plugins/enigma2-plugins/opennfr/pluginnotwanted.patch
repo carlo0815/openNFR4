@@ -2,7 +2,15 @@ diff --git a/Makefile.am b/Makefile.am
 index d0f54e5..e535329 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -89,8 +89,6 @@
+@@ -63,6 +63,7 @@ SUBDIRS = \
+ 	partnerbox \
+ 	permanentclock \
+ 	pipservicerelation \
++	pluginhider \
+ 	podcast \
+ 	porncenter \
+ 	pushservice \
+@@ -90,8 +91,6 @@ SUBDIRS = \
  	weatherplugin \
  	weathercomponent \
  	weathercomponenthandler \
@@ -11,7 +19,7 @@ index d0f54e5..e535329 100644
  	webcamviewer \
  	werbezapper \
  	zaphistorybrowser \
-@@ -101,7 +99,6 @@
+@@ -102,7 +101,6 @@ SUBDIRS = \
  	schiffe \
  	sudoku \
  	vierg \
@@ -19,7 +27,7 @@ index d0f54e5..e535329 100644
  	advancedmovieselection
  
  if DREAMBOX
-@@ -125,7 +122,5 @@
+@@ -126,9 +124,7 @@ if TPM
  SUBDIRS += \
  	mytube \
  	yttrailer \
@@ -27,4 +35,5 @@ index d0f54e5..e535329 100644
  	menusort \
 -	pluginhider \
  	pluginsort 
+ endif
 
