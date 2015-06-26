@@ -29,4 +29,5 @@ RRECOMMENDS_${PN} = "\
 	enigma2-plugin-extensions-bmediacenter \
 	enigma2-plugin-extensions-mainmenu2 \	
 	enigma2-plugin-skins-skallihd-fullhd \
+	enigma2-plugin-skins-smoke-light-hd \
 "
