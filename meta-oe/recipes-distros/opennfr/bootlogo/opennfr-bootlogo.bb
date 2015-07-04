@@ -27,6 +27,7 @@ SRC_URI_append_gbquad = "file://lcdsplash.bin file://lcdwaitkey.bin file://lcdwa
 SRC_URI_append_gb800ueplus = "file://lcdsplash.bin file://lcdwaitkey.bin file://lcdwarning.bin"
 SRC_URI_append_gbquadplus = "file://lcdsplash400.bin file://lcdwaitkey400.bin file://lcdwarning400.bin"
 SRC_URI_append_vuduo2 = "file://lcdbootlogo.png file://bootlogo.py"
+SRC_URI_append_7100s = "file://lcdsplash.bin file://7100s/lcdwaitkey.bin file://7100s/lcdwarning.bin file://7100s/lcdcomplete.bin"
 
 BINARY_VERSION = "1.3"
 
@@ -87,6 +88,13 @@ do_install_append_gbquadplus() {
 do_install_append_vuduo2() {
     install -m 0644 lcdbootlogo.png ${D}/usr/share/lcdbootlogo.png
     install -m 0644 bootlogo.py ${D}/${sysconfdir}/init.d/bootlogo.py
+}
+
+do_install_append_7100s() {
+    install -d ${D}/usr/share
+    install -m 0644 ${WORKDIR}/7100s/lcdwaitkey.bin ${D}/usr/share/lcdwaitkey.bin
+    install -m 0644 ${WORKDIR}/7100s/lcdwarning.bin ${D}/usr/share/lcdwarning.bin
+    install -m 0644 ${WORKDIR}/7100s/lcdcomplete.bin ${D}/usr/share/lcdcomplete.bin
 }
 
 inherit deploy
