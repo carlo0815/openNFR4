@@ -1,4 +1,0 @@
-#! /bin/sh 
-
-echo "gb800ueplus" > /proc/stb/info/gbmodel
-
