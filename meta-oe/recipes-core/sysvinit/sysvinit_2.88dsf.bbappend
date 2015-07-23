@@ -1,20 +1,13 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
+PR .= ".3"
+
 PACKAGE_ARCH := "${MACHINE_ARCH}"
 
 SRC_URI += " \
     file://67_init_hddown.dpatch \
     file://92_sata-hddown.dpatch \
-    ${@base_contains("MACHINE_FEATURES", "gbprogress", "file://proc_progressgb.patch", "file://proc_progress.patch", d)} \
-    ${@base_contains("MACHINE_FEATURES", "gbplusprogress", "file://proc_progressgbplus.patch", "", d)} \
-    ${@base_contains("MACHINE_FEATURES", "vuprogress", "file://proc_progress_vuplus.patch", "", d)} \
-    ${@base_contains("MACHINE", "inihdp", "file://proc_progress_ini.patch", "", d)} \
-    ${@base_contains("MACHINE", "inihde", "file://proc_progress_inihde.patch", "", d)} \
-    ${@base_contains("MACHINE", "inihde2", "file://proc_progress_inihde2.patch", "", d)} \
-    ${@base_contains("MACHINE", "formuler1", "file://proc_progress_formuler.patch", "", d)} \
-    ${@base_contains("MACHINE", "spark7162", "file://proc_progress_spark7162.patch", "", d)} \
-    ${@base_contains("MACHINE", "spark", "file://proc_progress_spark.patch", "", d)} "
-    
+"
 
 do_install_append() {
     rm ${D}${sysconfdir}/rc*.d/*bootlogd
@@ -28,7 +21,3 @@ a# *** aotom RTC on SPARK needs hwclock in localtime ***
 aUTC=no
 }' ${D}${sysconfdir}/default/rcS
 }
-
-FILES_${PN}_append_sh4 = " \
-    /bin \
-"
