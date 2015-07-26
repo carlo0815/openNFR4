@@ -31,7 +31,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-sundtekcontrolcenter_1.4.1-20150531-r0_all.ipk \
     enigma2-plugin-systemplugins-extnumberzap_1.0-rc12_mipsel.ipk \
     enigma2-plugin-extensions-atmolightd_0.7-pre22_all.ipk \
-    enigma2-plugin-extensions-autobouquets-e2_20150624r1_all.ipk \
+    enigma2-plugin-extensions-autobouquets-e2_20150721_all.ipk \
     enigma2-plugin-extensions-bildonline_3.1rc6_mips32el.ipk \
     enigma2-plugin-extensions-bluray_1.5c2_mips32el.ipk \
     enigma2-plugin-extensions-boblight-enigma2_0.8r7_mips32el.ipk \
@@ -40,23 +40,24 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-clevertanken_0.5rc1_mips32el.ipk \
     enigma2-plugin-extensions-csfd_10-60-20150309_all.ipk \
     enigma2-plugin-extensions-cyrussettings_1.0.0_all.ipk \
-    enigma2-plugin-extensions-digitalfernsehen_1.1rc2_mips32el.ipk \
+    enigma2-plugin-extensions-digitalfernsehen_1.1rc4_mips32el.ipk \
     enigma2-plugin-extensions-enigmalight_0.2-rc1_all.ipk \
     enigma2-plugin-extensions-facebook_1.4_mips32el.ipk \
     enigma2-plugin-extensions-filesearchfs_2.53_all.ipk \
-    enigma2-plugin-extensions-focusonline_1.0rc5_mips32el.ipk \
-    enigma2-plugin-extensions-fragmutti_0.2rc2_mips32el.ipk \
+    enigma2-plugin-extensions-focusonline_1.0rc8_mips32el.ipk \
+    enigma2-plugin-extensions-fragmutti_0.3_mips32el.ipk \
     enigma2-plugin-extensions-gmailreader-oe2.0_1.3_all.ipk \
     enigma2-plugin-extensions-googlenewsreader_1.0_mips32el.ipk \
     enigma2-plugin-extensions-hdmitest_0.4_mipsel.ipk \
     enigma2-plugin-extensions-hetweer_2.7_all.ipk \
+    enigma2-plugin-extensions-iptvplayer_67.02.02.01_all.ipk \
     enigma2-plugin-extensions-isettinge2-3.3.3-oe2.0-${@base_contains("TARGET_ARCH", "sh4", "sh4" , "mips32el", d)}.ipk \
-    enigma2-plugin-extensions-kicker_3.3rc12_mips32el.ipk \
-    enigma2-plugin-extensions-kino_1.4rc3_mips32el.ipk \
+    enigma2-plugin-extensions-kicker_3.3rc15_mips32el.ipk \
+    enigma2-plugin-extensions-kino_1.5_mips32el.ipk \
     enigma2-plugin-extensions-kodidirect_2.0_r0_all.ipk \
     enigma2-plugin-extensions-livefootball-oe2.0_5.4_all.ipk \
-    enigma2-plugin-extensions-mediainfo_2.6_all.ipk \
-    enigma2-plugin-extensions-mediaportal_7.1.3_all.ipk \
+    enigma2-plugin-extensions-mediainfo_2.7_all.ipk \
+    enigma2-plugin-extensions-mediaportal_7.1.4_all.ipk \
     enigma2-plugin-extensions-mediaportal-wallicons \
     enigma2-plugin-extensions-mediastream_6.0_all.ipk \
     enigma2-plugin-extensions-moviebrowser_3.6rc2_mips32el.ipk \
@@ -67,7 +68,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-navibar_1.1.1_all.ipk \
     enigma2-plugin-extensions-openopera_1.0-r0_mips32el.ipk \
     enigma2-plugin-extensions-opkg-tools_1.3_mipsel.ipk \
-    enigma2-plugin-extensions-oscamstatusview_0.5rc3_mips32el.ipk \
+    enigma2-plugin-extensions-oscamstatusview_0.7rc1_mips32el.ipk \
     enigma2-plugin-extensions-piconmanager_2.1-20150216-r2_all.ipk \
     enigma2-plugin-extensions-picturecenterfs_6.10_all.ipk \
     enigma2-plugin-extensions-planerfs_6.56_all.ipk \
@@ -91,12 +92,12 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-translator_0.9rc3_mips32el.ipk \
     enigma2-plugin-extensions-transmission_2.83_mips32el.ipk \
     enigma2-plugin-extensions-tsmedia_10.0_all.ipk \
-    enigma2-plugin-extensions-tvspielfilm_6.3rc7_mips32el.ipk \
-    enigma2-plugin-extensions-verkehrsinfo_1.0rc2_mips32el.ipk \
+    enigma2-plugin-extensions-tvspielfilm_6.4rc2_mips32el.ipk \
+    enigma2-plugin-extensions-verkehrsinfo_1.1rc1_mips32el.ipk \
     enigma2-plugin-extensions-vhannibalautosettings_1.1_mips32el.ipk \
     enigma2-plugin-extensions-vuplusforum_0.7rc3_mips32el.ipk \
     enigma2-plugin-extensions-webmedia_10.0_r02_oe2.0_all.ipk \
-    enigma2-plugin-extensions-webradiofs_13.23_all.ipk \
+    enigma2-plugin-extensions-webradiofs_13.29_all.ipk \
     enigma2-plugin-extensions-wikipedia_2.2rc5_mips32el.ipk \
     enigma2-plugin-extensions-wwech_1.01_all.ipk \
     enigma2-plugin-extensions-xbmcaddons_8.1_r0_all.ipk \
@@ -148,25 +149,25 @@ THIRDPARTY_MACHINE_PLUGINS_vuzero = " \
     enigma2-plugin-extensions-sdg-imagedownloader-v0.7-oe-2.0-vu-all.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et4x00 = " \
-    enigma2-plugin-extensions-newxtrend-hbbtv_2.5_mips32el.ipk \
+    enigma2-plugin-extensions-newxtrend-hbbtv_3.7_mips32el.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et6x00 = " \
     enigma2-plugin-extensions-et-webbrowser_2.0.0-r0_et6x00.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et7x00 = " \
-    enigma2-plugin-extensions-newxtrend-hbbtv_2.5_mips32el.ipk \
+    enigma2-plugin-extensions-newxtrend-hbbtv_3.7_mips32el.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et8000 = " \
-    enigma2-plugin-extensions-newxtrend-hbbtv_2.5_mips32el.ipk \
+    enigma2-plugin-extensions-newxtrend-hbbtv_3.7_mips32el.ipk \
      "
 THIRDPARTY_MACHINE_PLUGINS_et8500 = " \
-    enigma2-plugin-extensions-newxtrend-hbbtv_2.5_mips32el.ipk \
+    enigma2-plugin-extensions-newxtrend-hbbtv_3.7_mips32el.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et9x00 = " \
-    enigma2-plugin-extensions-et-webbrowser_2.0.0-r0_et9x00.ipk \
+    enigma2-plugin-extensions-newxtrend-hbbtv_3.7_mips32el.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_et10000 = " \
-    enigma2-plugin-extensions-newxtrend-hbbtv_2.5_mips32el.ipk \
+    enigma2-plugin-extensions-newxtrend-hbbtv_3.7_mips32el.ipk \
      "
 THIRDPARTY_MACHINE_PLUGINS_e3hd = " \
     enigma2-plugin-extensions-hbbtv_4.1_E3HD_mips32el.ipk \
