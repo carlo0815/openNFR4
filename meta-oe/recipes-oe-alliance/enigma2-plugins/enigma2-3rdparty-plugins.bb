@@ -57,7 +57,6 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-kodidirect_2.0_r0_all.ipk \
     enigma2-plugin-extensions-livefootball-oe2.0_5.4_all.ipk \
     enigma2-plugin-extensions-mediainfo_2.7_all.ipk \
-    enigma2-plugin-extensions-mediaportal_7.1.4_all.ipk \
     enigma2-plugin-extensions-mediaportal-wallicons \
     enigma2-plugin-extensions-mediastream_6.0_all.ipk \
     enigma2-plugin-extensions-moviebrowser_3.6rc2_mips32el.ipk \
