@@ -106,11 +106,11 @@ do_deploy() {
         	install -m 0644 splash.bin ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
     	fi
     fi
-    if [ -e lcdsplash.bin ]; then
-    install -m 0644 lcdsplash.bin ${DEPLOYDIR}/lcdsplash.bin
+    if [ -e lcdsplash220.bin ]; then
+    install -m 0644 lcdsplash220.bin ${DEPLOYDIR}/lcdsplash220.bin
     fi
     if [ -e lcdsplash400.bin ]; then
-        install -m 0644 lcdsplash400.bin ${DEPLOYDIR}/lcdsplash.bin
+        install -m 0644 lcdsplash400.bin ${DEPLOYDIR}/lcdsplash400.bin
     fi
 
 }
