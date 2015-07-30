@@ -16,7 +16,8 @@ EXTRA_OECONF_append = " --disable-nls "
 SRC_URI = "git://github.com/carlo0815/minidlna.git;protocol=git \
         file://minidlna.conf \
         file://minidlnad \
-        file://init"
+        file://init \
+        file://minidlnad-sh4"
 
 S = "${WORKDIR}/git"
 
@@ -37,9 +38,14 @@ do_install() {
     install -d ${D}${sysconfdir}/init.d/
     install -m 755 ${WORKDIR}/init ${D}${sysconfdir}/init.d/${PN}
     install -d ${D}/usr/sbin
-    install -m 755 ${WORKDIR}/minidlnad ${D}/usr/sbin
+    if [ "${BRAND_OEM}" = "fulan" ]; then
+	install -m 755 ${WORKDIR}/minidlnad-sh4 ${D}/usr/sbin/minidlnad
+    else
+    	install -m 755 ${WORKDIR}/minidlnad ${D}/usr/sbin 
+    fi
+
 }
 
 do_configure_prepend() {
     touch ${S}/ABOUT-NLS
-} 
+}

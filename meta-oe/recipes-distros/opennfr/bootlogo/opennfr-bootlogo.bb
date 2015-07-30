@@ -28,6 +28,8 @@ SRC_URI_append_gb800ueplus = "file://lcdsplash220.bin file://lcdwaitkey220.bin f
 SRC_URI_append_gbquadplus = "file://lcdsplash400.bin file://lcdwaitkey400.bin file://lcdwarning400.bin"
 SRC_URI_append_vuduo2 = "file://lcdbootlogo.png file://bootlogo.py"
 SRC_URI_append_7100s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin file://lcdcomplete220.bin"
+SRC_URI_append_dags7356 = "file://splash1.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
+SRC_URI_append_dags7362 = "file://splash1_power.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 
 BINARY_VERSION = "1.3"
 
@@ -99,12 +101,10 @@ do_install_append_7100s() {
 
 inherit deploy
 do_deploy() {
-    if [ "${BRAND_OEM}" = "vuplus" ] || [ "${BRAND_OEM}" = "dags" ]; then
-	install -m 0644 splash480.bin ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
+    if [ "${MACHINE}" = "vuduo" ] || [ "${MACHINE}" = "vuduo2" ] || [ "${MACHINE}" = "vuuno" ] || [ "${MACHINE}" = "vusolo" ] || [ "${MACHINE}" = "vusolose" ] || [ "${MACHINE}" = "vuultimo" ] || [ "${MACHINE}" = "vuzero" ] || [ "${BRAND_OEM}" = "dags" ]; then
+        install -m 0644 splash480.bmp ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
     else
-    	if [ -e splash.bin ]; then
-        	install -m 0644 splash.bin ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
-    	fi
+        install -m 0644 splash576.bmp ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
     fi
     if [ -e lcdsplash220.bin ]; then
     install -m 0644 lcdsplash220.bin ${DEPLOYDIR}/lcdsplash220.bin
@@ -112,7 +112,24 @@ do_deploy() {
     if [ -e lcdsplash400.bin ]; then
         install -m 0644 lcdsplash400.bin ${DEPLOYDIR}/lcdsplash400.bin
     fi
-
+    if [ -e splash1_os1.bmp ]; then
+        install -m 0644 splash1_os1.bmp ${DEPLOYDIR}/splash1_os1.bmp
+    fi
+    if [ -e splash1_os2.bmp ]; then
+        install -m 0644 splash1_os2.bmp ${DEPLOYDIR}/splash1_os2.bmp
+    fi
+    if [ -e splash1_power.bmp ]; then
+        install -m 0644 splash1_power.bmp ${DEPLOYDIR}/splash1.bmp
+    fi
+    if [ -e splash1.bmp ]; then
+        install -m 0644 splash1.bmp ${DEPLOYDIR}/splash1.bmp
+    fi
+    if [ -e splash2.bmp ]; then
+        install -m 0644 splash2.bmp ${DEPLOYDIR}/splash2.bmp
+    fi
+    if [ -e splash3.bmp ]; then
+        install -m 0644 splash3.bmp ${DEPLOYDIR}/splash3.bmp
+    fi
 }
 
 addtask deploy before do_build after do_install
