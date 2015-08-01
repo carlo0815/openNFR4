@@ -75,7 +75,7 @@ do_install_append_gbquad() {
     install -m 0644 lcdwarning220.bin ${D}/usr/share/lcdwarning.bin	
 }
 
-do_install_append_gb800ueplus() {
+do_install_append_gb7358() {
     install -d ${D}/usr/share
     install -m 0644 lcdwaitkey220.bin ${D}/usr/share/lcdwaitkey.bin
     install -m 0644 lcdwarning220.bin ${D}/usr/share/lcdwarning.bin	
