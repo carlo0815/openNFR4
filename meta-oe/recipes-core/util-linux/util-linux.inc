@@ -1,4 +1,3 @@
-
 SUMMARY = "A suite of basic system administration utilities."
 SUMMARY = "Util-linux includes a suite of basic system administration utilities \
 commonly found on most Linux systems.  Some of the more important utilities include \
