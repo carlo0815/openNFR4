@@ -2,15 +2,14 @@ SUMMARY = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-PR = "r1"
 
 inherit kernel machine_kernel_pr
 
 KV = "3.14.21"
-SRCDATE = "20150218"
+SRCDATE = "20150425"
 
-SRC_URI[md5sum] = "266fadcfdc08dd661556820bf3a5f44b"
-SRC_URI[sha256sum] = "76b99796a93a20d87e41cc962d47315d397c54ddd961a37e83d30aeee93781b7"
+SRC_URI[md5sum] = "00c5dee301c4b97558672a9634c0f85f"
+SRC_URI[sha256sum] = "d12a4a21969eb84db204661f9cdfd472ff59b6d1f0de17444af2dac716f170eb"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
@@ -21,11 +20,11 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://dev.nachtfalke.biz/nfr/feeds/1_linux-${KV}-${SRCDATE}.tar.gz \
+SRC_URI += "http://unibox.to/feeds/eco/development/kernel/linux-${KV}-${SRCDATE}.tar.gz \
     file://defconfig \
     file://nfs-max-rwsize-8k.patch \
     "
-	
+
 S = "${WORKDIR}/linux-${PV}"
 B = "${WORKDIR}/build"
 
@@ -36,6 +35,15 @@ KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz"
+
+do_configure_prepend() {
+    rm -rf ${STAGING_KERNEL_DIR}/.cofig
+    rm -rf ${STAGING_KERNEL_DIR}/.config
+    rm -rf ${STAGING_KERNEL_DIR}/.config.old
+    rm -rf ${STAGING_KERNEL_DIR}/include/generated
+    rm -rf ${STAGING_KERNEL_DIR}/include/config
+    rm -rf ${STAGING_KERNEL_DIR}/arch/mips/include/generated
+}
 
 kernel_do_install_append() {
     ${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
@@ -52,4 +60,7 @@ pkg_postinst_kernel-image () {
         fi
     fi
     true
+}
+
+do_rm_work() {
 }

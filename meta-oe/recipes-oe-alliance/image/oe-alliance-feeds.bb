@@ -9,7 +9,7 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGES = "${PN}"
 
 PV = "1.0"
-PR = "r55"
+PR = "r65"
 
 DEPENDS = "enigma2-plugin-drivers-usbserial"
 RECOMMENDS = "enigma2-plugin-extensions-et-livestream"
@@ -28,7 +28,6 @@ RDEPENDS_${PN} = " \
     enigma2-plugin-drivers-ntfs-3g \
     enigma2-plugin-drivers-exfat \
     enigma2-plugin-drivers-usbserial \
-    enigma2-plugin-extensions-ambx \
     enigma2-plugin-extensions-tuxcom \
     enigma2-plugin-security-firewall \
     enigma2-plugin-extensions-openairplay \
@@ -39,6 +38,10 @@ RDEPENDS_${PN} = " \
     enigma2-plugin-extensions-et-portal \
     enigma2-plugin-extensions-moviearchiver \
     enigma2-plugin-extensions-yahooweather \
+    enigma2-plugin-extensions-youtube \
+    ${@base_contains("MACHINE_FEATURES", "omb", "enigma2-plugin-extensions-openmultiboot", "", d)} \
+    ${@base_contains("MACHINE_FEATURES", "omb", "openmultiboot", "", d)} \
+    ${@base_contains("MACHINE_FEATURES", "xbmc", "enigma2-plugin-extensions-xbmc", "", d)} \
     \
     ${@base_contains("MACHINE_FEATURES", "fullgraphiclcd", "lcdpicons-enigma2-meta" , "", d)} \
     \
@@ -54,7 +57,7 @@ RDEPENDS_${PN} = " \
     dosfstools \
     dvbsnoop \
     dvdfs \
-    ${@base_contains("MACHINE_FEATURES", "legacykernel", "" , "evtest", d)} \
+    ${@base_contains("MACHINE_FEATURES", "legacykernel", "" , "evtest strace", d)} \
     exfat-utils \
     fuse-exfat \
     ${@base_contains("TARGET_ARCH", "sh4", "" , "gdb", d)} \
@@ -86,7 +89,6 @@ RDEPENDS_${PN} = " \
     smartmontools \
     smbnetfs \
     sshpass \
-    strace \
     tcpdump \
     transmission \
     ushare \
@@ -98,7 +100,11 @@ RDEPENDS_${PN} = " \
     idle3-tools \
     pngquant \
     streamproxy \
+    ${@base_contains("GST_VERSION", "1.0", "eplayer5", "eplayer4", d)} \
     "
+
+RDEPENDS_${PN}_remove_xc7362 = "network-usb-drivers-meta"
+RDEPENDS_${PN}_remove_wetekplay = "network-usb-drivers-meta"
 
 RRECOMMENDS_${PN}_append_vuuno = "enigma2-plugin-extensions-hbbtv"
 RRECOMMENDS_${PN}_append_vuultimo = "enigma2-plugin-extensions-hbbtv"

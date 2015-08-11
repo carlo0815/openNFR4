@@ -16,8 +16,7 @@ EXTRA_OECONF = " \
 "
 
 SRC_URI = "svn://ssl.bulix.org/svn/lcd4linux/;module=trunk;protocol=https;rev=1200 \
-    file://lcd4linux.init \
-    file://lcd4config"
+    file://lcd4linux.init"
 
 S =  "${WORKDIR}/trunk"
 
@@ -28,7 +27,11 @@ do_setlibtool() {
 }
 
 do_setlibtool_cube (){
-	sed -i "s#LIBTOOL=libtool#LIBTOOL=\${STAGING_BINDIR_CROSS}\/arm-oe-linux-gnueabi-libtool#" ${S}/Makefile.am
+    sed -i "s#LIBTOOL=libtool#LIBTOOL=\${STAGING_BINDIR_CROSS}\/arm-oe-linux-gnueabi-libtool#" ${S}/Makefile.am
+}
+
+do_setlibtool_wetekplay (){
+    sed -i "s#LIBTOOL=libtool#LIBTOOL=\${STAGING_BINDIR_CROSS}\/arm-oe-linux-gnueabi-libtool#" ${S}/Makefile.am
 }
 
 INITSCRIPT_PARAMS_vuplus = "stop 10 0 6 ."
@@ -42,7 +45,5 @@ do_install_append() {
     install -m 0600 ${S}/lcd4linux.conf.sample  ${D}/${sysconfdir}/lcd4linux.conf
     install -d ${D}/${INIT_D_DIR}
     install -m 0755 ${WORKDIR}/lcd4linux.init ${D}/${INIT_D_DIR}/lcd4linux
-    install -d ${D}/etc/enigma2
-    install -m 0755 ${WORKDIR}/lcd4config ${D}/etc/enigma2/
 }
 

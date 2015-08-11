@@ -2,7 +2,6 @@ SUMMARY = "Linux kernel for ${MACHINE}"
 LICENSE = "GPLv2"
 SECTION = "kernel"
 KV = "3.9.7-r2"
-PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit kernel machine_kernel_pr
 
@@ -16,6 +15,7 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${KV}/COPYING;md5=d7810fab7487fb0aad
 SRC_URI = "http://en3homeftp.net/pub/src/linux-${KV}-${DATE}.tar.gz \
     file://defconfig \
     file://dmx_demux.patch \
+    file://dmx_delete_e2stb.patch \
     file://sit2_op.o \
     "
 
