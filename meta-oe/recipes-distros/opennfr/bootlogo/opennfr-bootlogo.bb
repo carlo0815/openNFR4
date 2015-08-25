@@ -28,7 +28,7 @@ SRC_URI_append_gb7358 = "file://lcdsplash220.bin file://lcdwaitkey220.bin file:/
 SRC_URI_append_gbquadplus = "file://lcdsplash400.bin file://lcdwaitkey400.bin file://lcdwarning400.bin"
 SRC_URI_append_vuduo2 = "file://lcdbootlogo.png file://bootlogo.py"
 SRC_URI_append_7100s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin file://lcdcomplete220.bin"
-SRC_URI_append_inihdp = "file://cfe.bmp file://finished.bmp file://imageversion.bmp file://kernel.bmp file://rootfs.bmp file://splash.bmp"
+SRC_URI_append_inihdp = "file://inihdp/cfe.bmp file://inihdp/finished.bmp file://inihdp/imageversion.bmp file://inihdp/kernel.bmp file://inihdp/rootfs.bmp file://inihdp/splash.bmp"
 SRC_URI_append_dags7356 = "file://splash1.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 SRC_URI_append_dags7362 = "file://splash1_power.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 
@@ -101,12 +101,12 @@ do_install_append_7100s() {
 }
 
 do_install_append_inihdp() {
-    install -m 0644 ${S}/cfe.bmp ${DEPLOY_DIR_IMAGE}/cfe.bmp
-    install -m 0644 ${S}/finished.bmp ${DEPLOY_DIR_IMAGE}/finished.bmp
-    install -m 0644 ${S}/imageversion.bmp ${DEPLOY_DIR_IMAGE}/imageversion.bmp
-    install -m 0644 ${S}/kernel.bmp ${DEPLOY_DIR_IMAGE}/kernel.bmp
-    install -m 0644 ${S}/rootfs.bmp ${DEPLOY_DIR_IMAGE}/rootfs.bmp   
-    install -m 0644 ${S}/splash.bmp ${DEPLOY_DIR_IMAGE}/splash.bmp  
+    install -m 0644 ${S}/inihdp/cfe.bmp ${DEPLOY_DIR_IMAGE}/cfe.bmp
+    install -m 0644 ${S}/inihdp/finished.bmp ${DEPLOY_DIR_IMAGE}/finished.bmp
+    install -m 0644 ${S}/inihdp/imageversion.bmp ${DEPLOY_DIR_IMAGE}/imageversion.bmp
+    install -m 0644 ${S}/inihdp/kernel.bmp ${DEPLOY_DIR_IMAGE}/kernel.bmp
+    install -m 0644 ${S}/inihdp/rootfs.bmp ${DEPLOY_DIR_IMAGE}/rootfs.bmp   
+    install -m 0644 ${S}/inihdp/splash.bmp ${DEPLOY_DIR_IMAGE}/splash.bmp  
 }
 
 inherit deploy
@@ -118,24 +118,6 @@ do_deploy() {
     fi
     if [ -e splash.bin ]; then
         install -m 0644 splash.bin ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
-    fi
-    if [ -e cfe.bmp ]; then
-        install -m 0644 cfe.bmp ${DEPLOYDIR}/cfe.bmp
-    fi    
-    if [ -e finished.bmp ]; then
-        install -m 0644 finished.bmp ${DEPLOYDIR}/finished.bmp
-    fi     
-    if [ -e imageversion.bmp ]; then
-        install -m 0644 imageversion.bmp ${DEPLOYDIR}/imageversion.bmp
-    fi         
-    if [ -e kernel.bmp ]; then
-        install -m 0644 kernel.bmp ${DEPLOYDIR}/kernel.bmp
-    fi     
-    if [ -e rootfs.bmp ]; then
-        install -m 0644 rootfs.bmp ${DEPLOYDIR}/rootfs.bmp
-    fi         
-    if [ -e splash.bmp ]; then
-        install -m 0644 splash.bmp ${DEPLOYDIR}/splash.bmp
     fi
     if [ -e lcdsplash220.bin ]; then
     install -m 0644 lcdsplash220.bin ${DEPLOYDIR}/lcdsplash220.bin
