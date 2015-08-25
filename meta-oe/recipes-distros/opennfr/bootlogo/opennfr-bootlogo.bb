@@ -101,12 +101,12 @@ do_install_append_7100s() {
 }
 
 do_install_append_inihdp() {
-    install -m 0644 ${S}/inihdp/cfe.bmp ${DEPLOY_DIR_IMAGE}/cfe.bmp
-    install -m 0644 ${S}/inihdp/finished.bmp ${DEPLOY_DIR_IMAGE}/finished.bmp
-    install -m 0644 ${S}/inihdp/imageversion.bmp ${DEPLOY_DIR_IMAGE}/imageversion.bmp
-    install -m 0644 ${S}/inihdp/kernel.bmp ${DEPLOY_DIR_IMAGE}/kernel.bmp
-    install -m 0644 ${S}/inihdp/rootfs.bmp ${DEPLOY_DIR_IMAGE}/rootfs.bmp   
-    install -m 0644 ${S}/inihdp/splash.bmp ${DEPLOY_DIR_IMAGE}/splash.bmp  
+    install -m 0644 ${S}/inihdp/cfe.bmp ${DEPLOYDIR}/cfe.bmp
+    install -m 0644 ${S}/inihdp/finished.bmp ${DEPLOYDIR}/finished.bmp
+    install -m 0644 ${S}/inihdp/imageversion.bmp ${DEPLOYDIR}/imageversion.bmp
+    install -m 0644 ${S}/inihdp/kernel.bmp ${DEPLOYDIR}/kernel.bmp
+    install -m 0644 ${S}/inihdp/rootfs.bmp ${DEPLOYDIR}/rootfs.bmp   
+    install -m 0644 ${S}/inihdp/splash.bmp ${DEPLOYDIR}/splash.bmp  
 }
 
 inherit deploy
