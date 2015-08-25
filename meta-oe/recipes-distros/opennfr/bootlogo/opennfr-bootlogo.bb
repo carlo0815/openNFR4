@@ -116,6 +116,27 @@ do_deploy() {
     else
         install -m 0644 splash576.bmp ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
     fi
+    if [ -e splash.bin ]; then
+        install -m 0644 splash.bin ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
+    fi
+    if [ -e cfe.bmp ]; then
+        install -m 0644 cfe.bmp ${DEPLOYDIR}/cfe.bmp
+    fi    
+    if [ -e finished.bmp ]; then
+        install -m 0644 finished.bmp ${DEPLOYDIR}/finished.bmp
+    fi     
+    if [ -e imageversion.bmp ]; then
+        install -m 0644 imageversion.bmp ${DEPLOYDIR}/imageversion.bmp
+    fi         
+    if [ -e kernel.bmp ]; then
+        install -m 0644 kernel.bmp ${DEPLOYDIR}/kernel.bmp
+    fi     
+    if [ -e rootfs.bmp ]; then
+        install -m 0644 rootfs.bmp ${DEPLOYDIR}/rootfs.bmp
+    fi         
+    if [ -e splash.bmp ]; then
+        install -m 0644 splash.bmp ${DEPLOYDIR}/splash.bmp
+    fi
     if [ -e lcdsplash220.bin ]; then
     install -m 0644 lcdsplash220.bin ${DEPLOYDIR}/lcdsplash220.bin
     fi
