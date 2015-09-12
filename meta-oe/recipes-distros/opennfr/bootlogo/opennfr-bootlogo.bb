@@ -29,7 +29,7 @@ SRC_URI_append_gbquadplus = "file://lcdsplash400.bin file://lcdwaitkey400.bin fi
 SRC_URI_append_vuduo2 = "file://lcdbootlogo.png file://bootlogo.py"
 SRC_URI_append_7100s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin file://lcdcomplete220.bin"
 SRC_URI_append_inihdp = "file://inihdp/cfe.bmp file://inihdp/finished.bmp file://inihdp/imageversion.bmp file://inihdp/kernel.bmp file://inihdp/rootfs.bmp file://inihdp/splash.bmp"
-SRC_URI_append_inihde2 = "file://inihde2/cfe.bmp file://inihde2/finished.bmp file://inihde2/imageversion.bmp file://inihde2/kernel.bmp file://inihde2/rootfs.bmp file://inihde2/splash.bmp"
+SRC_URI_append_inihde2 = "file://inihdp/cfe.bmp file://inihdp/finished.bmp file://inihdp/imageversion.bmp file://inihdp/kernel.bmp file://inihdp/rootfs.bmp file://inihdp/splash.bmp"
 SRC_URI_append_dags7356 = "file://splash1.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 SRC_URI_append_dags7362 = "file://splash1_power.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 
