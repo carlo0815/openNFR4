@@ -29,6 +29,7 @@ SRC_URI = " \
     file://silence_tuner_printk.patch;patch=1 \
     file://silence_stmfb_printk.patch;patch=1 \
     file://fix_makefile.patch;patch=1 \
+    file://disable_video_free_on_release.patch;patch=1 \
     file://ddbootup \
     file://sh4booster \
     file://modules.conf \
