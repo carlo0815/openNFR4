@@ -28,7 +28,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 S = "${WORKDIR}/git"
 
 THIRDPARTY_PLUGINS = " \
-    enigma2-plugin-extensions-kodi_15.2-r1-gitAUTOINC-3917696038_hd2400.ipk
+    enigma2-plugin-extensions-kodi_15.2-r1-gitAUTOINC-3917696038_hd2400.ipk \
     enigma2-plugin-extensions-sundtekcontrolcenter-20150912-1.ipk \
     enigma2-plugin-systemplugins-extnumberzap_1.0-rc12_mipsel.ipk \
     enigma2-plugin-extensions-atmolightd_0.7-pre22_all.ipk \
