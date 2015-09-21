@@ -103,10 +103,7 @@ THIRDPARTY_MACHINE_PLUGINS_sf8= " \
 THIRDPARTY_MACHINE_PLUGINS_xp1000= " \
     enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
     "
-THIRDPARTY_MACHINE_PLUGINS_formuler1 = " \
-    enigma2-plugin-extensions-kodi_15.2-r1-gitAUTOINC-3917696038_hd2400.ipk \
-    "
-    
+
 do_install() {
 }
 
