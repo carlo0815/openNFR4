@@ -106,7 +106,6 @@ THIRDPARTY_MACHINE_PLUGINS_xp1000= " \
 THIRDPARTY_MACHINE_PLUGINS_formuler1 = " \
     enigma2-plugin-extensions-kodi_15.2-r1-gitAUTOINC-3917696038_hd2400.ipk \
     "
-
 do_install() {
 }
 
@@ -127,17 +126,7 @@ do_deploy_append_mipsel() {
     Z1=$(ls -1 ${S}/*${MACHINE}.ipk | wc -l)
     if [ $Z1 -gt 0 ]; then
         install -m 0644 ${S}/*${MACHINE}.ipk ${DEPLOY_DIR_IPK}/${MACHINE} #|| true
-    fi    
-    for i in ${THIRDPARTY_MACHINE_PLUGINS}; do
-        if [ -f $i ]; then
-            install -m 0644 $i ${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty || true
-        fi
-    done;
-    for i in ${THIRDPARTY_EXTRA_PLUGINS}; do
-        if [ -f $i ]; then
-            install -m 0644 $i ${DEPLOY_DIR_IPK}/3rdparty || true
-        fi
-    done;    
+    fi 
     pkgdir=${DEPLOY_DIR_IPK}/3rdparty
     if [ -e $pkgdir ]; then
         chmod 0755 $pkgdir
