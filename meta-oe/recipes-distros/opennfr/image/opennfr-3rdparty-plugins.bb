@@ -128,6 +128,16 @@ do_deploy_append_mipsel() {
     if [ $Z1 -gt 0 ]; then
         install -m 0644 ${S}/*${MACHINE}.ipk ${DEPLOY_DIR_IPK}/${MACHINE} #|| true
     fi    
+    for i in ${THIRDPARTY_MACHINE_PLUGINS}; do
+        if [ -f $i ]; then
+            install -m 0644 $i ${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty || true
+        fi
+    done;
+    for i in ${THIRDPARTY_EXTRA_PLUGINS}; do
+        if [ -f $i ]; then
+            install -m 0644 $i ${DEPLOY_DIR_IPK}/3rdparty || true
+        fi
+    done;    
     pkgdir=${DEPLOY_DIR_IPK}/3rdparty
     if [ -e $pkgdir ]; then
         chmod 0755 $pkgdir
