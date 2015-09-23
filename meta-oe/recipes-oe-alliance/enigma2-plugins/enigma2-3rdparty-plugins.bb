@@ -178,7 +178,6 @@ THIRDPARTY_MACHINE_PLUGINS_inihde = " \
 THIRDPARTY_MACHINE_PLUGINS_inihde2 = " \
     enigma2-plugin-extensions-hbbtv_1.1-INI_mips32el.ipk \
     "    
-    
 do_install[noexec] = "1"
 do_package_write_ipk[noexec] = "1"
 
