@@ -106,6 +106,9 @@ THIRDPARTY_MACHINE_PLUGINS_xp1000= " \
 THIRDPARTY_MACHINE_PLUGINS_formuler1 = " \
     enigma2-plugin-extensions-kodi_15.2-r1-gitAUTOINC-3917696038_hd2400.ipk \
     "
+THIRDPARTY_MACHINE_PLUGINS_hd2400 = " \
+    enigma2-plugin-extensions-kodi_15.2-r1-gitAUTOINC-3917696038_hd2400.ipk \
+    "    
 do_install() {
 }
 
