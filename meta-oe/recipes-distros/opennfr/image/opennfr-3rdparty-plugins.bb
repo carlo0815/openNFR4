@@ -9,7 +9,7 @@ inherit gitpkgv autotools deploy
 SRCREV = "${AUTOREV}"
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
-PR = "r36"
+PR = "r37"
 SRC_URI="git://github.com/carlo0815/3rdparty-plugins.git;protocol=git;branch=4.4"
 
 EXTRA_OECONF = " \
