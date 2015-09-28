@@ -12,6 +12,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 IMAGE_INSTALL = " \
     opennfr-base \
+    packagegroup-base-nfs \ 
     	"
 
 export IMAGE_BASENAME = "opennfr-image"
