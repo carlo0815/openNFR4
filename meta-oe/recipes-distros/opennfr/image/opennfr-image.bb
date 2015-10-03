@@ -55,13 +55,6 @@ rootfs_postprocess() {
 			mv ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse-neu.py ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse.py
 			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse-neu.py
 			cd $curdir
-			
-			cd ${IMAGE_ROOTFS}/usr/share/enigma2/bootvideos
-				if [ "${BRAND_OEM}" = "xcore" ]; then
-					rm -rf ${IMAGE_ROOTFS}/usr/share/enigma2/bootvideos/Test.mkv
-					rm -rf ${IMAGE_ROOTFS}/usr/share/enigma2/bootvideos/Test.mp4
-				fi	
-			cd $curdir			
 
     set -x
 
