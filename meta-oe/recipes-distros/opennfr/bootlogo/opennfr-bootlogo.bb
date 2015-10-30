@@ -119,6 +119,14 @@ do_install_append_inihde2() {
     install -m 0644 ${S}/inihdp/splash.bmp ${DEPLOY_DIR_IMAGE}/splash.bmp  
 }
 
+do_install_append_dags7356() {
+    install -m 0644 splash1.bmp ${DEPLOY_DIR_IMAGE}/splash1.bmp
+    install -m 0644 splash1_os1.bmp ${DEPLOY_DIR_IMAGE}/splash1_os1.bmp
+    install -m 0644 splash1_os2.bmp ${DEPLOY_DIR_IMAGE}/splash1_os2.bmp
+    install -m 0644 splash2.bmp ${DEPLOY_DIR_IMAGE}/splash2.bmp
+    install -m 0644 splash3.bmp ${DEPLOY_DIR_IMAGE}/splash3.bmp   
+}
+
 inherit deploy
 do_deploy() {
     if [ "${MACHINE}" = "vuduo" ] || [ "${MACHINE}" = "vuduo2" ] || [ "${MACHINE}" = "vuuno" ] || [ "${MACHINE}" = "vusolo" ] || [ "${MACHINE}" = "vusolose" ] || [ "${MACHINE}" = "vuultimo" ] || [ "${MACHINE}" = "vuzero" ] || [ "{MACHINE}" = "dags7335" ]; then
