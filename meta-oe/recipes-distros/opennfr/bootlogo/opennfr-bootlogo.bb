@@ -126,9 +126,6 @@ do_deploy() {
     else
         install -m 0644 splash576.bmp ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
     fi
-    if [ -e splash.bin ]; then
-        install -m 0644 splash.bin ${DEPLOYDIR}/${BOOTLOGO_FILENAME}
-    fi
     if [ -e lcdsplash220.bin ]; then
         install -m 0644 lcdsplash220.bin ${DEPLOYDIR}/lcdsplash220.bin
     fi
