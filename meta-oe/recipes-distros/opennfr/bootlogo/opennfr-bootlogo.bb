@@ -21,7 +21,7 @@ INITSCRIPT_PARAMS_vusolose = "start 70 S . stop 89 0 ."
 
 inherit update-rc.d
 
-SRC_URI = "file://splash480.bmp file://splash576.bmp file://bootlogo.mvi file://backdrop.mvi file://bootlogo_wait.mvi file://radio.mvi file://bootlogo.sh ${@base_contains("MACHINE_FEATURES", "bootsplash", "file://splash.bin" , "", d)} ${@base_contains("MACHINE_FEATURES", "bootsplash", "file://splash480.bin" , "", d)}"
+SRC_URI = "file://splash480.bmp file://splash576.bmp file://bootlogo.mvi file://backdrop.mvi file://bootlogo_wait.mvi file://radio.mvi file://bootlogo.sh"
 SRC_URI_append_gb800ue = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin"
 SRC_URI_append_gbquad = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin"
 SRC_URI_append_gb7358 = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin"
