@@ -33,7 +33,7 @@ DEPENDS_remove_xc7362 = "network-usb-drivers-meta"
 RDEPENDS_${PN} = "\
     enigma2-plugin-systemplugins-wirelesslan \
     ${@base_contains("MACHINE", "vuduo2", "enigma2-plugin-drivers-network-usb-rt3070", "", d)} \
-    ${@base_contains("MACHINE", "inihdp", "enigma2-plugin-drivers-network-usb-rt3070", "", d)} \
+    ${@base_contains("MACHINE", "inihdp", "enigma2-plugin-drivers-network-usb-rt3070 enigma2-plugin-drivers-network-usb-r8723a", "", d)} \
     ${@base_contains("MACHINE", "inihde", "enigma2-plugin-drivers-network-usb-rt3070", "", d)} \
     ${@base_contains("MACHINE", "inihdx", "enigma2-plugin-drivers-network-usb-rt3070", "", d)} \
     ${@base_contains("MACHINE_BRAND", "Vu+", "enigma2-plugin-drivers-network-usb-rtl8192cu", "", d)} \
