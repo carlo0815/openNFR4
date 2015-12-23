@@ -228,6 +228,7 @@ EXTRA_OECONF = " \
     ${@base_contains("MACHINE_FEATURES", "nolcd", "--with-nolcd" , "", d)} \
     ${@base_contains("TARGET_ARCH", "sh4", "--enable-sh=yes " , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "uianimation", "--with-libvugles2" , "", d)} \
+    ${@base_contains("MACHINE_FEATURES", "osdanimation", "--with-osdanimation" , "", d)} \
     "
 
 LDFLAGS_prepend = "${@base_contains('GST_VERSION', '1.0', ' -lxml2 ', '', d)}"
