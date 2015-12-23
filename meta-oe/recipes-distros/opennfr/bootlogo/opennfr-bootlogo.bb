@@ -27,7 +27,7 @@ SRC_URI = "file://splash480.bmp file://splash576.bmp file://bootlogo.mvi file://
 "
 SRC_URI_append_gb800ue = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin"
 #SRC_URI_append_gbquad = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin"
-SRC_URI_append_gb7358 = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin"
+#SRC_URI_append_gb7358 = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin"
 #SRC_URI_append_gbquadplus = "file://lcdsplash400.bin file://lcdwaitkey400.bin file://lcdwarning400.bin"
 SRC_URI_append_vuduo2 = "file://lcdbootlogo.png file://bootlogo.py"
 SRC_URI_append_7100s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin file://lcdcomplete220.bin"
