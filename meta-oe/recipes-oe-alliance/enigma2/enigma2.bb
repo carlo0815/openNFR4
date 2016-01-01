@@ -8,7 +8,7 @@ DEPENDS = " \
     gettext-native \
     gstreamer1.0-plugins-base gstreamer1.0 \
     jpeg \
-    libdreamdvd libdvbsi++ libfribidi libmad libpng libsigc++-1.2 libungif giflib libxml2 libxmlccwrap \
+    libdreamdvd libdvbsi++ libfribidi libmad libpng libsigc++-1.2 giflib libxml2 libxmlccwrap \
     openssl \
     python python-imaging python-twisted python-wifi \
     swig-native \
@@ -63,7 +63,16 @@ PYTHON_RDEPS = " \
     python-process \
     python-imaging \
     python-enum34 \
-    python-pyasn1 \
+    python-pyasn1 \    
+    python-pycrypto \
+    python-json \
+    python-misc \
+    python-textutils \
+    python-compression \
+    python-robotparser \
+    python-mechanize \
+    python-pyopenssl \
+    python-html \
     "
 
 GST_BASE_RDEPS = "  \
@@ -102,10 +111,12 @@ GST_GOOD_RDEPS = "  \
     "
 
 GST_BAD_RDEPS = "  \
+    gstreamer1.0-plugins-bad-dashdemux \
     gstreamer1.0-plugins-bad-mms \
     gstreamer1.0-plugins-bad-mpegpsdemux \
     gstreamer1.0-plugins-bad-mpegtsdemux \
     gstreamer1.0-plugins-bad-rtmp \
+    gstreamer1.0-plugins-bad-smoothstreaming \
     gstreamer1.0-plugins-bad-faad \
     gstreamer1.0-plugins-bad-fragmented \
     gstreamer1.0-plugins-bad-videoparsersbad \
@@ -159,12 +170,13 @@ DESCRIPTION_append_enigma2-plugin-systemplugins-networkwizard = "provides easy s
 RDEPENDS_enigma2-plugin-extensions-dvdburn = "dvd+rw-tools dvdauthor mjpegtools cdrkit python-imaging ${DEMUXTOOL}"
 RDEPENDS_enigma2-plugin-systemplugins-hotplug = "hotplug-e2-helper"
 CONFFILES_enigma2-plugin-extensions-openxtareader = "/usr/lib/enigma2/python/Plugins/Extensions/OpenXtaReader/db/favoriten"
+RDEPENDS_enigma2-plugin-extensions-openxtareader = "python-lxml"
 
 inherit autotools-brokensep gitpkgv pkgconfig pythonnative
 
-PV = "3.0+git${SRCPV}"
-PKGV = "3.0+git${GITPKGV}"
-PR = "r23"
+PV = "5.1+git${SRCPV}"
+PKGV = "5.1+git${GITPKGV}"
+PR = "r1"
 
 SRC_URI = "${ENIGMA2_URI}"
 
@@ -209,10 +221,10 @@ EXTRA_OECONF = " \
     STAGING_LIBDIR=${STAGING_LIBDIR} \
     --with-boxtype=${MACHINE} \
     --with-machinebuild="${MACHINEBUILD}" \
-    --with-po \
     --with-libsdl=no \
+    --with-po \
     --enable-dependency-tracking \
-    --with-gstversion=1.0 \
+    ${@base_contains("GST_VERSION", "1.0", "--with-gstversion=1.0", "", d)} \
     ${@base_contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd", "--with-colorlcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "colorlcd128", "--with-colorlcd128" , "", d)} \
