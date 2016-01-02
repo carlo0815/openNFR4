@@ -9,7 +9,7 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGES = "${PN}"
 
 PV = "1.0"
-PR = "r65"
+PR = "r70"
 
 DEPENDS = "enigma2-plugin-drivers-usbserial"
 RECOMMENDS = "enigma2-plugin-extensions-et-livestream"
@@ -42,10 +42,11 @@ RDEPENDS_${PN} = " \
     ${@base_contains("MACHINE_FEATURES", "omb", "enigma2-plugin-extensions-openmultiboot", "", d)} \
     ${@base_contains("MACHINE_FEATURES", "omb", "openmultiboot", "", d)} \
     ${@base_contains("MACHINE_FEATURES", "xbmc", "enigma2-plugin-extensions-xbmc", "", d)} \
+    ${@base_contains("MACHINE_FEATURES", "webkithbbtv", "webkit-hbbtv-browser", "", d)} \
     \
     ${@base_contains("MACHINE_FEATURES", "fullgraphiclcd", "lcdpicons-enigma2-meta" , "", d)} \
     \
-    ${@base_contains("MACHINE_FEATURES", "sdl", "snes9x-sdl" , "", d)} \
+    ${@base_contains("MACHINE_FEATURES", "sdl", "enigma2-plugin-extensions-snesmanager" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "gles", "libmicrohttpd libnfs libshairport libtinyxml mysql5 yajl" , "", d)} \
     \
     autofs \
@@ -83,6 +84,7 @@ RDEPENDS_${PN} = " \
     procps \
     pyload \
     python-circuits python-circuits-bricks python-cocy python-mechanize python-requests livestreamer livestreamersrv \
+    python-ujson python-singledispatch python-futures \
     rsync \
     rtorrent \
     sabnzbd \
