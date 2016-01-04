@@ -9,7 +9,7 @@ require conf/license/license-gplv2.inc
 RDEPENDS_${PN} += "showiframe"
 
 PV = "5.1"
-PR = "r3"
+PR = "r4"
 
 S = "${WORKDIR}"
 
@@ -67,29 +67,6 @@ do_install() {
     install -m 0644 radio.mvi ${D}/usr/share/enigma2/radio.mvi
     install -d ${D}/${sysconfdir}/init.d
     install -m 0755 bootlogo.sh ${D}/${sysconfdir}/init.d/bootlogo
-}
-do_install_append_gb800ue() {
-    install -d ${D}/usr/share
-    install -m 0644 lcdwaitkey220.bin ${D}/usr/share/lcdwaitkey.bin
-    install -m 0644 lcdwarning220.bin ${D}/usr/share/lcdwarning.bin
-}
-
-do_install_append_gbquad() {
-    install -d ${D}/usr/share
-    install -m 0644 lcdwaitkey220.bin ${D}/usr/share/lcdwaitkey.bin
-    install -m 0644 lcdwarning220.bin ${D}/usr/share/lcdwarning.bin	
-}
-
-do_install_append_gb7358() {
-    install -d ${D}/usr/share
-    install -m 0644 lcdwaitkey220.bin ${D}/usr/share/lcdwaitkey.bin
-    install -m 0644 lcdwarning220.bin ${D}/usr/share/lcdwarning.bin	
-}
-
-do_install_append_gbquadplus() {
-    install -d ${D}/usr/share
-    install -m 0644 lcdwaitkey400.bin ${D}/usr/share/lcdwaitkey.bin
-    install -m 0644 lcdwarning400.bin ${D}/usr/share/lcdwarning.bin
 }
 
 do_install_append_vuduo2() {
