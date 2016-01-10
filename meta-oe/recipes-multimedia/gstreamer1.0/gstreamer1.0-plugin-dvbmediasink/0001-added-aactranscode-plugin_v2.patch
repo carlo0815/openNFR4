@@ -32,7 +32,7 @@ index ed319cd..a359e25 100644
  
  if HAVE_DTSDOWNMIX
  plugin_LTLIBRARIES += libgstdtsdownmix.la
-@@ -50,4 +50,18 @@ libgstdtsdownmix_la_CFLAGS = $(GST_CFLAGS)
+@@ -50,4 +50,19 @@ libgstdtsdownmix_la_CFLAGS = $(GST_CFLAGS)
  libgstdtsdownmix_la_LIBADD = $(GST_LIBS) -lgstbase-$(GST_MAJORMINOR) $(DTS_LIBS) $(GST_PLUGINS_BASE_LIBS) $(GST_BASE_LIBS) -lgstaudio-$(GST_MAJORMINOR)
  libgstdtsdownmix_la_LDFLAGS = $(GST_PLUGIN_LDFLAGS)
  libgstdtsdownmix_la_LIBTOOLFLAGS = $(GST_PLUGIN_LIBTOOLFLAGS)
