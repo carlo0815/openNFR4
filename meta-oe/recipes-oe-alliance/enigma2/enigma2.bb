@@ -99,7 +99,6 @@ GST_GOOD_RDEPS = "  \
     gstreamer1.0-plugins-good-flv \
     gstreamer1.0-plugins-good-icydemux \
     gstreamer1.0-plugins-good-id3demux \
-    gstreamer1.0-plugins-good-isomp4 \
     gstreamer1.0-plugins-good-matroska \
     gstreamer1.0-plugins-good-rtp \
     gstreamer1.0-plugins-good-rtpmanager \
