@@ -14,8 +14,8 @@ SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-bad;branch=master
 SRC_URI += "file://0001-rtmp-fix-seeking-and-potential-segfault.patch"
 
 inherit gitpkgv
-PV = "1.7.0+git${SRCPV}"
-PKGV = "1.7.0+git${GITPKGV}"
+PV = "1.7.1+git${SRCPV}"
+PKGV = "1.7.1+git${GITPKGV}"
 
 do_configure_prepend() {
 	cd ${S}
