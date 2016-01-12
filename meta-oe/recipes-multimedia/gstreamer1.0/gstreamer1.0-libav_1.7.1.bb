@@ -21,8 +21,8 @@ S = "${WORKDIR}/git"
 SRCREV = "${AUTOREV}"
  
 inherit gitpkgv
-PV = "1.7.0+git${SRCPV}"
-PKGV = "1.7.0+git${GITPKGV}"
+PV = "1.7.1+git${SRCPV}"
+PKGV = "1.7.1+git${GITPKGV}"
 
 
 LIBAV_EXTRA_CONFIGURE_COMMON_ARG = "--target-os=linux \
