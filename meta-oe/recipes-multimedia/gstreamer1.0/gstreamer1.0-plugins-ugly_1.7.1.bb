@@ -11,8 +11,8 @@ SRCREV = "${AUTOREV}"
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-ugly;branch=master"
 
 inherit gitpkgv
-PV = "1.7.0+git${SRCPV}"
-PKGV = "1.7.0+git${GITPKGV}"
+PV = "1.7.1+git${SRCPV}"
+PKGV = "1.7.1+git${GITPKGV}"
 
 do_configure_prepend() {
 	cd ${S}
