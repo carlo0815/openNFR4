@@ -52,7 +52,7 @@ THIRDPARTY_MACHINE_PLUGINS_vuduo2 = " \
     enigma2-plugin-extensions-multiquickbutton_*_vu_all.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_vusolo4k = " \
-    enigma2-plugin-extensions-vmc_3.04R19_vusolo4k.ipk \
+    enigma2-plugin-extensions-vmc_3.04R24_all.ipk \
     "    
 
 THIRDPARTY_MACHINE_PLUGINS_et9x00 = " \
