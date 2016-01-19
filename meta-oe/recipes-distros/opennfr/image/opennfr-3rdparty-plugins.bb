@@ -27,57 +27,13 @@ S = "${WORKDIR}/git"
 
 DEPENDS = "enigma2"
 
-THIRDPARTY_MACHINE_PLUGINS_gbquad = " \
-    enigma2-plugin-extensions-multiquickbutton_*_gb_*.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_gb800ue = " \
-    enigma2-plugin-extensions-multiquickbutton_*_gb_*.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_gb800se = " \
-    enigma2-plugin-extensions-multiquickbutton_*_gb_*.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_gb800solo = " \
-    enigma2-plugin-extensions-multiquickbutton_*_gb_*.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_vusolo = " \
-    enigma2-plugin-extensions-multiquickbutton_*_vu_all.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_vuduo = " \
-    enigma2-plugin-extensions-multiquickbutton_*_vu_all.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_vusolo2 = " \
-    enigma2-plugin-extensions-multiquickbutton_*_vu_all.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_vuduo2 = " \
-    enigma2-plugin-extensions-multiquickbutton_*_vu_all.ipk \
-    "
 THIRDPARTY_MACHINE_PLUGINS_vusolo4k = " \
     enigma2-plugin-extensions-vmc_3.04R24_all.ipk \
     "    
-
-THIRDPARTY_MACHINE_PLUGINS_et9x00 = " \
-    enigma2-plugin-extensions-et-*.ipk \
-    enigma2-plugin-extensions-multiquickbutton_*_et_mipsel.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_et6x00 = " \
-    enigma2-plugin-extensions-et-*.ipk \
-    enigma2-plugin-extensions-multiquickbutton_*_et_mipsel.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_et5x00 = " \
-    enigma2-plugin-extensions-et-*.ipk \
-    enigma2-plugin-extensions-multiquickbutton_*_et_mipsel.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_et4x00 = " \
-    enigma2-plugin-extensions-et-*.ipk \
-    enigma2-plugin-extensions-multiquickbutton_*_et_mipsel.ipk \
-    "
 THIRDPARTY_MACHINE_PLUGINS_e3hd = " \
     enigma2-plugin-extensions-hbbtv_2.13_E3HD_mips32el.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_odinm7 = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_maram9 = " \
     enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_starsatlx = " \
@@ -90,21 +46,6 @@ THIRDPARTY_MACHINE_PLUGINS_axodin = " \
     enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
     "
 THIRDPARTY_MACHINE_PLUGINS_axase3 = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_tmtwin = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_tmsingle = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_xp100mk= " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_sf8= " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_xp1000= " \
     enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
     "
 do_install() {
