@@ -103,4 +103,25 @@ do_deploy_append_sh4() {
     fi
 }
 
+do_deploy_append_vusolo4k() {
+    install -d 0755 ${DEPLOY_DIR_IPK}/3rdparty
+    install -d 0755 ${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty
+    install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
+    install -m 0644 ${S}/*vusolo4k.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
+    rm -f ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-backupsuite*.ipk || true
+    install -m 0644 ${S}/enigma2-plugin-extensions-et-portal*.ipk ${DEPLOY_DIR_IPK}/3rdparty || true
+    Z1=$(ls -1 ${S}/*${MACHINE}.ipk | wc -l)
+    if [ $Z1 -gt 0 ]; then
+        install -m 0644 ${S}/*${MACHINE}.ipk ${DEPLOY_DIR_IPK}/${MACHINE} #|| true
+    fi    
+    pkgdir=${DEPLOY_DIR_IPK}/3rdparty
+    if [ -e $pkgdir ]; then
+        chmod 0755 $pkgdir
+    fi
+    pkgdir=${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty
+    if [ -e $pkgdir ]; then
+        chmod 0755 $pkgdir
+    fi
+}
+
 addtask do_deploy before do_package_write after do_package_write_ipk 
