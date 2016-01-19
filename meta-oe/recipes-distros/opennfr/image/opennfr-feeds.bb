@@ -30,4 +30,5 @@ RRECOMMENDS_${PN} = "\
 	enigma2-plugin-extensions-mainmenu2 \	
 	enigma2-plugin-skins-skallihd-fullhd \
 	enigma2-plugin-skins-smoke-light-hd \
+	enigma2-plugin-extensions-vmc_3.04R24_all \	
 "
