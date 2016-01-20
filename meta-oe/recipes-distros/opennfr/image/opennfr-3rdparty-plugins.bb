@@ -108,6 +108,7 @@ do_deploy_append_vusolo4k() {
     install -d 0755 ${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty
     install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
     Z2=$(ls -1 ${S}/*$vusolo4k.ipk | wc -l)
+    if [ $Z2 -gt 0 ]; then
         install -m 0644 ${S}/*vusolo4k.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
     fi 
     rm -f ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-backupsuite*.ipk || true
