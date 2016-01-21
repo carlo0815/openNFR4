@@ -40,7 +40,6 @@ do_deploy_append() {
     	 install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
    	 install -m 0644 ${S}/*mipsel.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
    	 install -m 0644 ${S}/*mips32el.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
-    	 install -m 0644 ${S}/*arm.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
     fi
     if [ "${TARGET_ARCH}" = "sh4" ]; then
     	 install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
@@ -48,9 +47,8 @@ do_deploy_append() {
     fi
     if [ "${TARGET_ARCH}" = "arm" ]; then
     	 install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
-    	 install -m 0644 ${S}/*arm.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
-   	 install -m 0644 ${S}/*mipsel.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
-   	 install -m 0644 ${S}/*mips32el.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
+   	     install -m 0644 ${S}/*mipsel.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
+   	     install -m 0644 ${S}/*mips32el.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
     fi
     Z1=$(ls -1 ${S}/*${MACHINE}.ipk | wc -l)
     if [ $Z1 -gt 0 ]; then
