@@ -27,33 +27,11 @@ S = "${WORKDIR}/git"
 
 DEPENDS = "enigma2"
 
-THIRDPARTY_MACHINE_PLUGINS_vusolo4k = " \
-    enigma2-plugin-extensions-vmc_3.04R24_all.ipk \
-    "    
-THIRDPARTY_MACHINE_PLUGINS_e3hd = " \
-    enigma2-plugin-extensions-hbbtv_2.13_E3HD_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_odinm7 = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_starsatlx = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_classm = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_axodin = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
-THIRDPARTY_MACHINE_PLUGINS_axase3 = " \
-    enigma2-plugin-extensions-hbbtv_2.12_ODIN_mips32el.ipk \
-    "
 do_install() {
 }
 
 do_deploy() {
 }
-
 
 do_deploy_append() {    
     install -d 0755 ${DEPLOY_DIR_IPK}/3rdparty
