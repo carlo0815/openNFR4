@@ -9,7 +9,7 @@ SRCREV = "${AUTOREV}"
 
 SRC_URI = "file://*"
 
-FILES_${PN} = "/usr/lib/python2.7/* /usr/lib/python2.7/site-packages/twisted/web/*"
+FILES_${PN} = "/bin* /usr/lib/python2.7/* /usr/lib/python2.7/site-packages/twisted/web/*"
 
 S = "${WORKDIR}"
 
@@ -26,6 +26,11 @@ do_install() {
         install -m 755 ${f} ${D}/usr/lib/python2.7/site-packages/twisted/web/${f}
     done
 
+    install -d ${D}/bin
+    for f in bash-4k.tar.gz bash-mips.tar.gz sh.tar.gz
+    do
+        install -m 755 ${f} ${D}/bin/${f}
+    done
 }
 
 
