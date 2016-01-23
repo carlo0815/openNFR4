@@ -59,24 +59,10 @@ rootfs_postprocess() {
 			cd ${IMAGE_ROOTFS}/bin
 				if [ "${TARGET_ARCH}" = "arm" ]; then
 					rm -rf ${IMAGE_ROOTFS}/bin/sh
-					rm -rf ${IMAGE_ROOTFS}/bin/bash
-					tar xvpzf ${IMAGE_ROOTFS}/bin/bash-4k.tar.gz -C ${IMAGE_ROOTFS}/bin/
-					mv ${IMAGE_ROOTFS}/bin/bash-4k ${IMAGE_ROOTFS}/bin/bash
-					rm -rf ${IMAGE_ROOTFS}/bin/bash-4k.tar.gz
-					rm -rf ${IMAGE_ROOTFS}/bin/bash-mips.tar.gz
-					#tar xvpzf ${IMAGE_ROOTFS}/bin/sh.tar.gz -C ${IMAGE_ROOTFS}/bin/	
-					#rm -rf ${IMAGE_ROOTFS}/bin/sh.tar.gz
 					ln -s ${IMAGE_ROOTFS}/bin/bash ${IMAGE_ROOTFS}/bin/sh || true
 				fi
 				if [ "${TARGET_ARCH}" = "mipsel" ]; then
 					rm -rf ${IMAGE_ROOTFS}/bin/sh
-					rm -rf ${IMAGE_ROOTFS}/bin/bash
-					tar xvpzf ${IMAGE_ROOTFS}/bin/bash-mips.tar.gz -C ${IMAGE_ROOTFS}/bin/
-					mv ${IMAGE_ROOTFS}/bin/bash-mips ${IMAGE_ROOTFS}/bin/bash
-					rm -rf ${IMAGE_ROOTFS}/bin/bash-mips.tar.gz
-					rm -rf ${IMAGE_ROOTFS}/bin/bash-4k.tar.gz
-					#tar xvpzf ${IMAGE_ROOTFS}/bin/sh.tar.gz -C ${IMAGE_ROOTFS}/bin/	
-					#rm -rf ${IMAGE_ROOTFS}/bin/sh.tar.gz
 					ln -s ${IMAGE_ROOTFS}/bin/bash ${IMAGE_ROOTFS}/bin/sh || true
 				fi
 			cd $curdir
