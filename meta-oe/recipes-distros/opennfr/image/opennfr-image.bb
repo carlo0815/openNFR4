@@ -65,7 +65,7 @@ rootfs_postprocess() {
 			#		rm -rf ${IMAGE_ROOTFS}/bin/sh
 			#		ln -s ${IMAGE_ROOTFS}/bin/bash ${IMAGE_ROOTFS}/bin/sh || true
 			#	fi
-			cd $curdir
+			#cd $curdir
 
     set -x
 
