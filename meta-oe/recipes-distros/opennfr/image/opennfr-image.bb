@@ -56,15 +56,15 @@ rootfs_postprocess() {
 			rm -rf ${IMAGE_ROOTFS}/usr/lib/python2.7/argparse-neu.py
 			cd $curdir
 
-			cd ${IMAGE_ROOTFS}/bin
-				if [ "${TARGET_ARCH}" = "arm" ]; then
-					rm -rf ${IMAGE_ROOTFS}/bin/sh
-					ln -s ${IMAGE_ROOTFS}/bin/bash ${IMAGE_ROOTFS}/bin/sh || true
-				fi
-				if [ "${TARGET_ARCH}" = "mipsel" ]; then
-					rm -rf ${IMAGE_ROOTFS}/bin/sh
-					ln -s ${IMAGE_ROOTFS}/bin/bash ${IMAGE_ROOTFS}/bin/sh || true
-				fi
+			#cd ${IMAGE_ROOTFS}/bin
+			#	if [ "${TARGET_ARCH}" = "arm" ]; then
+			#		rm -rf ${IMAGE_ROOTFS}/bin/sh
+			#		ln -s ${IMAGE_ROOTFS}/bin/bash ${IMAGE_ROOTFS}/bin/sh || true
+			#	fi
+			#	if [ "${TARGET_ARCH}" = "mipsel" ]; then
+			#		rm -rf ${IMAGE_ROOTFS}/bin/sh
+			#		ln -s ${IMAGE_ROOTFS}/bin/bash ${IMAGE_ROOTFS}/bin/sh || true
+			#	fi
 			cd $curdir
 
     set -x
