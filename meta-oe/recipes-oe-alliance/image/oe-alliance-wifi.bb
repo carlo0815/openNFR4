@@ -10,7 +10,7 @@ inherit packagegroup
 ALLOW_EMPTY_${PN} = "1"
 PACKAGES = "${PN}"
 
-PV = "1.0"
+PV = "5.2"
 PR = "r18"
 
 
