@@ -174,8 +174,8 @@ RDEPENDS_enigma2-plugin-extensions-openxtareader = "python-lxml"
 
 inherit autotools-brokensep gitpkgv pkgconfig pythonnative
 
-PV = "5.1+git${SRCPV}"
-PKGV = "5.1+git${GITPKGV}"
+PV = "5.2+git${SRCPV}"
+PKGV = "5.2+git${GITPKGV}"
 PR = "r2"
 
 SRC_URI = "${ENIGMA2_URI}"
@@ -202,6 +202,10 @@ SRC_URI_append_azboxminime = " \
 SRC_URI_append_vuduo = " \
     file://duo_VFD.patch \
     "
+    
+SRC_URI_append_opennfr = " \
+     file://tuxbox_fix_DVB_API_VERSION_check_for_gcc5.patch \
+     "
 
 S = "${WORKDIR}/git"
 
