@@ -6,7 +6,7 @@ DISTRO_FEATURES_BACKFILL_CONSIDERED += "pulseaudio"
 
 OE_TERMINAL ?= "auto"
 DISTRO_NAME ?= "opennfr"
-DISTRO_VERSION = "5.1"
+DISTRO_VERSION = "5.2"
 DISTRO_TYPE ?= "Release"
 BUILD_VERSION = "1"
 
@@ -69,8 +69,8 @@ FULL_OPTIMIZATION_pn-tremor = "${O3_OPT}"
 FULL_OPTIMIZATION_pn-zlib = "${O3_OPT}"
 
 PYTHON_BASEVERSION ?= "2.7"
-PREFERRED_VERSION_python ?= "2.7.9"
-PREFERRED_VERSION_python-native ?= "2.7.9"
+PREFERRED_VERSION_python ?= "2.7.11"
+PREFERRED_VERSION_python-native ?= "2.7.11"
 
 # qtwebkit
 PREFERRED_VERSION_qt4-native ?= "4.8.7"
