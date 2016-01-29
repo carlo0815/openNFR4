@@ -223,7 +223,6 @@ IMAGE_CMD_ubi_append = "\
     rm -rf bwidowx; \
     rm -rf bwidowx2; \
     rm -rf opticum; \
-    cp ${DEPLOY_DIR_IMAGE}/*.zip /media/UBUNTU/OPENNFR5-3/image-zips; \    
     "
 
 MACHINE_FEATURES += "3dtv alsa hdmicec switchoff wifi bootsplash omb"
