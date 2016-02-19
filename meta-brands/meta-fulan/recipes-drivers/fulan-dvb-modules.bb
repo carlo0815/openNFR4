@@ -8,15 +8,15 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/COPYING;md5=751419260aa954499f7abaabaa882b
 
 RDEPENDS_${PN} = "stinit"
 
-SRCDATE = "20150806"
+SRCDATE = "20151113"
 KV = "2.6.32.61-stm24-0217"
-SRCREV = "d09675989743a5f5705e47438575a675f9cfaa18"
+SRCREV = "68dd588335a29d3cc4fab7bbbf51a29c2132af2d"
 
 inherit module
 
 PACKAGES = "${PN} ${PN}-dev"
 
-PR = "r33"
+PR = "r36"
 PV = "${KV}+${SRCDATE}"
 
 PTI_NP_PATH ?= "/data/pti_np"
@@ -29,6 +29,8 @@ SRC_URI = " \
     file://silence_tuner_printk.patch;patch=1 \
     file://silence_stmfb_printk.patch;patch=1 \
     file://fix_makefile.patch;patch=1 \
+    file://disable_video_free_on_release.patch;patch=1 \
+    file://add_hdmi_colorspace_proc.patch;patch=1 \
     file://ddbootup \
     file://sh4booster \
     file://modules.conf \
@@ -143,10 +145,10 @@ do_install() {
 	install -m 0755 ${WORKDIR}/sh4booster ${D}${sysconfdir}/init.d
 	ln -sf ../init.d/sh4booster ${D}${sysconfdir}/rcS.d/S05sh4booster
 
-    install -m 644 ${WORKDIR}/${MACHINE}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko
+    install -m 644 ${WORKDIR}/${MACHINE}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko	
 
     find ${D} -name stmcore-display-sti7106.ko | xargs -r rm # we don't have a 7106 chip
 }
 
 FILES_${PN}-dev += "${includedir}"
-
+ 
