@@ -16,7 +16,7 @@ inherit module
 
 PACKAGES = "${PN} ${PN}-dev"
 
-PR = "r36"
+PR = "r37"
 PV = "${KV}+${SRCDATE}"
 
 PTI_NP_PATH ?= "/data/pti_np"
@@ -36,13 +36,14 @@ SRC_URI = " \
     file://modules.conf \
     file://modules-conf.conf \
     file://COPYING \
-    file://${MACHINE}/pti.ko \
 " 
 
 FILES_${PN} = "${sysconfdir}/init.d ${sysconfdir}/rcS.d ${sysconfdir}/modules-load.d ${sysconfdir}/modprobe.d"
 FILES = ""
 
 S = "${WORKDIR}/git"
+
+EXTRA_OEMAKE = "-e MAKEFLAGS="
 
 do_configure_prepend () {
 
@@ -145,7 +146,13 @@ do_install() {
 	install -m 0755 ${WORKDIR}/sh4booster ${D}${sysconfdir}/init.d
 	ln -sf ../init.d/sh4booster ${D}${sysconfdir}/rcS.d/S05sh4booster
 
-    install -m 644 ${WORKDIR}/${MACHINE}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko	
+    # if no pti_np sources are available and a custom pti.ko is present, overwrite the tdt one
+    if [ ! -e ${PTI_NP_PATH}/Makefile ]; then
+        if [ -e ${PTI_NP_PATH}/pti.ko ]; then
+            echo "Found custom pti binary.." 
+            install -m 644 ${PTI_NP_PATH}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko
+        fi
+    fi
 
     find ${D} -name stmcore-display-sti7106.ko | xargs -r rm # we don't have a 7106 chip
 }
