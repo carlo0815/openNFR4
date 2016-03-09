@@ -131,12 +131,10 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-fulan"
 PREFERRED_VERSION_linux-libc-headers = "2.6.32"
 PREFERRED_VERSION_directfb = "1.4.12"
 SERIAL_CONSOLE = "115200 ttyAS0"
-#PREFERRED_VERSION_lirc ?= "0.9.0"
-PREFERRED_VERSION_libtalloc = "2.0.1"
 
 DVBPROVIDER = "kernel"
 
-MACHINE_FEATURES = "3dtv alsa hdmicec switchoff kernel26 ext2 usbhost serial dvb-c singlecore textlcd sh4booster no-nmap omb directfb sdl"
+MACHINE_FEATURES = "3dtv alsa hdmicec switchoff kernel26 ext2 usbhost serial dvb-c singlecore textlcd sh4booster no-nmap omb skins1080 directfb sdl"
 
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3"
 
@@ -157,13 +155,13 @@ IMAGE_FSTYPES ?= "jffs2"
 #INHERIT += "usb_image-spark71xx"
 
 IMAGE_CLASSES += "usb_image-spark71xx"
-INITRAMFS_FSTYPES = "ext2.gz spark-updt"
+INITRAMFS_FSTYPES = "ext2.gz"
 
 IMAGE_CMD_jffs2_prepend = " \
     rm -rf ${IMAGE_ROOTFS}/tmp/*; \
     "
 
-IMAGE_CMD_jffs2_append = "\
+IMAGE_CMD_jffs2_append = "; \
     mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
     mv ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.jffs2 ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${ROOTFS_FILE}; \
     cp ${DEPLOY_DIR_IMAGE}/uImage ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/${KERNEL_FILE}; \
@@ -190,7 +188,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     "
 
 MACHINE_EXTRA_RRECOMMENDS = " \
-    fulan-gst-plugin-dvbmediasink \
+    gstreamer1.0-plugin-dvbmediasink \
     enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \
     "
@@ -209,4 +207,3 @@ require conf/machine/include/tune-sh4.inc
 
 # add support for extra feeds
 PACKAGE_ARCHS += " ${MACHINEBUILD}"
- 
