@@ -43,7 +43,8 @@ do_deploy_append() {
          install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
          install -m 0644 ${S}/*mipsel.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
          install -m 0644 ${S}/*mips32el.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
-        fi 
+        fi
+        rm  ${DEPLOY_DIR_IPK}/3rdparty/libav_9.18-r0_mips32el.ipk
     fi
     if [ "${TARGET_ARCH}" = "sh4" ]; then
     	 install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
@@ -57,6 +58,7 @@ do_deploy_append() {
    	     install -m 0644 ${S}/*mipsel.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
    	     install -m 0644 ${S}/*mips32el.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
    	    fi 
+   	    rm  ${DEPLOY_DIR_IPK}/3rdparty/libav_9.18-r0_mips32el.ipk
     fi
     Z1=$(ls -1 ${S}/*${MACHINE}.ipk | wc -l)
     if [ $Z1 -gt 0 ]; then
