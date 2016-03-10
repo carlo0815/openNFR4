@@ -37,9 +37,6 @@ do_deploy_append() {
     install -d 0755 ${DEPLOY_DIR_IPK}/3rdparty
     install -d 0755 ${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty
     if [ "${TARGET_ARCH}" = "mipsel" ]; then
-        if [ "libav_9.18-r0_mips32el.ipk" ]; then
-         install -m 0644 ${S}/libav_9.18-r0_mips32el.ipk ${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty #|| true
-        else 
          install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
          install -m 0644 ${S}/*mipsel.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
          install -m 0644 ${S}/*mips32el.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
@@ -51,9 +48,7 @@ do_deploy_append() {
     fi
     if [ "${TARGET_ARCH}" = "arm" ]; then
         if [ "libav_9.18-r0_armv7ahf-neon.ipk" ]; then
-         install -m 0644 ${S}/libav_9.18-r0_mips32el.ipk ${DEPLOY_DIR_IPK}/${MACHINE}_3rdparty #|| true
-        else 
-    	 install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
+         install -m 0644 ${S}/*all.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
    	     install -m 0644 ${S}/*mipsel.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
    	     install -m 0644 ${S}/*mips32el.ipk ${DEPLOY_DIR_IPK}/3rdparty #|| true
    	    fi 
