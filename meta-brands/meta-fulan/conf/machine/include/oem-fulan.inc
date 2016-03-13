@@ -183,7 +183,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += " \
     fp-control \
     stlirc \
     stinit \
-    fulan-dvb-modules \
+    fulan-dvb-modules-${MACHINE} \
     mtd-utils-jffs2 \
     "
 
@@ -207,3 +207,4 @@ require conf/machine/include/tune-sh4.inc
 
 # add support for extra feeds
 PACKAGE_ARCHS += " ${MACHINEBUILD}"
+
