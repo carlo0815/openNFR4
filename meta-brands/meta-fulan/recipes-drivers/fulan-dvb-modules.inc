@@ -36,6 +36,7 @@ SRC_URI = " \
     file://fix_makefile.patch;patch=1 \
     file://disable_video_free_on_release.patch;patch=1 \
     file://add_hdmi_colorspace_proc.patch;patch=1 \
+    file://${MACHINE}/pti.ko \
     file://ddbootup \
     file://sh4booster \
     file://modules.conf \
@@ -151,13 +152,7 @@ do_install() {
 	install -m 0755 ${WORKDIR}/sh4booster ${D}${sysconfdir}/init.d
 	ln -sf ../init.d/sh4booster ${D}${sysconfdir}/rcS.d/S05sh4booster
 
-    # if no pti_np sources are available and a custom pti.ko is present, overwrite the tdt one
-    if [ ! -e ${PTI_NP_PATH}/Makefile ]; then
-        if [ -e ${PTI_NP_PATH}/pti.ko ]; then
-            echo "Found custom pti binary.." 
-            install -m 644 ${PTI_NP_PATH}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko
-        fi
-    fi
+    install -m 644 ${WORKDIR}/${MACHINE}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko	
 
     find ${D} -name stmcore-display-sti7106.ko | xargs -r rm # we don't have a 7106 chip
 }
