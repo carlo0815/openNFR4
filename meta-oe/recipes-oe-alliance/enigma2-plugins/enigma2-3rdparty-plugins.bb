@@ -34,7 +34,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-bildonline_3.1rc6_mips32el.ipk \
     enigma2-plugin-extensions-bluray_1.5c3_mips32el.ipk \
     enigma2-plugin-extensions-boblight-enigma2_0.8r7_mips32el.ipk \
-    enigma2-plugin-extensions-camofs_11.51_all.ipk \
+    enigma2-plugin-extensions-camofs_9.19_all.ipk \
     enigma2-plugin-systemplugins-channelselectionnavigator_0.9_mipsel.ipk \
     enigma2-plugin-extensions-chefkoch_1.4rc5_all.ipk \
     enigma2-plugin-extensions-clevertanken_0.7_all.ipk \
