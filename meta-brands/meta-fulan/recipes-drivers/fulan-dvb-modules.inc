@@ -150,7 +150,7 @@ do_install() {
 	install -m 0755 ${WORKDIR}/sh4booster ${D}${sysconfdir}/init.d
 	ln -sf ../init.d/sh4booster ${D}${sysconfdir}/rcS.d/S05sh4booster
 
-    install -m 644 ${WORKDIR}/${MACHINE}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti/pti.ko	
+    install -m 644 ${WORKDIR}/${MACHINE}/pti.ko ${D}/lib/modules/${KERNEL_VERSION}/extra/pti_np/pti.ko	
 
     find ${D} -name stmcore-display-sti7106.ko | xargs -r rm # we don't have a 7106 chip
 }
