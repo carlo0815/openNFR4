@@ -84,8 +84,6 @@ PREFERRED_PROVIDER_qt4-tools-native = "qt4-native"
 # Force the older version of liberation-fonts until we fix the fontforge issue
 PREFERRED_VERSION_liberation-fonts ?= "1.04"
 
-PREFERRED_VERSION_udev ?= "182"
-
 PREFERRED_VERSION_gstreamer1.0 = "1.7.1"
 PREFERRED_VERSION_gstreamer1.0-plugins-ugly = "1.7.1"
 PREFERRED_VERSION_gstreamer1.0-plugins-good = "1.7.1"
