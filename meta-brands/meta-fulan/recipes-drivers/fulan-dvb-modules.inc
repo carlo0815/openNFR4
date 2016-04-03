@@ -41,6 +41,9 @@ SRC_URI = " \
     file://COPYING \
 " 
 
+SRC_URI_remove_opennfr = " \
+    file://disable_video_free_on_release.patch;patch=1 \
+"     
 FILES_${PN} = "${sysconfdir}/init.d ${sysconfdir}/rcS.d ${sysconfdir}/modules-load.d ${sysconfdir}/modprobe.d"
 FILES = ""
 
