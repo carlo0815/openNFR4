@@ -16,7 +16,18 @@ SRC_URI = "file://Makefile \
           "
 
 S = "${WORKDIR}"
-KV = "${PREFERRED_VERSION_linux-${BRAND_OEM}}"
+addtask patchsource before do_compile
+do_patchsource() {
+	if [ "${BRAND_OEM}" = "ini" ]; then
+	           if [ "MACHINEBUILD" = "xpeedlx3" ] || [ "MACHINEBUILD" = "atemionemesis" ]; then
+	                      KV = "${PREFERRED_VERSION_linux-inihdp}"
+	           elif [ "MACHINEBUILD" = "xpeedlx" ]; then
+	                      KV = "${PREFERRED_VERSION_linux-inihde}"
+	           elif [ "MACHINEBUILD" = "atemio6000" ] || [ "MACHINEBUILD" = "atemio6100" ] || [ "MACHINEBUILD" = "atemio6200" ] || [ "MACHINEBUILD" = "opticumtt" ]; then
+	                      KV = "${PREFERRED_VERSION_linux-inihde2}"	                      
+	else
+	           KV = "${PREFERRED_VERSION_linux-${BRAND_OEM}}"
+}
 
 # The inherit of module.bbclass will automatically name module packages with
 # "kernel-module-" prefix as required by the oe-core build environment.
