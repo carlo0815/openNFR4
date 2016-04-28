@@ -35,7 +35,7 @@ do_patchsource() {
 # "kernel-module-" prefix as required by the oe-core build environment.
 
 do_install() {
-	if [ "${BRAND_OEM}" = "vuplus" ] || [ "${BRAND_OEM}" = "skylake" ]; then
+	if [ "${BRAND_OEM}" = "vuplus" ] || [ "${BRAND_OEM}" = "skylake" ] || [ "${BRAND_OEM}" = "ax" ]; then
 		echo "no bcm need"
 	else
         	install -d ${D}/${sysconfdir}/modules-load.d
