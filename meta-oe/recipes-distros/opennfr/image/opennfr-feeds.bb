@@ -33,7 +33,5 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-skins-fenris-blassermod \
     enigma2-plugin-skins-prime-nfrstyle \
     enigma2-plugin-skins-smoke-light-hd \
-    opera-dumpait \
-    bcm-au \
     enigma2-plugin-extensions-vmc \
 "  
