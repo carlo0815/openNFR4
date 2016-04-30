@@ -20,14 +20,14 @@ addtask patchsource before do_compile
 do_patchsource() {
 	if [ "${BRAND_OEM}" = "ini" ]; then
 	           if [ "MACHINEBUILD" = "xpeedlx3" ] || [ "MACHINEBUILD" = "atemionemesis" ]; then
-	                      KV = "${PREFERRED_VERSION_linux-inihdp}"
+	                      KV="${PREFERRED_VERSION_linux-inihdp}"
 	           elif [ "MACHINEBUILD" = "xpeedlx" ]; then
-	                      KV = "${PREFERRED_VERSION_linux-inihde}"
+	                      KV="${PREFERRED_VERSION_linux-inihde}"
 	           elif [ "MACHINEBUILD" = "atemio6000" ] || [ "MACHINEBUILD" = "atemio6100" ] || [ "MACHINEBUILD" = "atemio6200" ] || [ "MACHINEBUILD" = "opticumtt" ]; then
-	                      KV = "${PREFERRED_VERSION_linux-inihde2}"
+	                      KV="${PREFERRED_VERSION_linux-inihde2}"
 	           fi           
 	else
-	           KV = "${PREFERRED_VERSION_linux-${BRAND_OEM}}"
+	           KV="${PREFERRED_VERSION_linux-${BRAND_OEM}}"
 	fi           
 }
 
