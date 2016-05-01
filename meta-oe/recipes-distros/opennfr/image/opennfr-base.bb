@@ -29,5 +29,4 @@ RDEPENDS_${PN} = "\
     dvbsnoop \
     bash \
     enigma2-plugin-drivers-usbserial \
-    bcm-au \
     "
