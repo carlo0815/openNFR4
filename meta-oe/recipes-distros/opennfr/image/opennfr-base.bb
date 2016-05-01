@@ -27,7 +27,6 @@ RDEPENDS_${PN} = "\
     python-gdata \
     libshowiframe \
     dvbsnoop \
-    bcm-au \
     bash \
     enigma2-plugin-drivers-usbserial \ 
     "
