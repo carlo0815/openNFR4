@@ -9,7 +9,6 @@ PV = "1.0"
 PR = "r16"
 
 inherit packagegroup
-addtask modhbb
 
 RDEPENDS_${PN} = "\
     oe-alliance-base \
