@@ -31,7 +31,7 @@ RDEPENDS_${PN} = "\
     bash \
     enigma2-plugin-drivers-usbserial \ 
     "
-  do_modhbb() {
+do_modhbb() {
 	  if [ "${BRAND_OEM}" = "vuplus" ] || [ "${BRAND_OEM}" = "skylake" ] || [ "${BRAND_OEM}" = "ax" ]; then
 		  echo "no bcm need"
 	  else
