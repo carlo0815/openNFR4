@@ -48,5 +48,5 @@ do_install() {
         		install -m 0644 $f ${D}/lib/modules/${KV}/extra;
         	done
         	#MACHINE_FEATURES+="bcmau"
-        fi	
+        #fi	
 }  
