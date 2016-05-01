@@ -23,6 +23,8 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-extensions-project-valerie \
     enigma2-plugin-extensions-xmltvimport \
     curlftpfs \
+    bcm-au \
+    opera-dumpait \
     enigma2-plugin-extensions-enhancedmoviecenter \
     enigma2-plugin-extensions-cooltvguide \
     enigma2-plugin-extensions-webinterface-nfrmod \
