@@ -20,8 +20,12 @@ S = "${WORKDIR}/git"
 DESTDIR = "enigma2/python/Plugins/Extensions/HbbTV"
 
 do_install() {
-    install -d ${D}/usr/lib/${DESTDIR}
-    install -m 0755 ${S}/src/dumpait ${D}/usr/lib/${DESTDIR}
+    if [ "${BRAND_OEM}" = "vuplus" ]; then
+        echo "use original"
+    else    
+        install -d ${D}/usr/lib/${DESTDIR}
+        install -m 0755 ${S}/src/dumpait ${D}/usr/lib/${DESTDIR}
+    fi    
 }
 
 FILES_${PN} = "${libdir}/${DESTDIR}/dumpait"
