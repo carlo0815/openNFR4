@@ -9,6 +9,7 @@ PV = "1.0"
 PR = "r16"
 
 inherit packagegroup
+addtask modhbb
 
 RDEPENDS_${PN} = "\
     oe-alliance-base \
@@ -30,4 +31,13 @@ RDEPENDS_${PN} = "\
     bash \
     enigma2-plugin-drivers-usbserial \ 
     "
+  do_modhbb() {
+	  if [ "${BRAND_OEM}" = "vuplus" ] || [ "${BRAND_OEM}" = "skylake" ] || [ "${BRAND_OEM}" = "ax" ]; then
+		  echo "no bcm need"
+	  else
+	    RDEPENDS_${PN}+="\
+	    bcm-au \ 
+      " 
+    fi	
+    }  
  
