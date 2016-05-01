@@ -47,5 +47,6 @@ do_install() {
         	for f in ${S}/*.ko; do
         		install -m 0644 $f ${D}/lib/modules/${KV}/extra;
         	done
+        	MACHINE_FEATURES += "bcmau"
         fi	
 }  
