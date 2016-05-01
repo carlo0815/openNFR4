@@ -29,13 +29,6 @@ RDEPENDS_${PN} = "\
     libshowiframe \
     dvbsnoop \
     bash \
-    enigma2-plugin-drivers-usbserial \ 
+    enigma2-plugin-drivers-usbserial \
+    ${@base_contains("MACHINE_FEATURES", "bcmau", "bcm-au" , "", d)} \
     "
-do_modhbb() {
-	  if [ "${BRAND_OEM}" = "vuplus" ] || [ "${BRAND_OEM}" = "skylake" ] || [ "${BRAND_OEM}" = "ax" ] || [ "${BRAND_OEM}" = "formuler" ]; then
-		  echo "no bcm need"
-	  else
-	    RDEPENDS_${PN} += "bcm-au" 
-    	  fi	
-    	   }  
- 
