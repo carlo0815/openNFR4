@@ -16,6 +16,7 @@ SRC_URI = "file://Makefile \
           "
 
 S = "${WORKDIR}"
+KV = "${PREFERRED_VERSION_linux-${BRAND_OEM}}"
 addtask patchsource before do_compile
 do_patchsource() {
 	if [ "${BRAND_OEM}" = "ini" ]; then
@@ -27,7 +28,7 @@ do_patchsource() {
 	                      KV="${PREFERRED_VERSION_linux-ini-hde2}"
 	           fi           
 	else
-	           KV="${PREFERRED_VERSION_linux-${BRAND_OEM}}"
+	           echo "all ok"
 	fi           
 }
 
