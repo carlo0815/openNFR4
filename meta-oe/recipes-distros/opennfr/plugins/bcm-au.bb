@@ -20,11 +20,11 @@ addtask patchsource before do_compile
 do_patchsource() {
 	if [ "${BRAND_OEM}" = "ini" ]; then
 	           if [ "MACHINEBUILD" = "xpeedlx3" ] || [ "MACHINEBUILD" = "atemionemesis" ]; then
-	                      KV="${PREFERRED_VERSION_linux-inihdp}"
+	                      KV="${PREFERRED_VERSION_linux-ini-hdp}"
 	           elif [ "MACHINEBUILD" = "xpeedlx" ]; then
-	                      KV="${PREFERRED_VERSION_linux-inihde}"
+	                      KV="${PREFERRED_VERSION_linux-ini-hde}"
 	           elif [ "MACHINEBUILD" = "atemio6000" ] || [ "MACHINEBUILD" = "atemio6100" ] || [ "MACHINEBUILD" = "atemio6200" ] || [ "MACHINEBUILD" = "opticumtt" ]; then
-	                      KV="${PREFERRED_VERSION_linux-inihde2}"
+	                      KV="${PREFERRED_VERSION_linux-ini-hde2}"
 	           fi           
 	else
 	           KV="${PREFERRED_VERSION_linux-${BRAND_OEM}}"
@@ -39,13 +39,13 @@ do_install() {
 	#	echo "no bcm need"
 	#else
         	install -d ${D}/${sysconfdir}/modules-load.d
-        	install -d ${D}/lib/modules/${KV}/extra
+        	install -d ${D}/lib/modules/${KV}/kernel/drivers/bcm
         
         	touch ${D}${sysconfdir}/modules-load.d/bcm.conf
 	 	echo bcm >> ${D}/${sysconfdir}/modules-load.d/bcm.conf
         
         	for f in ${S}/*.ko; do
-        		install -m 0644 $f ${D}/lib/modules/${KV}/extra;
+        		install -m 0644 $f ${D}/lib/modules/${KV}/kernel/drivers/bcm;
         	done
         	#MACHINE_FEATURES+="bcmau"
         #fi	
