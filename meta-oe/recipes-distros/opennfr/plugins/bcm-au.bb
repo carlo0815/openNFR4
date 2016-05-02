@@ -38,13 +38,13 @@ do_patchsource() {
 do_install() {
 	if [ "${BRAND_OEM}" = "ini" ]; then
         	install -d ${D}/${sysconfdir}/modules-load.d
-        	install -d ${D}/lib/modules/$KV/kernel/drivers/bcm
+        	install -d ${D}/lib/modules/${KERNEL_VERSION}/kernel/drivers/bcm
         
         	touch ${D}${sysconfdir}/modules-load.d/bcm.conf
 	 	echo bcm >> ${D}/${sysconfdir}/modules-load.d/bcm.conf
         
         	for f in ${S}/*.ko; do
-        		install -m 0644 $f ${D}/lib/modules/$KV/kernel/drivers/bcm;
+        		install -m 0644 $f ${D}/lib/modules/${KERNEL_VERSION}/kernel/drivers/bcm;
         	done		
 	else
         	install -d ${D}/${sysconfdir}/modules-load.d
