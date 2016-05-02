@@ -36,9 +36,17 @@ do_patchsource() {
 # "kernel-module-" prefix as required by the oe-core build environment.
 
 do_install() {
-	#if [ "${BRAND_OEM}" = "vuplus" ] || [ "${BRAND_OEM}" = "skylake" ] || [ "${BRAND_OEM}" = "ax" ] || [ "${BRAND_OEM}" = "formuler" ]; then
-	#	echo "no bcm need"
-	#else
+	if [ "${BRAND_OEM}" = "ini" ]; then
+        	install -d ${D}/${sysconfdir}/modules-load.d
+        	install -d ${D}/lib/modules/$KV/kernel/drivers/bcm
+        
+        	touch ${D}${sysconfdir}/modules-load.d/bcm.conf
+	 	echo bcm >> ${D}/${sysconfdir}/modules-load.d/bcm.conf
+        
+        	for f in ${S}/*.ko; do
+        		install -m 0644 $f ${D}/lib/modules/$KV/kernel/drivers/bcm;
+        	done		
+	else
         	install -d ${D}/${sysconfdir}/modules-load.d
         	install -d ${D}/lib/modules/${KV}/kernel/drivers/bcm
         
@@ -49,5 +57,5 @@ do_install() {
         		install -m 0644 $f ${D}/lib/modules/${KV}/kernel/drivers/bcm;
         	done
         	#MACHINE_FEATURES+="bcmau"
-        #fi	
+        fi	
 }  
