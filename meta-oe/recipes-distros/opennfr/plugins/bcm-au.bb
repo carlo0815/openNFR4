@@ -39,13 +39,13 @@ do_install() {
 	#	echo "no bcm need"
 	#else
         	install -d ${D}/${sysconfdir}/modules-load.d
-        	install -d ${D}/lib/modules/${KV}/kernel/drivers/bcm
+        	install -d ${D}/lib/modules/${KV}/extra
         
         	touch ${D}${sysconfdir}/modules-load.d/bcm.conf
 	 	echo bcm >> ${D}/${sysconfdir}/modules-load.d/bcm.conf
         
         	for f in ${S}/*.ko; do
-        		install -m 0644 $f ${D}/lib/modules/${KV}/kernel/drivers/bcm;
+        		install -m 0644 $f ${D}/lib/modules/${KV}/extra;
         	done
         	#MACHINE_FEATURES+="bcmau"
         #fi	
