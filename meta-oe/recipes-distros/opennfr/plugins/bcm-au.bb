@@ -42,6 +42,5 @@ do_install() {
         	for f in ${S}/*.ko; do
         		install -m 0644 $f ${D}/lib/modules/${KV}/kernel/drivers/bcm;
         	done
-        	#MACHINE_FEATURES+="bcmau"
         fi	
 }  
