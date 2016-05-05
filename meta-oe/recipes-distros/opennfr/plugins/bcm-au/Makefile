@@ -1,14 +1,17 @@
-MODULES	= bcm
-kmodule_test-y := bcm.o
-obj-m += $(MODULES:%=%.o)
-BUILD	= $(MODULES:%=%.ko)
+obj-m := bcm.o
+bcm-objs := bcm_au.o aes256.o
 
-default: all
+ccflags-y = -Wno-error=date-time -Wno-warning=date-time
 
-all::
-	$(MAKE) -C $(KERNEL_SOURCE) ARCH=$(ARCH) \
-		SUBDIRS=$(CURDIR) CC=${CC}  modules
+SRC := $(shell pwd)
 
-clean::
-	rm -f $(BUILD) *.o *.ko *.mod.c *.mod.o *~ .*.cmd Module.symvers
-	rm -rf .tmp_versions
+all:
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)
+
+modules_install:
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
+
+clean:
+	rm -f *.o *~ core .depend .*.cmd *.ko *.mod.c
+	rm -f Module.markers Module.symvers modules.order
+	rm -rf .tmp_versions Modules.symvers
