@@ -5,7 +5,7 @@ WORKDIR1 = "${TMPDIR}/work-shared/${MACHINE_DRIVER}/kernel-source"
 inherit module
 
 PR = "r0"
-PV = "0.5"
+PV = "0.6"
 
 SRC_URI = "file://Makefile \
            file://aes256.c \
