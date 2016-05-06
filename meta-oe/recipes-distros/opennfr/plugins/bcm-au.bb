@@ -1,7 +1,7 @@
 SUMMARY = "Example of how to build an external Linux kernel module"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=12f884d2ae1ff87c09e5b7ccc2c4ca7e"
-
+WORKDIR1 = "${TMPDIR}/work-shared/${MACHINE_DRIVER}/kernel-source"
 inherit module
 
 PR = "r0"
@@ -17,6 +17,14 @@ SRC_URI = "file://Makefile \
 
 S = "${WORKDIR}"
 KV = "${KERNEL_VERSION}"
+addtask patchsource before do_compile
+do_patchsource() {
+	if [ "${BRAND_OEM}" = "dags" ]; then
+		rm -rf ${WORKDIR1}/makefile 
+	else
+	        echo "all ok"
+	fi           
+}
 
 # The inherit of module.bbclass will automatically name module packages with
 # "kernel-module-" prefix as required by the oe-core build environment.
