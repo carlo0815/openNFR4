@@ -13,7 +13,6 @@ DEPENDS = " \
     python python-imaging python-twisted python-wifi \
     swig-native \
     tuxtxt-enigma2 \
-    ${@base_contains("TARGET_ARCH", "sh4", "libmmeimage " , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "uianimation", "vuplus-libgles-${MACHINE} libvugles2" , "", d)} \
     "
 
@@ -174,9 +173,9 @@ RDEPENDS_enigma2-plugin-extensions-openxtareader = "python-lxml"
 
 inherit autotools-brokensep gitpkgv pkgconfig pythonnative
 
-PV = "5.2+git${SRCPV}"
-PKGV = "5.2+git${GITPKGV}"
-PR = "r2"
+PV = "5.3+git${SRCPV}"
+PKGV = "5.3+git${GITPKGV}"
+PR = "r3"
 
 SRC_URI = "${ENIGMA2_URI}"
 
@@ -242,7 +241,6 @@ EXTRA_OECONF = " \
     ${@base_contains("MACHINE_FEATURES", "fullgraphiclcd", "--with-fullgraphiclcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "gigabluelcd", "--with-gigabluelcd" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "nolcd", "--with-nolcd" , "", d)} \
-    ${@base_contains("TARGET_ARCH", "sh4", "--enable-sh=yes " , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "uianimation", "--with-libvugles2" , "", d)} \
     ${@base_contains("MACHINE_FEATURES", "osdanimation", "--with-osdanimation" , "", d)} \
     "
