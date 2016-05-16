@@ -1,1 +1,0 @@
-KERNEL=="bcm_au", SYMLINK+="bcm_au", MODE="0444"
