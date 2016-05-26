@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=e021dd6dda6ff1e6b1044002fc662b9b \
                     file://src/hb-ucdn/COPYING;md5=994ba0f1295f15b4bda4999a5bbeddef \
 "
 
-DEPENDS = "glib-2.0 cairo fontconfig freetype"
+DEPENDS = "glib-2.0 cairo fontconfig freetype librtmp"
 
 SRC_URI = "http://www.freedesktop.org/software/harfbuzz/release/${BP}.tar.bz2"
 
@@ -19,8 +19,6 @@ inherit autotools pkgconfig lib_package
 
 PACKAGECONFIG ??= "icu"
 PACKAGECONFIG[icu] = "--with-icu,--without-icu,icu"
-
-DEPENDS_${PN} += "librtmp"
 
 EXTRA_OECONF = " \
     --with-cairo \
