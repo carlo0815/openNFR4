@@ -75,7 +75,7 @@ do_install_append_vuduo2() {
     install -m 0644 bootlogo.py ${D}/${sysconfdir}/init.d/bootlogo.py
 }
 
-do_install_append_solo4k() {
+do_install_append_vusolo4k() {
     install -m 0644 lcdbootlogo.png ${D}/usr/share/lcdbootlogo.png
     install -m 0644 bootlogo.py ${D}/${sysconfdir}/init.d/bootlogo.py
 }
@@ -177,3 +177,4 @@ pkg_postrm_${PN}() {
 
 PACKAGE_ARCH := "${MACHINE_ARCH}"
 FILES_${PN} = "/boot /usr/share /etc/init.d"
+
