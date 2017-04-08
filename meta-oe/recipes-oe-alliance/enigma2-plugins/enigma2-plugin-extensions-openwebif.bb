@@ -33,7 +33,7 @@ PR = "r1"
 
 PACKAGE_ARCH = "all"
 
-SRC_URI = "git://github.com/oe-alliance/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
+SRC_URI = "https://github.com/carlo0815/openNFR4/tree/openNFR5.4/meta-oe/recipes-oe-alliance/enigma2-plugins/enigma2-plugin-extensions-openwebif \
 	openwebifhd.png \
 	openwebif.png \
 	"
