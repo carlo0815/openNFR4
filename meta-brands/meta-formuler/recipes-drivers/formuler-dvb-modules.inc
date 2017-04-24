@@ -10,7 +10,7 @@ PR = "r0"
 SRC_URI = " \
 	http://source.mynonpublic.com/formuler/${MACHINE}-drivers-${KV}-${SRCDATE}.zip \
 	file://cdfs.ko \
-	file://formuler1_4.ko \
+	file://formuler1_4tc.ko \
 "
 
 S = "${WORKDIR}"
