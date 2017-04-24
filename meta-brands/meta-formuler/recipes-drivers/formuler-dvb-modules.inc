@@ -34,8 +34,8 @@ do_install() {
         install -m 0755 ${WORKDIR}/$i.ko ${D}/lib/modules/${KV}/extraci
         echo $i >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf_ci
     done
-    install -m 644 ${WORKDIR}/${MACHINE}/cdfs.ko ${D}/lib/modules/${KV}/extratc
-    install -m 644 ${WORKDIR}/${MACHINE}/formuler1_4.ko ${D}/lib/modules/${KV}/extratc
+    install -m 644 ${WORKDIR}/cdfs.ko ${D}/lib/modules/${KV}/extratc
+    install -m 644 ${WORKDIR}/formuler1_4tc.ko ${D}/lib/modules/${KV}/extratc/formuler1_4.ko
     echo "cdfs" >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf_tc
     echo "formuler1_4" >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf_tc	
 }
