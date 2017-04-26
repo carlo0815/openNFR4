@@ -9,11 +9,14 @@ SRCREV = "${AUTOREV}"
 
 SRC_URI = ""
 
-SRC_URI_append_mipsel = "git://github.com/carlo0815/openNFR-base.git" 
+SRC_URI_append_mipsel = "git://github.com/carlo0815/openNFR-base.git \" 
 SRC_URI_append_sh4 = "git://github.com/carlo0815/openNFR-base.git;protocol=git;branch=sh4"
-SRC_URI_append_formuler1 = "http://source.mynonpublic.com/formuler/formuler1-drivers-al-4.10.6-20170419.zip" 
-SRC_URI_append_formuler3 = "http://source.mynonpublic.com/formuler/formuler3-drivers-al-4.10.6-20170419.zip"
-SRC_URI_append_formuler4 = "http://source.mynonpublic.com/formuler/formuler4-drivers-al-4.10.6-20170419.zip"
+SRC_URI_append_formuler1 = " \
+http://source.mynonpublic.com/formuler/formuler1-drivers-al-4.10.6-20170419.zip \" 
+SRC_URI_append_formuler3 = " \
+http://source.mynonpublic.com/formuler/formuler3-drivers-al-4.10.6-20170419.zip \"
+SRC_URI_append_formuler4 = " \
+http://source.mynonpublic.com/formuler/formuler4-drivers-al-4.10.6-20170419.zip \"
  
 
 FILES_${PN} = "/*"
