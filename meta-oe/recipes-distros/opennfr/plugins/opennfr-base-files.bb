@@ -9,25 +9,25 @@ SRCREV = "${AUTOREV}"
 
 SRC_URI = "git://github.com/carlo0815/openNFR-base.git"
 
-SRC_URI[md5sum] = "43989826c0d376db159ce42c3f9dcdbb"
-SRC_URI[sha256sum] = "e41116da6709346a3314db90124bec14343c5bd8ffa56e4d16f507a16577b08b"
+SRC_URI[formuler1.md5sum] = "43989826c0d376db159ce42c3f9dcdbb"
+SRC_URI[formuler1.sha256sum] = "e41116da6709346a3314db90124bec14343c5bd8ffa56e4d16f507a16577b08b"
 
-SRC_URI[md5sum] = "1ccb0b941035bbfd1e44bbf046d8df69"
-SRC_URI[sha256sum] = "d67988d57a926e3431733dd12bebe65d0aa5e1244ff28b953b89df07d899af50"
+SRC_URI[formuler3.md5sum] = "1ccb0b941035bbfd1e44bbf046d8df69"
+SRC_URI[formuler3.sha256sum] = "d67988d57a926e3431733dd12bebe65d0aa5e1244ff28b953b89df07d899af50"
 
-SRC_URI[md5sum] = "c29e74780f9bd1e2ca957e9cdd613437"
-SRC_URI[sha256sum] = "0f8e5505c044a44932eea1574d6f0f0d197be6e1ab81632f4023beb52caa7939"
+SRC_URI[formuler4.md5sum] = "c29e74780f9bd1e2ca957e9cdd613437"
+SRC_URI[formuler4.sha256sum] = "0f8e5505c044a44932eea1574d6f0f0d197be6e1ab81632f4023beb52caa7939"
 
 
 
 SRC_URI_append_formuler1 += " \
-http://source.mynonpublic.com/formuler/formuler1tc-drivers-al-4.10.6-20170419.zip  \
+http://source.mynonpublic.com/formuler/formuler1tc-drivers-al-4.10.6-20170419.zip;name=formuler1  \
 " 
 SRC_URI_append_formuler3 += " \
-http://source.mynonpublic.com/formuler/formuler3-drivers-al-4.10.6-20170419.zip  \
+http://source.mynonpublic.com/formuler/formuler3-drivers-al-4.10.6-20170419.zip;name=formuler3  \
 "
 SRC_URI_append_formuler4 += "  \
-http://source.mynonpublic.com/formuler/formuler4-drivers-al-4.10.6-20170419.zip  \
+http://source.mynonpublic.com/formuler/formuler4-drivers-al-4.10.6-20170419.zip;name=formuler4  \
 "
  
 
