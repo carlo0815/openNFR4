@@ -24,10 +24,10 @@ SRC_URI_append_formuler1 += " \
 http://source.mynonpublic.com/formuler/formuler1tc-drivers-al-4.10.6-20170419.zip;name=formuler1  \
 " 
 SRC_URI_append_formuler3 += " \
-http://source.mynonpublic.com/formuler/formuler3-drivers-al-4.10.6-20170419.zip;name=formuler3  \
+http://source.mynonpublic.com/formuler/formuler3ip-drivers-al-4.10.6-20170419.zip;name=formuler3  \
 "
 SRC_URI_append_formuler4 += "  \
-http://source.mynonpublic.com/formuler/formuler4-drivers-al-4.10.6-20170419.zip;name=formuler4  \
+http://source.mynonpublic.com/formuler/formuler4ip-drivers-al-4.10.6-20170419.zip;name=formuler4  \
 "
  
 
