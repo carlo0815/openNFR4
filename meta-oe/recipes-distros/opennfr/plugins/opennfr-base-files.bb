@@ -18,9 +18,6 @@ SRC_URI[formuler3.sha256sum] = "d67988d57a926e3431733dd12bebe65d0aa5e1244ff28b95
 SRC_URI[formuler4.md5sum] = "c29e74780f9bd1e2ca957e9cdd613437"
 SRC_URI[formuler4.sha256sum] = "0f8e5505c044a44932eea1574d6f0f0d197be6e1ab81632f4023beb52caa7939"
 
-RDEPENDS_${PN} = "\
-${@bb.utils.contains("MACHINE_NAME", "F1", "", enigma2-plugin-systemplugins-multitranscodingsetup", d)} \
-"
 
 SRC_URI_append_formuler1 += " \
 http://source.mynonpublic.com/formuler/formuler1tc-drivers-al-4.10.6-20170419.zip;name=formuler1  \
