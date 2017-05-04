@@ -13,7 +13,8 @@ PKGV = "4.0.+git${GITPKGV}"
 PR = "r12"
 
 
-SRC_URI="git://github.com/carlo0815/e2openplugin-EnhancedMovieCenter.git"
+SRC_URI="git://github.com/betonme/e2openplugin-EnhancedMovieCenter.git \
+	file://0001-Update-InfoBarSupport.py.patch"
 
 S = "${WORKDIR}/git"
 
