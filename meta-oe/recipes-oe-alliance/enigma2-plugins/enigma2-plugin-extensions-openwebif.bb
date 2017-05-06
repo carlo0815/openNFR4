@@ -33,8 +33,8 @@ PR = "r1"
 
 PACKAGE_ARCH = "all"
 
-SRC_URI="git://github.com/betonme/e2openplugin-EnhancedMovieCenter.git \
-	file://0001-Update-InfoBarSupport.py.patch"
+SRC_URI = "git://github.com/oe-alliance/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
+file://0001-add-openNFR.patch"
 	
 S="${WORKDIR}/git"
 
