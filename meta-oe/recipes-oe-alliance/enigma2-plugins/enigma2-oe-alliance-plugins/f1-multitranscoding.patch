@@ -1,0 +1,13 @@
+--- a/Makefile.am
++++ a/Makefile.am
+@@ -126,6 +126,10 @@
+ SUBDIRS += MultiTransCodingSetup
+ endif
+ 
++if FORMULER1
++SUBDIRS += MultiTransCodingSetup
++endif
++
+ if FORMULER1TC
+ SUBDIRS += MultiTransCodingSetup
+ endif
