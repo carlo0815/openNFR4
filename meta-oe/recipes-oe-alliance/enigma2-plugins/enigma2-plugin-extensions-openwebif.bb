@@ -34,7 +34,8 @@ PR = "r1"
 PACKAGE_ARCH = "all"
 
 SRC_URI = "git://github.com/oe-alliance/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
-file://0001-add-openNFR.patch"
+file://0001-add-openNFR.patch \
+0001-transcoding-support-rename-formuler1-to-formuler1tc.patch"
 	
 S="${WORKDIR}/git"
 
