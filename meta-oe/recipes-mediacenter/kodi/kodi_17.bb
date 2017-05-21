@@ -12,7 +12,7 @@ DEFAULT_PREFERENCE = "-1"
 
 FILESPATH =. "${FILE_DIRNAME}/kodi-17:"
 
-PACKAGE_ARCH = "${MACHINE}"
+#PACKAGE_ARCH = "${MACHINE}"
 
 DEPENDS = " \
             cmake-native \
