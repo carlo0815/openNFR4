@@ -6,7 +6,7 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE.GPL;md5=930e2a5f63425d8dd72dbd7391c43c46"
 
 PACKAGE_ARCH = "${MACHINEBUILD}"
-PR = "r12"
+PR = "r0"
 
 DEFAULT_PREFERENCE = "-1"
 
@@ -71,12 +71,14 @@ DEPENDS = " \
             libupnp \
             libshairport \
             libnfs \
+            alsa-lib \
+            alsa-plugins \
           "
 
 PROVIDES = "xbmc"
 
-SRCREV = "fc1619b118f6d503f920a49cf4ac4afcd0dd6b41"
-PV = "17.1+gitr${SRCPV}"
+SRCREV = "147cec4077415c93d3d84fb82cb6b695b5a9094c"
+PV = "17.3+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;branch=Krypton \
            file://0003-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
            file://0006-Disable-DVD-support.patch \
@@ -88,6 +90,7 @@ SRC_URI = "git://github.com/xbmc/xbmc.git;branch=Krypton \
            file://v3d-platform.patch \
            file://brcmstb-settings.patch \
            file://e2player.patch \
+           file://ffmpeg-autobuild.patch \
 "
 
 SRC_URI_append_libc-musl = " \
@@ -198,6 +201,7 @@ RRECOMMENDS_${PN}_append = " \
    python-sqlite3 \
    python-compression \
    python-profile \
+   python-mmap \
    libcurl \
    lsb \
    os-release \
