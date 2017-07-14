@@ -26,7 +26,7 @@ diff --git a/plugin/controllers/models/info.py b/plugin/controllers/models/info.
 index b9a75d9..78f0622 100644
 --- a/plugin/controllers/models/info.py
 +++ b/plugin/controllers/models/info.py
-@@ -489,7 +489,7 @@ def getInfo(session = None, need_fullinfo = False):
+@@ -492,7 +492,7 @@ def getInfo(session = None, need_fullinfo = False):
  	# TODO: fstab
  
  	info['transcoding'] = False
