@@ -2,7 +2,7 @@ diff --git a/plugin/controllers/views/main.tmpl b/plugin/controllers/views/main.
 index bae2114..1d83af9 100644
 --- a/plugin/controllers/views/main.tmpl
 +++ b/plugin/controllers/views/main.tmpl
-@@ -205,7 +205,7 @@
+@@ -204,7 +204,7 @@
  			<div id="content_container">
  			$content
  			</div>
@@ -11,4 +11,6 @@ index bae2114..1d83af9 100644
  		</div>
  	</div>
  	<form name="portForm" action="web/stream.m3u" method="GET" target="_blank">
+-- 
+2.7.4
 
