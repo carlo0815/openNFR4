@@ -13,7 +13,7 @@ diff --git a/plugin/controllers/ajax.py b/plugin/controllers/ajax.py
 index 1a03944..cd602cf 100644
 --- a/plugin/controllers/ajax.py
 +++ b/plugin/controllers/ajax.py
-@@ -328,7 +328,7 @@ class AjaxController(BaseController):
+@@ -326,7 +326,7 @@ class AjaxController(BaseController):
  		if transcoding:
  			try:
  				transcoder_port = int(config.plugins.transcodingsetup.port.value)
@@ -39,7 +39,7 @@ diff --git a/plugin/controllers/models/stream.py b/plugin/controllers/models/str
 index da7ed74..4af9262 100644
 --- a/plugin/controllers/models/stream.py
 +++ b/plugin/controllers/models/stream.py
-@@ -76,7 +76,7 @@ def getStream(session, request, m3ufile):
+@@ -89,7 +89,7 @@ def getStream(session, request, m3ufile):
  				aspectratio = config.plugins.transcodingsetup.aspectratio.value
  				interlaced = config.plugins.transcodingsetup.interlaced.value
  				args = "?bitrate=%s?width=%s?height=%s?aspectratio=%s?interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
@@ -48,7 +48,7 @@ index da7ed74..4af9262 100644
  		transcoder_port = 8001
  		if "device" in request.args :
  			if request.args["device"][0] == "phone" :
-@@ -156,7 +156,7 @@ def getTS(self, request):
+@@ -178,7 +178,7 @@ def getTS(self, request):
  					aspectratio = config.plugins.transcodingsetup.aspectratio.value
  					interlaced = config.plugins.transcodingsetup.interlaced.value
  					args = "?bitrate=%s?width=%s?height=%s?aspectratio=%s?interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
