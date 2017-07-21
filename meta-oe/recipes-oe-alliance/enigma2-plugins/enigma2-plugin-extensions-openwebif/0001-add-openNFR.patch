@@ -11,6 +11,4 @@ index bae2114..1d83af9 100644
  		</div>
  	</div>
  	<form name="portForm" action="web/stream.m3u" method="GET" target="_blank">
--- 
-2.7.4
 
