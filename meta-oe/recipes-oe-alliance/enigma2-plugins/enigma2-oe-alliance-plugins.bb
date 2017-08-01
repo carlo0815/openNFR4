@@ -58,6 +58,7 @@ DEPENDS = "\
     librtmp \
     minidlna \
     hddtemp \
+    udpxy \
     ppp \
     usbmodeswitch \
     usbmodeswitch-data \
