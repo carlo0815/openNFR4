@@ -41,8 +41,6 @@ PR = "r13"
 S="${WORKDIR}/git/files"
 
 do_install() {
-    install -d ${D}/etc/enigma2
-    cp -rp ${S}/etc/enigma2/subservices.xml ${D}/etc/enigma2
 }
 
 do_install_append_mipsel() {
