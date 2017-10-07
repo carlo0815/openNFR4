@@ -6,8 +6,8 @@ index cd602cf..1a03944 100644
  		if transcoding:
  			try:
  				transcoder_port = int(config.plugins.transcodingsetup.port.value)
--				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000','ew7356','formuler1tc'):
-+				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000','ew7356','formuler1'):
+-				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008','ew7356','formuler1tc'):
++				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008','ew7356','formuler1'):
  					transcoder_port = int(config.OpenWebif.streamport.value)
  			except StandardError:
  				transcoder_port = 0
@@ -20,8 +20,8 @@ index 78f0622..b9a75d9 100644
  	# TODO: fstab
  
  	info['transcoding'] = False
--	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1tc', 'gb7356', 'gb7252')):
-+	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1', 'gb7356', 'gb7252')):
+-	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1tc', 'gb7356', 'gb7252')):
++	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1', 'gb7356', 'gb7252')):
  		if os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/TransCodingSetup/plugin.pyo')) or os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/TranscodingSetup/plugin.pyo')) or os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/MultiTransCodingSetup/plugin.pyo')):
  			info['transcoding'] = True
  
