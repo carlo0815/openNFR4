@@ -6,8 +6,8 @@ index cd602cf..1a03944 100644
  		if transcoding:
  			try:
  				transcoder_port = int(config.plugins.transcodingsetup.port.value)
--				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008','ew7356','formuler1tc'):
-+				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008','ew7356','formuler1'):
+-				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008','ew7356','formuler1tc', 'tiviaraplus'):
++				if getMachineBuild() in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008','ew7356','formuler1', 'tiviaraplus'):
  					transcoder_port = int(config.OpenWebif.streamport.value)
  			except StandardError:
  				transcoder_port = 0
@@ -20,8 +20,8 @@ index 78f0622..b9a75d9 100644
  	# TODO: fstab
  
  	info['transcoding'] = False
--	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1tc', 'gb7356', 'gb7252')):
-+	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1', 'gb7356', 'gb7252')):
+-	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1tc', 'gb7356', 'gb7252', 'tiviaraplus')):
++	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1', 'gb7356', 'gb7252', 'tiviaraplus')):
  		if os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/TransCodingSetup/plugin.pyo')) or os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/TranscodingSetup/plugin.pyo')) or os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/MultiTransCodingSetup/plugin.pyo')):
  			info['transcoding'] = True
  
@@ -33,8 +33,8 @@ index 4af9262..da7ed74 100644
  				aspectratio = config.plugins.transcodingsetup.aspectratio.value
  				interlaced = config.plugins.transcodingsetup.interlaced.value
  				args = "?bitrate=%s?width=%s?height=%s?aspectratio=%s?interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
--	if machinebuild in ('ew7356', 'formuler1tc'):
-+	if machinebuild in ('ew7356', 'formuler1'):
+-	if machinebuild in ('ew7356', 'formuler1tc', 'tiviaraplus'):
++	if machinebuild in ('ew7356', 'formuler1', 'tiviaraplus'):
  		transcoder_port = 8001
  		if "device" in request.args :
  			if request.args["device"][0] == "phone" :
@@ -42,8 +42,8 @@ index 4af9262..da7ed74 100644
  					aspectratio = config.plugins.transcodingsetup.aspectratio.value
  					interlaced = config.plugins.transcodingsetup.interlaced.value
  					args = "?bitrate=%s?width=%s?height=%s?aspectratio=%s?interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
--		elif machinebuild in ('ew7356', 'formuler1tc'):
-+		elif machinebuild in ('ew7356', 'formuler1'):
+-		elif machinebuild in ('ew7356', 'formuler1tc', 'tiviaraplus'):
++		elif machinebuild in ('ew7356', 'formuler1', 'tiviaraplus'):
  			if "device" in request.args :
  				if request.args["device"][0] == "phone" :
  					portNumber = config.OpenWebif.streamport.value
