@@ -34,8 +34,8 @@ PR = "r1"
 PACKAGE_ARCH = "all"
 
 SRC_URI = "git://github.com/oe-alliance/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
-file://0001-add-openNFR.patch \
-file://0001-revert-to-formuler1.patch"
+file://0001-add-openNFR.patch "
+
 	
 S="${WORKDIR}/git"
 
