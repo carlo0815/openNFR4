@@ -29,7 +29,7 @@ DISTUTILS_INSTALL_ARGS = "--root=${D} --install-lib=/usr/lib/enigma2/python/Plug
 SRCREV = "${AUTOREV}"
 PV = "1+git${SRCPV}"
 PKGV = "1+git${GITPKGV}"
-PR = "r4"
+PR = "r5"
 
 PACKAGE_ARCH = "all"
 
