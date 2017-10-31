@@ -36,5 +36,6 @@ EXTRA_OEMAKE = " \
 do_install() {
     install -d ${D}/sbin
     install -m 755 ${S}/src/nfr4x_multiboot ${D}/sbin
-    install -m 644 ${S}/contrib/nfr4x-multiboot-branding-helper.py ${D}/sbin/NFR4XBoot-branding-helper.py
+    install -m 644 ${S}/contrib/nfr4x-multiboot-branding-helper.py ${D}/sbin/nfr4x-multiboot-branding-helper.py
+    mv ${D}/sbin/nfr4x-multiboot-branding-helper.py ${D}/sbin/NFR4XBoot-branding-helper.py
 }
