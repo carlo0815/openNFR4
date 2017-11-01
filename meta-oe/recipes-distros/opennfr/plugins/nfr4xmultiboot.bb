@@ -9,7 +9,7 @@ inherit gitpkgv
 SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
-PR = "r6"
+PR = "r7"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS = "freetype"
@@ -36,5 +36,5 @@ EXTRA_OEMAKE = " \
 do_install() {
     install -d ${D}/sbin
     install -m 755 ${S}/src/nfr4x_multiboot ${D}/sbin
-    install -m 644 ${S}/contrib/nfr4x-multiboot-branding-helper.py ${D}/sbin/NFR4XBoot-branding-helper.py
+    install -m 644 ${S}/contrib/nfr4x-multiboot-branding-helper.py ${D}/sbin
 }
