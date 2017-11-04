@@ -1,8 +1,8 @@
 diff --git a/plugin/controllers/ajax.py b/plugin/controllers/ajax.py
-index cd602cf..1a03944 100644
+index 4c661cd..057f749 100644
 --- a/plugin/controllers/ajax.py
 +++ b/plugin/controllers/ajax.py
-@@ -328,7 +328,7 @@ class AjaxController(BaseController):
+@@ -326,7 +326,7 @@ class AjaxController(BaseController):
  		if transcoding:
  			try:
  				transcoder_port = int(config.plugins.transcodingsetup.port.value)
@@ -13,23 +13,23 @@ index cd602cf..1a03944 100644
  				transcoder_port = 0
 
 diff --git a/plugin/controllers/models/info.py b/plugin/controllers/models/info.py
-index 78f0622..b9a75d9 100644
+index 6a5b613..fea271f 100644
 --- a/plugin/controllers/models/info.py
 +++ b/plugin/controllers/models/info.py
-@@ -492,7 +492,7 @@ def getInfo(session = None, need_fullinfo = False):
- 	# TODO: fstab
- 
- 	info['transcoding'] = False
--	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1tc', 'gb7356', 'gb7252', 'tiviaraplus', '8100s')):
-+	if (info['model'] in ("Uno4K", "Ultimo4K", "Solo4K", "Solo²", "Duo²", "Solo SE", "Quad", "Quad Plus") or info['machinebuild'] in ('inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3', 'ew7356', 'dags7356', 'dags7252', 'formuler1', 'gb7356', 'gb7252', 'tiviaraplus', '8100s')):
- 		if os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/TransCodingSetup/plugin.pyo')) or os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/TranscodingSetup/plugin.pyo')) or os.path.exists(eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/MultiTransCodingSetup/plugin.pyo')):
- 			info['transcoding'] = True
+@@ -538,7 +538,7 @@ def getInfo(session = None, need_fullinfo = False):
+ 	#: machinebuilds transcoding feature
+ 	TC_MACHINEBUILD = (
+ 		'inihdp', 'hd2400', 'et10000', 'et13000', 'sf5008', 'xpeedlx3',
+-		'ew7356', 'dags7356', 'dags7252', 'formuler1tc', 'gb7356', 'gb7252',
++		'ew7356', 'dags7356', 'dags7252', 'formuler1', 'gb7356', 'gb7252',
+ 		'tiviaraplus', '8100s'
+ 	)
  
 diff --git a/plugin/controllers/models/stream.py b/plugin/controllers/models/stream.py
-index 4af9262..da7ed74 100644
+index ab04ca9..534112d 100644
 --- a/plugin/controllers/models/stream.py
 +++ b/plugin/controllers/models/stream.py
-@@ -76,7 +76,7 @@ def getStream(session, request, m3ufile):
+@@ -89,7 +89,7 @@ def getStream(session, request, m3ufile):
  				aspectratio = config.plugins.transcodingsetup.aspectratio.value
  				interlaced = config.plugins.transcodingsetup.interlaced.value
  				args = "?bitrate=%s?width=%s?height=%s?aspectratio=%s?interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
@@ -38,7 +38,7 @@ index 4af9262..da7ed74 100644
  		transcoder_port = 8001
  		if "device" in request.args :
  			if request.args["device"][0] == "phone" :
-@@ -156,7 +156,7 @@ def getTS(self, request):
+@@ -178,7 +178,7 @@ def getTS(self, request):
  					aspectratio = config.plugins.transcodingsetup.aspectratio.value
  					interlaced = config.plugins.transcodingsetup.interlaced.value
  					args = "?bitrate=%s?width=%s?height=%s?aspectratio=%s?interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
