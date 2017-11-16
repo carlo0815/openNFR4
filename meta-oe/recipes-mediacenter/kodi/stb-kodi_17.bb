@@ -6,7 +6,7 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE.GPL;md5=930e2a5f63425d8dd72dbd7391c43c46"
 
 PACKAGE_ARCH = "${MACHINEBUILD}"
-PR = "r1"
+PR = "r2"
 
 DEFAULT_PREFERENCE = "-1"
 
@@ -77,8 +77,8 @@ DEPENDS = " \
 
 PROVIDES = "xbmc"
 
-SRCREV = "f8f2dca17b40247c8cf9fffbc986cd31434278ae"
-PV = "17.5+gitr${SRCPV}"
+SRCREV = "a9a7a20071bfd759e72e7053cee92e6f5cfb5e48"
+PV = "17.6+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;branch=Krypton \
            file://0003-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
            file://0006-Disable-DVD-support.patch \
