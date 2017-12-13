@@ -9,7 +9,7 @@ inherit gitpkgv
 SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
-PR = "r8"
+PR = "r9"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS = "freetype"
