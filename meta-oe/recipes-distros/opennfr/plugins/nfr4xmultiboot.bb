@@ -23,13 +23,13 @@ S = "${WORKDIR}/git"
 EXTRA_OEMAKE = " \
     'CFLAGS=${CFLAGS} \
     -I=${includedir}/freetype2 \
-    ${@bb.utils.contains("MACHINE_FEATURES", "singlecore", "-DNFR4X_DEFAULT_TIMER=10" , "-DNFR4X_DEFAULT_TIMER=5", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "textlcd", "-DNFR4X_HAVE_TEXTLCD" , "", d)} \
-    ${@bb.utils.contains("IMAGE_FSTYPES", "ubi", "-DNFR4X_FLASH_UBI" , "", d)} \
-    ${@bb.utils.contains("IMAGE_FSTYPES", "jffs2", "-DNFR4X_FLASH_JFFS2" , "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "dreambox", "-DNFR4X_DREAMBOX", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "mmc", "-DNFR4X_MMCBLK", "", d)} \
-    -DNFR4X_KERNEL_MTD=\"/dev/${MTD_KERNEL}\"' \
+    ${@bb.utils.contains("MACHINE_FEATURES", "singlecore", "-Dnfr4x_DEFAULT_TIMER=10" , "-Dnfr4x_DEFAULT_TIMER=5", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "textlcd", "-Dnfr4x_HAVE_TEXTLCD" , "", d)} \
+    ${@bb.utils.contains("IMAGE_FSTYPES", "ubi", "-Dnfr4x_FLASH_UBI" , "", d)} \
+    ${@bb.utils.contains("IMAGE_FSTYPES", "jffs2", "-Dnfr4x_FLASH_JFFS2" , "", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "dreambox", "-Dnfr4x_DREAMBOX", "", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "mmc", "-Dnfr4x_MMCBLK", "", d)} \
+    -Dnfr4x_KERNEL_MTD=\"/dev/${MTD_KERNEL}\"' \
     'LDFLAGS= -lfreetype ${LDFLAGS}' \
     "
 
