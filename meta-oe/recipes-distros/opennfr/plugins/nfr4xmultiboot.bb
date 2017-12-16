@@ -29,6 +29,7 @@ EXTRA_OEMAKE = " \
     ${@bb.utils.contains("IMAGE_FSTYPES", "jffs2", "-Dnfr4x_FLASH_JFFS2" , "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "dreambox", "-Dnfr4x_DREAMBOX", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "mmc", "-Dnfr4x_MMCBLK", "", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "emmc", "-Dnfr4x_MMCBLK", "", d)} \   
     -Dnfr4x_KERNEL_MTD=\"/dev/${MTD_KERNEL}\"' \
     'LDFLAGS= -lfreetype ${LDFLAGS}' \
     "
