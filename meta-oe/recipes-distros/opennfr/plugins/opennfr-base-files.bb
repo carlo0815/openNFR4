@@ -45,8 +45,8 @@ do_install() {
 
 do_install_append_arm() {
     install -d ${D}/usr/bin ${D}/usr/bin
-	cp -rp ${S}/usr/bin/dvbdate_mipsel ${D}/usr/bin/dvbdate_mipsel
-	mv ${D}/usr/bin/dvbdate_mipsel ${D}/usr/bin/dvbdate
+	cp -rp ${S}/usr/bin/dvbdate_arm ${D}/usr/bin/dvbdate_arm
+	mv ${D}/usr/bin/dvbdate_arm ${D}/usr/bin/dvbdate
 	chmod -v 755 ${D}/usr/bin/dvbdate
 }
 
