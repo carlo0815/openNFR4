@@ -43,12 +43,6 @@ S="${WORKDIR}/git/files"
 do_install() {
 }
 
-do_install_append_arm() {
-    install -d ${D}/usr/bin ${D}/usr/bin
-	cp -rp ${S}/usr/bin/dvbdate_arm ${D}/usr/bin/dvbdate_arm
-	mv ${D}/usr/bin/dvbdate_arm ${D}/usr/bin/dvbdate
-	chmod -v 755 ${D}/usr/bin/dvbdate
-}
 
 do_install_append_mipsel() {
     install -d ${D}/media
@@ -57,10 +51,6 @@ do_install_append_mipsel() {
     mkdir -p ${D}/usr/lib
     cd ${D}/usr/lib
     ln -s libbz2.so.0.0.0 libbz2.so.1.0 || true
-    install -d ${D}/usr/bin ${D}/usr/bin
-	cp -rp ${S}/usr/bin/dvbdate_mipsel ${D}/usr/bin/dvbdate_mipsel
-	mv ${D}/usr/bin/dvbdate_mipsel ${D}/usr/bin/dvbdate
-	chmod -v 755 ${D}/usr/bin/dvbdate	
     install -d ${D}/usr/lib/enigma2/python/Components/Converter
     install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/Infopanel/data
     cp -rp ${S}/usr/lib/enigma2/python/Components/Converter/* ${D}/usr/lib/enigma2/python/Components/Converter
