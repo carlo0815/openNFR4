@@ -6,7 +6,7 @@ index dc353d2..b04e0c6 100644
  			InfoBarPlugins, \
  			InfoBarNumberZap, \
  			InfoBarPiP, \
-+		    InfoBarHdmi, \
++		    	InfoBarHdmi, \
  			InfoBarEPG ):
   
 @@ -115,7 +116,7 @@ class InfoBarSupport(	InfoBarBase, \
