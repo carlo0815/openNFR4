@@ -2,14 +2,13 @@ diff --git a/src/InfoBarSupport.py b/src/InfoBarSupport.py
 index dc353d2..b04e0c6 100644
 --- a/src/InfoBarSupport.py
 +++ b/src/InfoBarSupport.py
-@@ -101,6 +101,7 @@ class InfoBarSupport(	InfoBarBase, \
- 											InfoBarPlugins, \
- 											InfoBarNumberZap, \
- 											InfoBarPiP, \
-+		     									InfoBarHdmi, \
- 											InfoBarEPG ):
- 											#InfoBarMoviePlayerSummarySupport
- 
+@@ -100,5 +100,6 @@ class InfoBarSupport(	InfoBarBase, \
+ 			InfoBarPlugins, \
+ 			InfoBarNumberZap, \
+ 			InfoBarPiP, \
++		    InfoBarHdmi, \
+ 			InfoBarEPG ):
+  
 @@ -115,7 +116,7 @@ class InfoBarSupport(	InfoBarBase, \
  				InfoBarSubtitleSupport, \
  				InfoBarTeletextPlugin, InfoBarServiceErrorPopupSupport, InfoBarExtensions, InfoBarNotifications, \
