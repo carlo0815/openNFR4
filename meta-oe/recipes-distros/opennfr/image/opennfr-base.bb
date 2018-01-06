@@ -23,7 +23,6 @@ RDEPENDS_${PN} = "\
     packagegroup-base-smbfs-client \
     packagegroup-base-smbfs-server \
     hddtemp \
-    busybox-cron \
     exteplayer3 \
     gstplayer \
     ffmpeg \
@@ -37,7 +36,6 @@ RDEPENDS_${PN} = "\
     python-service-identity \
     libshowiframe \
     dvbsnoop \
-    bash \
     enigma2-plugin-drivers-usbserial \ 
     "
 
