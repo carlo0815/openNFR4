@@ -130,7 +130,7 @@ inherit autotools-brokensep gitpkgv pythonnative gettext
 SRCREV = "${AUTOREV}"
 PV = "${IMAGE_VERSION}+git${SRCPV}"
 PKGV = "${IMAGE_VERSION}+git${GITPKGV}"
-PR = "r5"
+PR = "r6"
 
 SRC_URI = "${OEA_PLUGINS_URI} \
     file://f1-multitranscoding.patch \
