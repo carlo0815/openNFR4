@@ -50,7 +50,7 @@ THIRDPARTY_PLUGINS = " \
     ${@bb.utils.contains("TARGET_ARCH", "sh4", "enigma2-plugin-extensions-isettinge2-3.3.9-oe2.0-all-sh4.ipk" , "", d)} \
     ${@bb.utils.contains("TARGET_ARCH", "mipsel", "enigma2-plugin-extensions-isettinge2-3.4.1-oe2.0-all-mips.ipk" , "", d)} \
     ${@bb.utils.contains("TARGET_ARCH", "arm", "enigma2-plugin-extensions-isettinge2-3.3.9-oe2.0-all-arm.ipk" , "", d)} \
-	enigma2-plugin-extensions-kicker_3.5rc13_all.ipk \
+    enigma2-plugin-extensions-kicker_3.5rc13_all.ipk \
     enigma2-plugin-extensions-kino_1.7rc4_all.ipk \
     enigma2-plugin-extensions-livefootball_7.1_all.ipk \
     enigma2-plugin-extensions-mediainfo_3.0.2_all.ipk \
@@ -107,7 +107,7 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-systemplugins-recinfobar_1.22rc2_mips32el.ipk \
     enigma2-plugin-picons-snp-full.400x240-400x240.light.on.transparent_2017-08-30--10-28-13_all.ipk \
     enigma2-plugin-picons-srp-full.400x240-400x240.light.on.transparent_2017-08-30--10-28-13_all.ipk \
-	${@bb.utils.contains("DISTRO_NAME", "opennfr", "file://001-revert-opkg-tools.patch", "", d)} \
+    ${@bb.utils.contains("DISTRO_NAME", "opennfr", "file://001-revert-opkg-tools.patch", "", d)} \
     "
 
 #     Install any packages t_append =hat are only For this machines feed here, uncomment the line below and change as required
