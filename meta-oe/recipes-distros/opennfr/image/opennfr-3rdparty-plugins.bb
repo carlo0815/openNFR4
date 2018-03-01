@@ -57,12 +57,12 @@ do_deploy_append() {
     Z1=$(ls -1 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_mips32el.ipk | wc -l)
     if [ $Z1 -gt 0 ]; then
         install -m 0644 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_mips32el.ipk ${DEPLOY_DIR_IPK}/mips32el #|| true
-        remove ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools_1.4_mips32el.ipk
+        rm ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools_1.4_mips32el.ipk
     fi 
     Z1=$(ls -1 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_cortexa15hf-neon-vfpv4.ipk | wc -l)
     if [ $Z1 -gt 0 ]; then
         install -m 0644 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_cortexa15hf-neon-vfpv4.ipk ${DEPLOY_DIR_IPK}/cortexa15hf-neon-vfpv4 #|| true
-        remove ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools_1.4_cortexa15hf-neon-vfpv4.ipk
+        rm ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools_1.4_cortexa15hf-neon-vfpv4.ipk
     fi 		
     pkgdir=${DEPLOY_DIR_IPK}/3rdparty
     if [ -e $pkgdir ]; then
