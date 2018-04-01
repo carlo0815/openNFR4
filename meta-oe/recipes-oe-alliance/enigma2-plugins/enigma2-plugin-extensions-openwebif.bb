@@ -29,7 +29,7 @@ inherit gitpkgv distutils-openplugins
 DISTUTILS_INSTALL_ARGS = "--root=${D} --install-lib=/usr/lib/enigma2/python/Plugins"
 
 SRCREV = "${AUTOREV}"
-PV = "1.3.0git${SRCPV}"
+PV = "1.3.0+git${SRCPV}"
 PKGV = "1.3.0+git${GITPKGV}"
 
 PACKAGE_ARCH = "all"
