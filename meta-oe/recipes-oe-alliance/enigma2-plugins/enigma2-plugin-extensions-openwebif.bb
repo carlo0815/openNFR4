@@ -8,7 +8,6 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 # BRANCH="branding"
 
 BRANCH="master"
-BRANCH_opennfr="responsive"
 
 DEPENDS = "python-cheetah-native"
 RDEPENDS_${PN} = "\
@@ -30,8 +29,8 @@ inherit gitpkgv distutils-openplugins
 DISTUTILS_INSTALL_ARGS = "--root=${D} --install-lib=/usr/lib/enigma2/python/Plugins"
 
 SRCREV = "${AUTOREV}"
-PV = "1.2+git${SRCPV}"
-PKGV = "1.2+git${GITPKGV}"
+PV = "1.3.0git${SRCPV}"
+PKGV = "1.3.0+git${GITPKGV}"
 
 PACKAGE_ARCH = "all"
 
