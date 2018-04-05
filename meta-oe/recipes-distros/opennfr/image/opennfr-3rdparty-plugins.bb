@@ -26,7 +26,7 @@ EXTRA_OECONF = " \
 ALLOW_EMPTY_${PN} = "1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-S = "${WORKDIR}/"
+S = "${WORKDIR}"
 
 DEPENDS = "enigma2"
 
