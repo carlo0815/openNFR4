@@ -6,11 +6,10 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=45de10587e108efb50c321c1affd5e00"
 
 inherit gitpkgv deploy
 
-SRCREV = "${AUTOREV}"
-PV = "git${SRCPV}"
-PKGV = "git${GITPKGV}"
-PR = "r40"
-SRC_URI="git://github.com/carlo0815/3rdparty-plugins.git;protocol=git;branch=4.4"
+INHIBIT_PACKAGE_STRIP = "1"
+
+PR = "r39"
+SRC_URI="http://dev.nachtfalke.biz/nfr/downloads/3rdparty-plugins-4.4.zip"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
@@ -23,7 +22,7 @@ EXTRA_OECONF = " \
 ALLOW_EMPTY_${PN} = "1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-S = "${WORKDIR}/git"
+S = "${WORKDIR}/"
 
 DEPENDS = "enigma2"
 
