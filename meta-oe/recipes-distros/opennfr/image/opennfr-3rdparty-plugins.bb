@@ -4,6 +4,10 @@ MAINTAINER = "OpenNFR Team"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=45de10587e108efb50c321c1affd5e00"
 
+SRC_URI[md5sum] = "c7262276b75a2ef0a5140155225e22b4"
+
+SRC_URI[sha256sum] = "a36ad86aeec04f60edfd46a3a6e3a16c8c3dad95dd7d70b5c1b8a27cd9b1df28"
+
 inherit gitpkgv deploy
 
 INHIBIT_PACKAGE_STRIP = "1"
