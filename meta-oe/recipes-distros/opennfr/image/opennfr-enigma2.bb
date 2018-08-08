@@ -37,6 +37,7 @@ RDEPENDS_${PN} = "\
     ${@bb.utils.contains("MACHINE_FEATURES", "chromiumos", "enigma2-plugin-extensions-chromium", "", d)} \ 
     ${@bb.utils.contains("MACHINE_FEATURES", "quadpip", "enigma2-plugin-extensions-quadpip", "", d)} \
     \
+    enigma2-plugin-opennfrskins-smokedefault-hd \
     enigma2-plugin-opennfrskins-utopia-hd \
     opennfr-base-files \
 	nfr4xmultiboot \
