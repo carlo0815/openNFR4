@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 require conf/license/license-close.inc
 
 PV = "1.0"
-PR = "r6"
+PR = "r7"
 
 SRC_URI = "file://coldboot file://coldboot.sh"
 
