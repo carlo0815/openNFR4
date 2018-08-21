@@ -114,12 +114,8 @@ do_deploy() {
     if [ -e splash1_os2.bmp ]; then
         install -m 0644 splash1_os2.bmp ${DEPLOYDIR}/splash1_os2.bmp
     fi
-	if [ "${MACHINE}" = "lunix" ] ; then
-        install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
-	else
-	    if [ -e splash1_power.bmp ]; then
-            install -m 0644 splash1_power.bmp ${DEPLOYDIR}/splash1_power.bmp
-        fi
+    if [ -e splash1_power.bmp ]; then
+        install -m 0644 splash1_power.bmp ${DEPLOYDIR}/splash1_power.bmp
     fi	
     if [ -e splash1_rc.bmp ]; then
         install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
