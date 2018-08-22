@@ -114,7 +114,11 @@ do_deploy() {
     if [ -e splash1_os2.bmp ]; then
         install -m 0644 splash1_os2.bmp ${DEPLOYDIR}/splash1_os2.bmp
     fi
-    if [ -e splash1_power.bmp ]; then
+    if [ "${MACHINE}" = "lunix" ]; then
+    	if [ -e splash1_power.bmp ]; then
+	    install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
+	fi
+    else [ -e splash1_power.bmp ]; then
         install -m 0644 splash1_power.bmp ${DEPLOYDIR}/splash1_power.bmp
     fi	
     if [ -e splash1_rc.bmp ]; then
@@ -130,12 +134,7 @@ do_deploy() {
         install -m 0644 splash3.bmp ${DEPLOYDIR}/splash3.bmp
     fi
 }
-
-do_deploy_append_lunix() {
-	if [ -e splash1_power.bmp ]; then
-	    install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
-	fi    
-}	
+	
 addtask deploy before do_build after do_install
 
 pkg_preinst_${PN}() {
