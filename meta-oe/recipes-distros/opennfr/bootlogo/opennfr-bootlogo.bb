@@ -119,9 +119,6 @@ do_deploy() {
     	    install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
     	else install -m 0644 splash1_power.bmp ${DEPLOYDIR}/splash1_power.bmp
     fi	
-    if [ -e splash1_rc.bmp ]; then
-        install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
-    fi
     if [ -e splash1.bmp ]; then
         install -m 0644 splash1.bmp ${DEPLOYDIR}/splash1.bmp
     fi
