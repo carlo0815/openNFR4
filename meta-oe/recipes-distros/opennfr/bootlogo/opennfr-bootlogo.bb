@@ -132,9 +132,9 @@ do_deploy() {
 }
 
 do_deploy_append_lunix() {
-	if ${DEPLOYDIR}/splash1_power.bmp
-		install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
-	fi	
+    if [ -e ${DEPLOYDIR}/splash1_power.bmp ]; then
+	install -m 0644 splash1_rc.bmp ${DEPLOYDIR}/splash1_rc.bmp
+    fi	
 }	
 addtask deploy before do_build after do_install
 
