@@ -2,10 +2,9 @@ MODULE = "OpenWebif"
 DESCRIPTION = "Control your receiver with a browser"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://README;firstline=10;lastline=12;md5=9c14f792d0aeb54e15490a28c89087f7"
+PACKAGE_ARCH = "all"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-
-# BRANCH="branding"
 
 BRANCH="master"
 
@@ -31,8 +30,6 @@ DISTUTILS_INSTALL_ARGS = "--root=${D} --install-lib=/usr/lib/enigma2/python/Plug
 SRCREV = "${AUTOREV}"
 PV = "1.3.0+git${SRCPV}"
 PKGV = "1.3.0+git${GITPKGV}"
-
-PACKAGE_ARCH = "all"
 
 SRC_URI = "git://github.com/E2OpenPlugins/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
            file://transcoding.py \
