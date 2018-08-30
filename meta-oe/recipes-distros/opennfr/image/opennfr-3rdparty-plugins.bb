@@ -78,4 +78,8 @@ do_deploy_append() {
     fi
 }
 
+do_package_write_ipk() {
+    :
+}
+
 addtask do_deploy before do_package_write after do_package_write_ipk 
