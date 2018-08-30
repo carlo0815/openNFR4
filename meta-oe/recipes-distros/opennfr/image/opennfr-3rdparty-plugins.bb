@@ -68,6 +68,11 @@ do_deploy_append() {
 	rm -rf ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools*
     fi
 
+    if [ ! -e "${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-customsubservices_0.1.2*" ]
+    then
+	rm -rf ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-customsubservices_0.1.2*
+    fi
+    
     pkgdir=${DEPLOY_DIR_IPK}/3rdparty
     if [ -e $pkgdir ]; then
         chmod 0755 $pkgdir
