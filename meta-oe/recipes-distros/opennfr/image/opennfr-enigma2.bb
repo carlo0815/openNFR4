@@ -19,7 +19,7 @@ RDEPENDS_${PN} = "\
     enigma2-plugin-extensions-mediaplayer \
     enigma2-plugin-extensions-cutlisteditor \
     enigma2-plugin-extensions-menusort \
-    enigma2-plugin-extensions-customsubservices \
+    #enigma2-plugin-extensions-customsubservices \
     enigma2-plugin-extensions-infopanel \
     enigma2-plugin-extensions-nfr4xboot \
     enigma2-plugin-extensions-imdb \
