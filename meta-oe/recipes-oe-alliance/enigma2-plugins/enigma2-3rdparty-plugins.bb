@@ -25,10 +25,6 @@ EXTRA_OECONF = " \
 ALLOW_EMPTY_${PN} = "1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-SRC_URI_append_opennfr = " \
-	file://0001-revert-opkg-tools.patch \
-	"
-
 S = "${WORKDIR}/git"
 
 THIRDPARTY_PLUGINS = " \
@@ -39,7 +35,6 @@ THIRDPARTY_PLUGINS = " \
     enigma2-plugin-extensions-chefkoch_1.5rc5_all.ipk \
     enigma2-plugin-extensions-clevertanken_0.8rc1_all.ipk \
     enigma2-plugin-extensions-csfd_11-55-20160929_all.ipk \
-    enigma2-plugin-extensions-customsubservices_0.1.2_all.ipk \
     enigma2-plugin-extensions-cyrussettings_1.0.0_all.ipk \
     enigma2-plugin-extensions-digitalfernsehen_1.2rc1_all.ipk \
     enigma2-plugin-extensions-dvrproviderplayer_2.06_all.ipk \
