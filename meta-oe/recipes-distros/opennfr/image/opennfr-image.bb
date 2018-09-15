@@ -23,22 +23,3 @@ IMAGE_LINGUAS = ""
 IMAGE_FEATURES += "package-management"	
 
 inherit image
-
-
-rootfs_postprocess() {
-    curdir=$PWD
-    cd ${IMAGE_ROOTFS}
-    # because we're so used to it
-    ln -s opkg usr/bin/ipkg || true
-    ln -s opkg-cl usr/bin/ipkg-cl || true
-    cd $curdir
-    set -x
-
-    if [ ! -z "${DEPLOY_KEEP_PACKAGES}" ]; then
-        return
-    fi
-
-}
-
-ROOTFS_POSTPROCESS_COMMAND += "rootfs_postprocess; "
-
