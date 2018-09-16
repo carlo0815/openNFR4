@@ -4,13 +4,16 @@ MAINTAINER = "OpenNFR Team"
 LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://COPYING;md5=45de10587e108efb50c321c1affd5e00"
 
+SRC_URI[md5sum] = "c7262276b75a2ef0a5140155225e22b4"
+
+SRC_URI[sha256sum] = "a36ad86aeec04f60edfd46a3a6e3a16c8c3dad95dd7d70b5c1b8a27cd9b1df28"
+
 inherit gitpkgv deploy
 
-SRCREV = "${AUTOREV}"
-PV = "git${SRCPV}"
-PKGV = "git${GITPKGV}"
+INHIBIT_PACKAGE_STRIP = "1"
+
 PR = "r39"
-SRC_URI="git://github.com/carlo0815/3rdparty-plugins.git;protocol=git;branch=4.4"
+SRC_URI="http://dev.nachtfalke.biz/nfr/downloads/3rdparty-plugins-4.4.zip"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
@@ -23,7 +26,7 @@ EXTRA_OECONF = " \
 ALLOW_EMPTY_${PN} = "1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-S = "${WORKDIR}/git"
+S = "${WORKDIR}"
 
 DEPENDS = "enigma2"
 
@@ -68,11 +71,6 @@ do_deploy_append() {
 	rm -rf ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools*
     fi
 
-    if [ ! -e "${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-customsubservices_0.1.2*" ]
-    then
-	rm -rf ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-customsubservices_0.1.2*
-    fi
-    
     pkgdir=${DEPLOY_DIR_IPK}/3rdparty
     if [ -e $pkgdir ]; then
         chmod 0755 $pkgdir
@@ -81,10 +79,6 @@ do_deploy_append() {
     if [ -e $pkgdir ]; then
         chmod 0755 $pkgdir
     fi
-}
-
-do_package_write_ipk() {
-    :
 }
 
 addtask do_deploy before do_package_write after do_package_write_ipk 
