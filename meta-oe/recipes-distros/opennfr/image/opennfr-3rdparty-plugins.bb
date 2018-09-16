@@ -13,7 +13,7 @@ inherit gitpkgv deploy
 INHIBIT_PACKAGE_STRIP = "1"
 
 PR = "r39"
-SRC_URI="git://github.com/carlo0815/3rdparty-plugins.git;protocol=git;branch=4.4"
+SRC_URI="http://dev.nachtfalke.biz/nfr/downloads/3rdparty-plugins-4.4.zip"
 
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
