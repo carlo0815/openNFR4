@@ -35,7 +35,7 @@ rootfs_postprocess() {
     set -x
 
     ipkgarchs="${ALL_MULTILIB_PACKAGE_ARCHS} ${SDK_PACKAGE_ARCHS}"
-    unused="*-dev_* *-staticdev_* *-doc_* *-demos_* *-examples_* *-sourcecode_* *-locale-* *-localedata-*"
+    unused="*-doc_* *-demos_* *-examples_* *-sourcecode_* *-locale-* *-localedata-*"
 
     if [ ! -z "${DEPLOY_KEEP_PACKAGES}" ]; then
         return
