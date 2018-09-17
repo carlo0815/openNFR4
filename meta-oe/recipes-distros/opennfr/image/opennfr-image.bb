@@ -31,8 +31,19 @@ inherit image
 do_package_index[nostamp] = "1"
 do_package_index[depends] += "${PACKAGEINDEXDEPS}"
 
+rootfs_postprocess() {
+    curdir=$PWD
+    cd ${IMAGE_ROOTFS}
+    # because we're so used to it
+    ln -s opkg usr/bin/ipkg || true
+    ln -s opkg-cl usr/bin/ipkg-cl || true
+    }
+
 python do_package_index() {
     from oe.rootfs import generate_index_files
     generate_index_files(d)
 }
+
+ROOTFS_POSTPROCESS_COMMAND += "rootfs_postprocess; "
 addtask do_package_index after do_rootfs before do_image_complete
+
