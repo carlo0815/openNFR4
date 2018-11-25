@@ -235,7 +235,6 @@ RRECOMMENDS_${PN}_append = " \
     python-xml \
     python-netserver \
     python-misc \
-    python-pygobject \
     python-textutils \
     python-simplejson \
     python-xmlrpc   \
