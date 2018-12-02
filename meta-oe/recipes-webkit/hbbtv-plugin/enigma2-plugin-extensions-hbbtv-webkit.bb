@@ -8,9 +8,9 @@ RDEPENDS_${PN} = "dumpait-legacy \
     ${@bb.utils.contains('TUNE_FEATURES', 'aarch64', 'lib32-webkit-hbbtv-plugin' , 'webkit-hbbtv-plugin', d)} \
 "
 
-SRC_URI_append_opennfr = " \
-    PACKAGE_ARCH = "${MACHINEBUILD}" \
-"
+if [ "${DISTRO}" = "opennfr" ]; then
+    PACKAGE_ARCH = "${MACHINEBUILD}"
+fi
 
 inherit gitpkgv
 
