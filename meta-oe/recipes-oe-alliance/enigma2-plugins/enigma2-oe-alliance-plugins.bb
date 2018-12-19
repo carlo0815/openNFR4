@@ -133,6 +133,7 @@ PR = "r6"
 
 SRC_URI = "${OEA_PLUGINS_URI} \
     file://f1-multitranscoding.patch \
+    file://0001-Update-blindscan-plugin.py.patch \
 "
 
 EXTRA_OECONF = " \
