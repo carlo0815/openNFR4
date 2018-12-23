@@ -43,5 +43,6 @@ RDEPENDS_${PN} = "\
 	nfr4xmultiboot \
     \
     ${@bb.utils.contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
-"
+    "
+    
 RRECOMMENDS_${PN}_append_osmio4k = " enigma2-plugin-extensions-hbbtv-webkit enigma2-plugin-systemplugins-satipclient"
