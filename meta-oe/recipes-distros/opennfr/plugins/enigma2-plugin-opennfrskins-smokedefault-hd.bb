@@ -17,10 +17,11 @@ SRC_URI="git://github.com/carlo0815/openNFR-skin-2018.git"
 
 S = "${WORKDIR}/git"
 
-FILES_${PN} = "/usr/*"
+FILES_${PN} = "${libdir}"
 
 do_install() {
-    cp -rp ${S}/usr ${D}/
+    install -d ${D}${libdir}
+    cp -rp ${S}/usr/lib/* ${D}${libdir}/
 }
 
 do_populate_sysroot[noexec] = "1"

@@ -18,10 +18,11 @@ SRC_URI="git://github.com/stein17/Skins-for-Plugins-by-stein17.git"
 
 S = "${WORKDIR}/git/BMediacenter-AX-Blue-Skin"
 
-FILES_${PN} = "/usr/*"
+FILES_${PN} = "${libdir}"
 
 do_install() {
-    cp -rp ${S}/usr ${D}/
+    install -d ${D}${libdir}
+    cp -rp ${S}/usr/lib/* ${D}${libdir}/
 }
 
 do_populate_sysroot[noexec] = "1"
