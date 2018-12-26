@@ -18,7 +18,7 @@ SRC_URI="git://github.com/carlo0815/skins-sphere-fhd.git"
 
 S = "${WORKDIR}/git"
 
-FILES_${PN} = "${libdir} /usr/share
+FILES_${PN} = "${libdir} /usr/share"
 
 do_install() {
     install -d ${D}${libdir}
