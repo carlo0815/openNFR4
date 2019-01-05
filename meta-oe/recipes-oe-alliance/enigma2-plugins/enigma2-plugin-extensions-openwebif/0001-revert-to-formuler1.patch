@@ -11,24 +11,3 @@ index 4c661cd..057f749 100644
  					transcoder_port = int(config.OpenWebif.streamport.value)
  			except StandardError:
  				transcoder_port = 0
-
-
-diff --git a/plugin/controllers/models/stream.py b/plugin/controllers/models/stream.py
-index ab04ca9..534112d 100644
---- a/plugin/controllers/models/stream.py
-+++ b/plugin/controllers/models/stream.py
-@@ -81,4 +81,4 @@ def getStream(session, request, m3ufile):
- 	# INI use dynamic encoder allocation, and each stream can have diffrent parameters
--	elif machinebuild in ('ew7356', 'formuler1tc', 'tiviaraplus'):
-+	elif machinebuild in ('ew7356', 'formuler1', 'tiviaraplus'):
-		transcoder_port = 8001
-		if "device" in request.args :
-@@ -174,4 +174,4 @@ def getTS(self, request):
-		# INI use dynamic encoder allocation, and each stream can have diffrent parameters
--		elif machinebuild in ('ew7356', 'formuler1tc', 'tiviaraplus'):
-+		elif machinebuild in ('ew7356', 'formuler1', 'tiviaraplus'):
-			if "device" in request.args :
-				if request.args["device"][0] == "phone" :
--- 
-1.7.9.5
-
