@@ -146,8 +146,8 @@ index 13c1e24..e8659e8 100644
  			if tp.pls_code > 0:
  				tmp_tp.append('pls_mode="%d"' % tp.pls_mode)
  				tmp_tp.append('pls_code="%d"' % tp.pls_code)
--			if hasattr(tp, "t2mi_plp_id") and tp.t2mi_plp_id > eDVBFrontendParametersSatellite.No_T2MI_PLP_Id:
--				tmp_tp.append('t2mi_plp_id="%d"' % tp.t2mi_plp_id)
+-				if hasattr(tp, "t2mi_plp_id") and tp.t2mi_plp_id > eDVBFrontendParametersSatellite.No_T2MI_PLP_Id:
+-					tmp_tp.append('t2mi_plp_id="%d"' % tp.t2mi_plp_id)
  			tmp_tp.append('/>\n')
  			xml.append(' '.join(tmp_tp))
  		xml.append('	</sat>\n')
