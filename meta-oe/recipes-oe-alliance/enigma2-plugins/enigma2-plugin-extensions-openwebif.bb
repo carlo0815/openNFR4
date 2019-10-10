@@ -17,8 +17,10 @@ RDEPENDS_${PN} = "\
 	python-json \
 	python-misc \
 	python-numbers \
+	python-pprint \
 	python-pyopenssl \
 	python-shell \
+	python-twisted-web \
 	python-unixadmin \
 	oe-alliance-branding \
 	"
@@ -28,12 +30,13 @@ inherit gitpkgv distutils-openplugins
 DISTUTILS_INSTALL_ARGS = "--root=${D} --install-lib=${libdir}/enigma2/python/Plugins"
 
 SRCREV = "${AUTOREV}"
-PV = "1.3.0+git${SRCPV}"
-PKGV = "1.3.0+git${GITPKGV}"
+PV = "1.3.8+git${SRCPV}"
+PKGV = "1.3.8+git${GITPKGV}"
 
 SRC_URI = "git://github.com/E2OpenPlugins/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
            file://transcoding.py \
            file://0001-revert-to-formuler1.patch \
+	   file://remove-obsolete-import-version.patch \
 	   file://0001-add-fileupload.patch"
 	
 S="${WORKDIR}/git"
