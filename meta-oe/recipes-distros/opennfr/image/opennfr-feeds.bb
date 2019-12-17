@@ -42,7 +42,7 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-opennfrskins-smoke-light-hd \
     enigma2-plugin-opennfrskins-sphere-fhd-4nfr \
     enigma2-plugin-opennfrskins-multibox-fhd-4nfr \
-    enigma2-plugin-opennfrskins-Ultimate-hd-4nfr \
+    enigma2-plugin-opennfrskins-ultimate-hd-4nfr \
     enigma2-plugin-skins-anadol \
     enigma2-plugin-extensions-vmc \
 " 
