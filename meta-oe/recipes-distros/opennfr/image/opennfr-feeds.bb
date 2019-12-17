@@ -25,7 +25,6 @@ RRECOMMENDS_${PN} = "\
     curlftpfs \
     enigma2-plugin-extensions-enhancedmoviecenter \
     enigma2-plugin-extensions-cooltvguide \
-    enigma2-plugin-extensions-webinterface-nfrmod \
     enigma2-plugin-extensions-bmediacenter \
     enigma2-plugin-extensions-mainmenu2 \
     enigma2-plugin-skincomponents-bmediacenter-ax-blue-skin \
@@ -43,7 +42,7 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-opennfrskins-smoke-light-hd \
     enigma2-plugin-opennfrskins-sphere-fhd-4nfr \
     enigma2-plugin-opennfrskins-multibox-fhd-4nfr \
-	enigma2-plugin-opennfrskins-Ultimate-hd-4nfr \
+    enigma2-plugin-opennfrskins-Ultimate-hd-4nfr \
     enigma2-plugin-skins-anadol \
     enigma2-plugin-extensions-vmc \
 " 
