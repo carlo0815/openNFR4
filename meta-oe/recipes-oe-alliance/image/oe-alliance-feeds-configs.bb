@@ -14,8 +14,9 @@ do_compile() {
     done
 }
 do_compile_append_gb7252() {
-    rm ${S}/${sysconfdir}/opkg/${PACKAGE_EXTRA_ARCHS}-feed.conf
-    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI}/cortexagb7252/${PACKAGE_EXTRA_ARCHS}" > ${S}/${sysconfdir}/opkg/${PACKAGE_EXTRA_ARCHS}-feed.conf
+    rm ${S}/${sysconfdir}/opkg/cortexa15hf-neon-vfpv4-feed.conf
+    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI}/cortexagb7252/cortexa15hf-neon-vfpv4" > ${S}/${sysconfdir}/opkg/cortexa15hf-neon-vfpv4-feed.conf
+    done
 }
 
 do_install () {
