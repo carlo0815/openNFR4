@@ -1,6 +1,6 @@
 From 71e937a2477033e4ec9ed2c20e6aa2486657383d Mon Sep 17 00:00:00 2001
-From: torwald12 <torwald12@team.nachtfalke.biz>
-Date: Tue, 23 Jul 2019 22:50:49 +0200
+From: carlo0815 <toto_golden@gmx.de>
+Date: sat, 28 Dez 2019 20:30:49 +0200
 Subject: [PATCH] add fileupload
 
 ---
@@ -11,22 +11,17 @@ diff --git a/plugin/controllers/base.py b/plugin/controllers/base.py
 index 2116a2e..cd1bb47 100644
 --- a/plugin/controllers/base.py
 +++ b/plugin/controllers/base.py
-@@ -301,11 +301,14 @@ class BaseController(resource.Resource):
-						port = port[1:]
-
-		if oscamwebif and port is not None:
-			url = "%s://%s:%s" % (proto, request.getRequestHostname(), port)
--				if self.oscamconf.endswith("oscam.conf"):
-+				print "url:", url
-+                                if self.oscamconf.endswith("oscam.conf"):
- 					extras.append({'key': url, 'description': _("OSCam Webinterface"), 'nw': '1'})
- 				elif self.oscamconf.endswith("ncam.conf"):
- 					extras.append({'key': url, 'description': _("NCam Webinterface"), 'nw': '1'})
+@@ -319,10 +319,12 @@ class BaseController(resource.Resource):
+ 			url = "%s://%s:%s" % (proto, request.getRequestHostname(), port)
+ 			if variant == "oscam":
+ 				extras.append({'key': url, 'description': _("OSCam Webinterface"), 'nw': '1'})
+ 			elif variant == "ncam":
+ 				extras.append({'key': url, 'description': _("NCam Webinterface"), 'nw': '1'})
 +		url1 = "http://%s:8000" %request.getRequestHostname()
-+                extras.append({'key': url1, 'description': _("FileLoad"), 'nw': '1'})					
++		extras.append({'key': url1, 'description': _("FileLoad"), 'nw': '1'})		                
  
  		try:
  			from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
--- 
-2.7.4
+ 			extras.append({'key': 'ajax/at', 'description': _('AutoTimer')})
+ 		except ImportError:
 
