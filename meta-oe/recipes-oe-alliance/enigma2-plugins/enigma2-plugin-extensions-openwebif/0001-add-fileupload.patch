@@ -13,19 +13,19 @@ index 2116a2e..cd1bb47 100644
 +++ b/plugin/controllers/base.py
 @@ -301,10 +301,13 @@ class BaseController(resource.Resource):
  						port = port[1:]
- 			if port is not None:
+ 			if oscamwebif and port is not None:
  				url = "%s://%s:%s" % (proto, request.getRequestHostname(), port)
 -				if self.oscamconf.endswith("oscam.conf"):
 +				print "url:", url
-+                                if self.oscamconf.endswith("oscam.conf"):
++               if self.oscamconf.endswith("oscam.conf"):
  					extras.append({'key': url, 'description': _("OSCam Webinterface"), 'nw': '1'})
  				elif self.oscamconf.endswith("ncam.conf"):
  					extras.append({'key': url, 'description': _("NCam Webinterface"), 'nw': '1'})
-+		url1 = "http://%s:8000" %request.getRequestHostname()
-+                extras.append({'key': url1, 'description': _("FileLoad"), 'nw': '1'})					
++				url1 = "http://%s:8000" %request.getRequestHostname()
++               	extras.append({'key': url1, 'description': _("FileLoad"), 'nw': '1'})					
  
- 		try:
- 			from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
+ 			try:
+ 				from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
 -- 
 2.7.4
 
