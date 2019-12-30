@@ -10,12 +10,12 @@ PR = "r0"
 do_compile() {
     mkdir -p ${S}/${sysconfdir}/opkg
 	for feed in all ${PACKAGE_EXTRA_ARCHS} ${MACHINE_ARCH} 3rdparty ${MACHINE}_3rdparty ; do
-        echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+        echo "src/gz ortexa15hf-neon-vfpv4-${feed} ${DISTRO_FEED_URI}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
     done
 }
 do_compile_append_gb7252() {
     rm ${S}/${sysconfdir}/opkg/cortexa15hf-neon-vfpv4-feed.conf
-    echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI}/cortexagb7252/cortexa15hf-neon-vfpv4" > ${S}/${sysconfdir}/opkg/cortexa15hf-neon-vfpv4-feed.conf
+    echo "src/gz ${DISTRO_FEED_PREFIX}-cortexa15hf-neon-vfpv4 ${DISTRO_FEED_URI}/cortexagb7252/cortexa15hf-neon-vfpv4" > ${S}/${sysconfdir}/opkg/cortexa15hf-neon-vfpv4-feed.conf
 }
 
 do_install () {
