@@ -10,7 +10,7 @@ PR = "r0"
 do_compile() {
     mkdir -p ${S}/${sysconfdir}/opkg
 	for feed in all ${PACKAGE_EXTRA_ARCHS} ${MACHINE_ARCH} 3rdparty ${MACHINE}_3rdparty ; do
-        echo "src/gz ortexa15hf-neon-vfpv4-${feed} ${DISTRO_FEED_URI}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
+        echo "src/gz ${DISTRO_FEED_PREFIX}-${feed} ${DISTRO_FEED_URI}/${feed}" > ${S}/${sysconfdir}/opkg/${feed}-feed.conf
     done
 }
 do_compile_append_gb7252() {
