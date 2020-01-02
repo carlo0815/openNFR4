@@ -37,6 +37,8 @@ rootfs_postprocess() {
     # because we're so used to it
     ln -s opkg usr/bin/ipkg || true
     ln -s opkg-cl usr/bin/ipkg-cl || true
+    ln -s libcrypto.so.1.0.2 usr/lib/libcrypto.so.0.9.8 || true
+    
 }
 
 python do_package_index() {
