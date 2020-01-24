@@ -45,6 +45,7 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-opennfrskins-ultimate-hd-4nfr \
     enigma2-plugin-skins-anadol \
     enigma2-plugin-extensions-vmc \
+    enigma2-plugin-extensions-gbipboxclient \
     " 
 
 RRECOMMENDS_${PN}_append_gb800solo = "enigma2-plugin-extensions-gbipboxclient"
