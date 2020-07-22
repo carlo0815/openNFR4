@@ -5,7 +5,10 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=7b423f1c9388eae123332e372451a4f7"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-18:"
 
-PACKAGE_ARCH = "${MACHINEBUILD}"
+if DISTRO_NAME in ['opennfr']:
+            PACKAGE_ARCH = "${MACHINEBUILD}"
+else 
+            PACKAGE_ARCH = "${MACHINE}"
 
 inherit cmake gettext python-dir pythonnative
 
