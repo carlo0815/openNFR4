@@ -4,7 +4,7 @@
  				pass
  		try:
  			#not all images support recording type indicators
--			recordings = self.session.nav.getRecordings(False,Components.RecordingConfig.recType(config.recording.show_rec_symbol_for_rec_types.getValue()))
+-			recordings = self.session.nav.getRecordings(False, Components.RecordingConfig.recType(config.recording.show_rec_symbol_for_rec_types.getValue()))
 +			recordings = self.session.nav.getRecordings()
  		except:
  			recordings = self.session.nav.getRecordings()
