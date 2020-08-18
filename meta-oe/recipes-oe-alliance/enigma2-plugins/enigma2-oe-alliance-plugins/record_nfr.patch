@@ -1,6 +1,6 @@
 --- a/GigaBlueVFDControl/src/plugin.py
 +++ a/GigaBlueVFDControl/src/plugin.py
-@@ -275,7 +275,7 @@ class Channelnumber:
+@@ -276,7 +276,7 @@ class Channelnumber:
  				pass
  		try:
  			#not all images support recording type indicators
