@@ -5,14 +5,18 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 PACKAGE_ARCH = "${MACHINEBUILD}"
 
-PV = "${@bb.utils.contains("MACHINE_FEATURES", "kodi18", "18", "17", d)}"
+inherit gitpkgv autotools ${PYTHON_PN}native
+
+SRCREV = "${AUTOREV}"
+PV = "19+git${SRCPV}"
+PKGV = "19+git${GITPKGV}"
+VER = "19"
 
 RDEPENDS_${PN} += "virtual/kodi"
 
 RRECOMMENDS_${PN} = "${@bb.utils.contains("MACHINE_FEATURES", "no-subssupport", "" , "enigma2-plugin-extensions-subssupport", d)}"
 
-SRCREV = "241a5aabf50aa21ed06c8180e854a65ebec47790"
-SRC_URI = "git://github.com/mx3L/kodiext;protocol=git;branch=master \
+SRC_URI = "git://github.com/oe-mirrors/kodiext;protocol=git;branch=master \
         file://0001-add-subtitleSelection-option.patch \
         file://advancedsettings.xml \
         "
@@ -30,5 +34,4 @@ FILES_${PN} = " \
     /usr/share/kodi/system \
     "
 
-inherit autotools
 INSANE_SKIP += "file-deps"
