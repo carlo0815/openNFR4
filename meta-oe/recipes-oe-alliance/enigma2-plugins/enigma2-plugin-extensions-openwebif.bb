@@ -8,24 +8,24 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 BRANCH="master"
 
-DEPENDS = "python-cheetah-native"
+DEPENDS = "${PYTHON_PN}-cheetah-native"
 RDEPENDS_${PN} = "\
 	aio-grab \
-	python-cheetah \
-	python-compression \
-	python-ipaddress \
-	python-json \
-	python-misc \
-	python-numbers \
-	python-pprint \
-	python-pyopenssl \
-	python-shell \
-	python-twisted-web \
-	python-unixadmin \
+	${PYTHON_PN}-cheetah \
+	${PYTHON_PN}-compression \
+	${PYTHON_PN}-ipaddress \
+	${PYTHON_PN}-json \
+	${PYTHON_PN}-misc \
+	${PYTHON_PN}-numbers \
+	${PYTHON_PN}-pprint \
+	${PYTHON_PN}-pyopenssl \
+	${PYTHON_PN}-shell \
+	${PYTHON_PN}-twisted-web \
+	${PYTHON_PN}-unixadmin \
 	oe-alliance-branding \
 	"
 
-inherit gitpkgv distutils-openplugins gettext
+inherit gitpkgv ${@bb.utils.contains("PYTHON_PN", "python", "distutils-openplugins", "distutils3-openplugins", d)} gettext
 
 DISTUTILS_INSTALL_ARGS = "--root=${D} --install-lib=${libdir}/enigma2/python/Plugins"
 
@@ -48,7 +48,6 @@ do_compile() {
 	find ${S}/plugin/public/images/boxes/ ! -name 'unknown.png' -type f -exec rm -f {} +
 	find ${S}/plugin/public/images/remotes/ ! -name 'ow_remote.png' -type f -exec rm -f {} +
 	cheetah-compile -R --nobackup ${S}/plugin
-	python -O -m compileall ${S}
 }
 
 PLUGINPATH = "${libdir}/enigma2/python/Plugins/Extensions/${MODULE}"
@@ -65,7 +64,6 @@ python populate_packages_prepend() {
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/public/vxg/.*$', 'enigma2-plugin-%s-vxg', '%s (WebTV for Google Chrome)', recursive=True, match_path=True, prepend=True, extra_depends="${PN}-webtv")
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.pexe$', 'enigma2-plugin-%s-vxg', '%s (WebTV support for Google Chrome)', recursive=True, match_path=True, prepend=True, extra_depends="${PN}-webtv")
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/[a-zA-Z0-9_]+.*$', 'enigma2-plugin-%s', '%s', recursive=True, match_path=True, prepend=True, extra_depends="enigma2")
-    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.py$', 'enigma2-plugin-%s-src', '%s (source files)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.la$', 'enigma2-plugin-%s-dev', '%s (development)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.a$', 'enigma2-plugin-%s-staticdev', '%s (static development)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/(.*/)?\.debug/.*$', 'enigma2-plugin-%s-dbg', '%s (debug)', recursive=True, match_path=True, prepend=True)
