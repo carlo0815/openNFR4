@@ -36,7 +36,8 @@ PKGV = "1.3.9+git${GITPKGV}"
 SRC_URI = "git://github.com/E2OpenPlugins/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
            file://transcoding.py \
            file://0001-revert-to-formuler1.patch \
-	   file://0001-add-fileupload.patch"
+	   file://0001-add-fileupload.patch \
+	   file://001-terminal.patch"
 	
 S="${WORKDIR}/git"
 
