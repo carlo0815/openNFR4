@@ -1,5 +1,5 @@
---- a/plugin/plugin/controllers/root.py
-+++ b/plugin/plugin/controllers/root.py
+--- a/plugin/controllers/root.py
++++ b/plugin/controllers/root.py
 @@ -63,7 +63,7 @@
  				self.putChild2(static_val, static.File(six.ensure_binary(getPublicPath() + '/' + static_val)))
  
