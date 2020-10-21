@@ -11,7 +11,7 @@ RREPLACES_${PN} = "enigma2-plugin-extensions-serviceapp"
 SRCREV = "${AUTOREV}"
 SRCREV_openatv = "02956ea6b05a0186667582f9f25491f18334d31b"
 SRC_URI = " \
-    git://github.com/torwald12/serviceapp.git;branch=master \
+    git://github.com/carlo0815/serviceapp.git;branch=master \
     file://0001-serviceapp-add-setQpipMode-function-recently-added-f.patch \
     "
 
