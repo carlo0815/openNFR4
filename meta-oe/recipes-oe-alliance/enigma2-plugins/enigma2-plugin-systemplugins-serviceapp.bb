@@ -35,7 +35,6 @@ EXTRA_OECONF = "\
 PACKAGES = "${PN} ${PN}-src ${PN}-dbg"
 
 FILES_${PN} = "\
-    ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/*.py \
     ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/serviceapp.so \
     ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/locale/*/*/*.mo \
     "
@@ -49,3 +48,7 @@ FILES_${PN}-dbg = "\
     /usr/src/debug/enigma2-plugin-systemplugins-serviceapp/*/*/*/*/*/*.h \
     /usr/src/debug/enigma2-plugin-systemplugins-serviceapp/*/*/*/*/*/*.c \
     "
+ # Just a quick hack to "compile" the python parts.
+do_compile_append() {
+    ${@bb.utils.contains("PYTHON_PN", "python", "python2", "python3", d)} -O -m compileall ${S}
+}   
