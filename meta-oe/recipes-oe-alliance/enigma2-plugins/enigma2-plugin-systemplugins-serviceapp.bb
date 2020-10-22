@@ -32,7 +32,7 @@ EXTRA_OECONF = "\
 	STAGING_LIBDIR=${STAGING_LIBDIR} \
 	"
 
-PACKAGES = "${PN} ${PN}-src ${PN}-dbg"
+PACKAGES = "${PN} ${PN}-dbg"
 
 FILES_${PN} = "\
     ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/serviceapp.so \
