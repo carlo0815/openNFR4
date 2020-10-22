@@ -48,7 +48,8 @@ FILES_${PN}-dbg = "\
     /usr/src/debug/enigma2-plugin-systemplugins-serviceapp/*/*/*/*/*/*.h \
     /usr/src/debug/enigma2-plugin-systemplugins-serviceapp/*/*/*/*/*/*.c \
     "
- # Just a quick hack to "compile" the python parts.
+
+# Just a quick hack to "compile" the python parts.
 do_compile_append() {
     ${@bb.utils.contains("PYTHON_PN", "python", "python2", "python3", d)} -O -m compileall ${S}
 }   
