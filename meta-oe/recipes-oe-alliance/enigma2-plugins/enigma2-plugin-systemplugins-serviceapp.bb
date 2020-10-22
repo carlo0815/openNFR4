@@ -35,7 +35,7 @@ EXTRA_OECONF = "\
 PACKAGES = "${PN} ${PN}-src ${PN}-dbg"
 
 FILES_${PN} = "\
-    ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/*.pyo \
+    ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/*.py \
     ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/serviceapp.so \
     ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/locale/*/*/*.mo \
     "
