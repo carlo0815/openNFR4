@@ -40,12 +40,6 @@ FILES_${PN} = "\
     ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/locale/*/*/*.mo \
     "
 
-FILES_${PN}-src = "\
-    ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/*.py \
-    ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/locale/*/LC_MESSAGES/*.mo \
-    /usr/src/debug/* \
-    "
-
 FILES_${PN}-dbg = "\
     ${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceApp/serviceapp.la \
     /usr/src/debug/enigma2-plugin-systemplugins-serviceapp/*/*/*/*/*.cpp \
