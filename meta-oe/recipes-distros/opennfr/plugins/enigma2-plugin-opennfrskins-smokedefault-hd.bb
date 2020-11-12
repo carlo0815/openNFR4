@@ -13,9 +13,9 @@ PKGV = "2.1+git${GITPKGV}"
 VER ="2.1"
 PR = "r3"
 
-SRC_URI="git://github.com/carlo0815/openNFR-skin-2018.git;protocol=git;branch=6.5"
+SRC_URI="https://github.com/stein17/Skins-for-openNFR;protocol=git;branch=6.5"
 
-S = "${WORKDIR}/git"
+S = "${WORKDIR}/git/openNFR-skin-2018"
 
 FILES_${PN} = "${libdir} /usr/share"
 
