@@ -43,6 +43,7 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-opennfrskins-sphere-fhd-4nfr \
     enigma2-plugin-opennfrskins-multibox-fhd-4nfr \
     enigma2-plugin-opennfrskins-ultimate-hd-4nfr \
+    enigma2-plugin-opennfrskins-steampunk-hd-skin-4nfr \ 
     enigma2-plugin-skins-anadol \
     enigma2-plugin-extensions-vmc \
     enigma2-plugin-extensions-gbipboxclient \
