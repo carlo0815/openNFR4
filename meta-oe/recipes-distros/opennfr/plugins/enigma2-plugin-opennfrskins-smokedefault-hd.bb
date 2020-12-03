@@ -11,11 +11,11 @@ SRCREV = "${AUTOREV}"
 PV = "2.1+git${SRCPV}"
 PKGV = "2.1+git${GITPKGV}"
 VER ="2.1"
-PR = "r5"
+PR = "r3"
 
-SRC_URI="git://github.com/stein17/Skins-for-openNFR.git"
+SRC_URI="git://github.com/carlo0815/openNFR-skin-2018.git"
 
-S = "${WORKDIR}/git/openNFR-skin-2018"
+S = "${WORKDIR}/git"
 
 FILES_${PN} = "${libdir} /usr/share"
 
