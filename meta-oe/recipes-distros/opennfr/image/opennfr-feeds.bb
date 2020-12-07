@@ -38,11 +38,12 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-opennfrskins-iflat-blassermod \
     enigma2-plugin-opennfrskins-fenris-blassermod \
     enigma2-plugin-opennfrskins-bundesliga-hd-opennfr-mod \
-    enigma2-plugin-opennfrskins-prime-nfrstyle \
+    enigma2-plugin-opennfrskins-prime-nfr-style \
     enigma2-plugin-opennfrskins-smoke-light-hd \
     enigma2-plugin-opennfrskins-sphere-fhd-4nfr \
-    enigma2-plugin-opennfrskins-multibox-fhd-4nfr \
-    enigma2-plugin-opennfrskins-ultimate-hd-4nfr \
+    enigma2-plugin-opennfrskins-multibox-fhd-skin-4nfr \
+    enigma2-plugin-opennfrskins-ultimate-hd-skin-4nfr \
+    enigma2-plugin-opennfrskins-steampunk-hd-skin-4nfr \
     enigma2-plugin-skins-anadol \
     enigma2-plugin-extensions-vmc \
     enigma2-plugin-extensions-gbipboxclient \
