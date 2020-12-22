@@ -67,7 +67,6 @@ DEPENDS = "enigma2 \
     ${PYTHON_PN}-httplib2 \
     ${PYTHON_PN}-youtube-dl \
     ${PYTHON_PN}-six-native \
-    ${PYTHON_PN}-beautifulsoup4 \
     dvdbackup \
     libav \
     libshowiframe \
