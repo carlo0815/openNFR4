@@ -19,6 +19,7 @@ RRECOMMENDS_${PN} = "${@bb.utils.contains("MACHINE_FEATURES", "no-subssupport", 
 SRC_URI = "git://github.com/oe-mirrors/kodiext;protocol=git;branch=master \
         file://0001-add-subtitleSelection-option.patch \
         file://advancedsettings.xml \
+        file://0001-add-openNFR.patch \	
         "
 
 S = "${WORKDIR}/git"
