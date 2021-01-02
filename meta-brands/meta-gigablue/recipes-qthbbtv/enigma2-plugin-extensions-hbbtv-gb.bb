@@ -23,7 +23,7 @@ S = "${WORKDIR}"
 
 PLUGINPATH = "${libdir}/enigma2/python/Plugins/Extensions/HbbTV"
 
-FILES_${PN} = "${bindir} ${libdir}/mozilla/plugins/libhbbtvbrowserplugin.so ${PLUGINPATH}/*.pyo"
+FILES_${PN} = "${bindir} ${libdir}/mozilla/plugins/libhbbtvbrowserplugin.so ${PLUGINPATH}/*.py"
 
 do_configure_prepend () {
     sed 's/reader.doDump()/#reader.doDump()/g' -i ${S}/plugin/plugin.py
