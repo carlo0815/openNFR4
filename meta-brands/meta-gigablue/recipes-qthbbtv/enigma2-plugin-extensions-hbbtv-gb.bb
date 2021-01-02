@@ -7,7 +7,7 @@ PACKAGE_ARCH := "${MACHINE_ARCH}"
 
 SRCDATE = "20210102_r0"
 
-PR = "r1"
+PR = "r2"
 
 inherit gitpkgv
 
