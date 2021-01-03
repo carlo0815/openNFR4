@@ -7,11 +7,11 @@ PACKAGE_ARCH := "${MACHINE_ARCH}"
 
 SRCDATE = "20210102_r0"
 
-PR = "r2"
+PR = "r3"
 
 inherit gitpkgv
 
-SRC_URI = "http://dev.nachtfalke.biz/nfr/downloads/gb-hbbtv-qt-${SRCDATE}.zip"
+SRC_URI = "http://dev.nachtfalke.biz/nfr/downloads/gb-hbbtv-qt-${SRCDATE}.tar.gz"
 
 SRC_URI[md5sum] = "ee97075422971196ecb1982b0eb7a0d8"
 SRC_URI[sha256sum] = "aef9f1187d92687d86df65f6dc04c4f9bc57d1d77cd3576a189d2708ac4ac5f0"
