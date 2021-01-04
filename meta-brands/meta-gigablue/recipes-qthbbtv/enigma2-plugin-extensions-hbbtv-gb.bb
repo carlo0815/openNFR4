@@ -5,9 +5,9 @@ LICENSE = "CLOSED"
 require conf/license/license-close.inc
 PACKAGE_ARCH := "${MACHINE_ARCH}"
 
-SRCDATE = "20210102_r0"
+SRCDATE = "20210104_r0"
 
-PR = "r4"
+PR = "r5"
 
 inherit gitpkgv
 
