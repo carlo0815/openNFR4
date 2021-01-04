@@ -55,7 +55,7 @@ RDEPENDS_${PN} = "\
     gstreamer1.0-plugins-bad-videoparsersbad \
     gstreamer1.0-plugins-bad-autoconvert \
 "
-
+PACKAGE_ARCH = "${MACHINEBUILD}"
 inherit gitpkgv
 
 SRCREV = "${AUTOREV}"
