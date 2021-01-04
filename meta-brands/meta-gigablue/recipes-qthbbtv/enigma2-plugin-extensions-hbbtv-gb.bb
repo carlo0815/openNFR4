@@ -13,8 +13,8 @@ inherit gitpkgv
 
 SRC_URI = "http://dev.nachtfalke.biz/nfr/downloads/gb-hbbtv-qt-${SRCDATE}.tar.gz"
 
-SRC_URI[md5sum] = "f95c5747351a76b28cf0137ce1707173"
-SRC_URI[sha256sum] = "cb76b5275a80683d5bf8ec32b8bb0ebfa48085904c7db02cc5a0d4f24b8c8868"
+SRC_URI[md5sum] = "e34d0e28ee5b311c162060c38dc93390"
+SRC_URI[sha256sum] = "e29f8b19e01dfe0f66440e6242ed2ae971ebb2bfcc2b70af12f5aa0edeb0b0eb"
 
 RDEPENDS_${PN}  = "qtwebkit virtual/libgles2"
 RDEPENDS_${PN} += "gb-v3ddriver-${MACHINE}"
