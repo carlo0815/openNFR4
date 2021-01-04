@@ -62,7 +62,7 @@ SRCREV = "${AUTOREV}"
 PKGVERSION = "2.0-r0"
 PV = "${PKGVERSION}-${SRCPV}"
 PKGV = "${PKGVERSION}-${GITPKGV}"
-PR = "r0"
+PR = "r1"
 
 INSANE_SKIP_${PN} += "already-stripped arch"
 
