@@ -7,13 +7,14 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "1.0"
-PR = "r04"
+PR = "r05"
 
 inherit packagegroup
 
 RRECOMMENDS_${PN} = "\
     curlftpfs \
     cdfs \
+    tvheadend \
     opennfr-3rdparty-plugins \
     oe-alliance-skins \
     enigma2-display-skins \
