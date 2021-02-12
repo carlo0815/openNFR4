@@ -23,7 +23,8 @@ RDEPENDS_${PN} = "\
     enigma2-plugin-extensions-fileload \
     enigma2-plugin-extensions-nfr4xboot \
     enigma2-plugin-extensions-imdb \
-    enigma2-plugin-extensions-customsubservices \    
+    enigma2-plugin-extensions-customsubservices \ 
+    enigma2-plugin-extensions-tvheadend \
     \
     enigma2-plugin-systemplugins-fastscan \
     enigma2-plugin-systemplugins-softwaremanager \
