@@ -47,4 +47,6 @@ RDEPENDS_${PN} = "\
     ${@bb.utils.contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
 "
 
-
+RRECOMMENDS_${PN}_append_osmio4k = " enigma2-plugin-systemplugins-satipclient enigma2-plugin-extensions-simpleumount"
+RRECOMMENDS_${PN}_append_osmio4kplus = " enigma2-plugin-systemplugins-satipclient enigma2-plugin-extensions-simpleumount"
+RRECOMMENDS_${PN}_append_osmini4k = " enigma2-plugin-systemplugins-satipclient enigma2-plugin-extensions-simpleumount"
