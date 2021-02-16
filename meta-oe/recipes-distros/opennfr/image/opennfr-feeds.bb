@@ -48,6 +48,7 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-skins-anadol \
     enigma2-plugin-extensions-vmc \
     enigma2-plugin-extensions-gbipboxclient \
+    enigma2-plugin-extensions-chocholousek-picons \
     " 
 
 RRECOMMENDS_${PN}_append_gb800solo = "enigma2-plugin-extensions-gbipboxclient"
