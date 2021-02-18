@@ -15,11 +15,12 @@ PACKAGES += " \
 PROVIDES += " \
     enigma2-plugin-extensions-autotimer \
     enigma2-plugin-extensions-btdevicesmanager \
+    enigma2-plugin-systemplugins-abmcustommiximporter \
+    enigma2-plugin-systemplugins-aboutboxbranding \
     enigma2-plugin-systemplugins-blindscan \
     enigma2-plugin-systemplugins-channelsimporter \
     enigma2-plugin-extensions-dlnabrowser \
     enigma2-plugin-extensions-dlnaserver \
-    enigma2-plugin-systemplugins-abmcustommiximporter \
     enigma2-plugin-systemplugins-firmwareupgrade \
     enigma2-plugin-systemplugins-fpgaupgrade \
     enigma2-plugin-systemplugins-vfdcontrol \
@@ -49,7 +50,7 @@ DEPENDS = "\
     ${@bb.utils.contains('MACHINE_FEATURES', 'blindscan-dvbc', 'virtual/blindscan-dvbc' , '', d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'blindscan-dvbs', 'virtual/blindscan-dvbs' , '', d)} \
     ${@bb.utils.contains('MACHINE_FEATURES', 'transcoding', 'virtual/transtreamproxy' , '', d)} \
-    python-dnspython python-beautifulsoup python-lxml python-simplejson python-pyamf python-icalendar python-pyusb \
+    python-dnspython python-beautifulsoup4 python-lxml python-simplejson python-pyamf python-icalendar python-pyusb \
     djmount \
     librtmp \
     minidlna \
@@ -67,8 +68,9 @@ DEPENDS = "\
     "
 
 DESCRIPTION_enigma2-plugin-systemplugins-audioeffect = "Audio Effect setup"
+DESCRIPTION_enigma2-plugin-systemplugins-aboutboxbranding = "View Boxbranding data from the GUI"
 DESCRIPTION_enigma2-plugin-extensions-btdevicesmanager = "this is bt devices manger to pair e.x keyboard or mouse"
-RDEPENDS_enigma2-plugin-extensions-btdevicesmanager = "bluez5-testtools bluez5 bluez-hcidump bluez-conf bluez-hidd bluez-alsa python-pexpect"
+RDEPENDS_enigma2-plugin-extensions-btdevicesmanager = "bluez5-testtools bluez5 bluez-hcidump bluez-conf bluez-hidd bluez-alsa alsa-utils-aplay python-pexpect"
 DESCRIPTION_enigma2-plugin-systemplugins-blindscan = "blindscan..."
 RRECOMMENDS_enigma2-plugin-systemplugins-blindscan = "virtual/blindscan-dvbs"
 DESCRIPTION_enigma2-plugin-extensions-dlnabrowser = "this is dlna/upnp browser using djmount"
@@ -104,7 +106,7 @@ DESCRIPTION_enigma2-plugin-systemplugins-transcodingsetup = "Setup transcoding o
 RDEPENDS_enigma2-plugin-systemplugins-transcodingsetup = "virtual/transtreamproxy"
 DESCRIPTION_enigma2-plugin-systemplugins-multitranscodingsetup = "Setup multitranscoding"
 DESCRIPTION_enigma2-plugin-systemplugins-micomupgrade = "micomupgrade"
-RDEPENDS_enigma2-plugin-extensions-ondemand = "python-dnspython python-beautifulsoup python-lxml python-simplejson python-pyamf"
+RDEPENDS_enigma2-plugin-extensions-ondemand = "python-dnspython python-beautifulsoup4 python-lxml python-simplejson python-pyamf"
 DESCRIPTION_enigma2-plugin-extensions-ondemand = "Watch on demand TV."
 DESCRIPTION_enigma2-plugin-extensions-fempa = "Norwegian P4 FEM PAA radio show player."
 DESCRIPTION_enigma2-plugin-extensions-lcd4linux = "Web/DPF/Samsung LCD Ansteuerung"
@@ -159,4 +161,5 @@ python populate_packages_prepend() {
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\/.*\.po$', 'enigma2-plugin-%s-po', '%s (translations)', recursive=True, match_path=True, prepend=True)
 }
 
-INSANE_SKIP_${PN} += "build-deps"
+do_package_qa() {
+}
