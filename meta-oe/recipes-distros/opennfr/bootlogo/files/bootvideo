@@ -1,0 +1,22 @@
+if [ -e /usr/share/bootvideo.mp4 ]; then
+	if [ -e /usr/bin/eplayer5 ]; then
+		if [ "$(grep config.audio.volume /etc/enigma2/settings)" ]; then
+			vol=`grep config.audio.volume /etc/enigma2/settings | cut -d"=" -f2`
+		else
+			vol=50
+		fi
+		voldb=$((63-vol*63/100))
+		if [ -e /proc/stb/avs/0/volume ]; then
+			echo $voldb > /proc/stb/avs/0/volume
+		fi
+		(sleep 10; killall eplayer5) & 
+		/usr/bin/eplayer5 "/usr/share/bootvideo.mp4" -n 
+	fi
+fi
+[ -e /etc/dropbear/dropbear_rsa_host_key ] &&  /usr/bin/showiframe /usr/share/bootlogo.mvi || /usr/bin/showiframe /usr/share/bootlogo_wait.mvi
+                            
+                            
+                            
+                            .... Thanks to captain for his Player5 ....
+                            
+                                     ... http://www.opena.tv ...
