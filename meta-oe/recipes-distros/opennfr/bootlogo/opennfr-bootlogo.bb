@@ -86,6 +86,7 @@ do_install() {
     install -m 0644 radio.mvi ${D}/usr/share/enigma2/radio.mvi
     install -d ${D}/${sysconfdir}/init.d
     install -m 0755 bootlogo.sh ${D}/${sysconfdir}/init.d/bootlogo
+    install -m 0755 bootvideo ${D}/${sysconfdir}/init.d/bootvideo    
 }
 
 do_install_append_vuduo2() {
