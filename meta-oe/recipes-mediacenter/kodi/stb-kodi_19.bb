@@ -93,8 +93,8 @@ SRC_URI = "git://github.com/xbmc/xbmc.git;protocol=https;branch=master \
            file://0006-stb-settings-19.patch \
            file://0007-add-winsystemfactory-windowing-init.patch \
            file://0008-adapt-window-system-registration.patch \
-           ${@bb.utils.contains_any('MACHINE_FEATURES', 'hisil-3798mv200 hisi hisil', '' , 'file://e2-player.patch', d)} \
-           ${@bb.utils.contains_any('MACHINE_FEATURES', 'hisil-3798mv200 hisi hisil', '' , 'file://gst-player.patch', d)} \
+           ${@bb.utils.contains_any('MACHINE_FEATURES', 'hisil-3798mv200 hisi hisil', '' , 'file://0009-e2-player.patch', d)} \
+           ${@bb.utils.contains_any('MACHINE_FEATURES', 'hisil-3798mv200 hisi hisil', '' , 'file://0010-gst-player.patch', d)} \
           "
 
 S = "${WORKDIR}/git"
