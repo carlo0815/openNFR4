@@ -15,7 +15,6 @@ RRECOMMENDS_${PN} = "${@bb.utils.contains("MACHINE_FEATURES", "no-subssupport", 
 SRCREV = "491bf29f3810d1beef20484b7886bcd0724aabc6"
 SRC_URI = "https://github.com/oe-alliance/kodiext.git;protocol=https;branch=python3 \
 	file://advancedsettings.xml \
-	file://0001-add-openNFR.patch \
 	"
 
 S = "${WORKDIR}/git"
