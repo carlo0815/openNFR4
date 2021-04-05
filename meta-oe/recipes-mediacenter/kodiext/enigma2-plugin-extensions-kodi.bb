@@ -13,9 +13,9 @@ RRECOMMENDS_${PN} = "${@bb.utils.contains("MACHINE_FEATURES", "no-subssupport", 
 
 SRCREV = "491bf29f3810d1beef20484b7886bcd0724aabc6"
 SRC_URI = "git://github.com/oe-alliance/kodiext.git;protocol=https;branch=python3 \
-        file://advancedsettings.xml \
-	file://0001-add-openNFR.patch \
-        "
+		file://advancedsettings.xml \
+		file://0001-add-openNFR.patch \
+		"
 
 S = "${WORKDIR}/git"
 
@@ -25,10 +25,10 @@ do_install_append() {
 }
 
 FILES_${PN} = " \
-    ${libdir}/enigma2/python/Plugins/Extensions/Kodi \
-    ${bindir}/kodiext \
-    /usr/share/kodi/system \
-    "
+	${libdir}/enigma2/python/Plugins/Extensions/Kodi \
+	${bindir}/kodiext \
+	/usr/share/kodi/system \
+	"
 
 inherit autotools
 INSANE_SKIP += "file-deps"
