@@ -5,21 +5,16 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 PACKAGE_ARCH = "${MACHINEBUILD}"
 
-inherit gitpkgv autotools ${PYTHON_PN}native
-
-SRCREV = "${AUTOREV}"
-PV = "19+git${SRCPV}"
-PKGV = "19+git${GITPKGV}"
-VER = "19"
+PV = "19"
 
 RDEPENDS_${PN} += "virtual/kodi kodi-addons-meta"
 
 RRECOMMENDS_${PN} = "${@bb.utils.contains("MACHINE_FEATURES", "no-subssupport", "" , "enigma2-plugin-extensions-subssupport", d)}"
 
-SRC_URI = "git://github.com/oe-mirrors/kodiext;protocol=git;branch=master \
-        file://0001-add-subtitleSelection-option.patch \
+SRCREV = "491bf29f3810d1beef20484b7886bcd0724aabc6"
+SRC_URI = "git://github.com/oe-alliance/kodiext.git;protocol=https;branch=python3 \
         file://advancedsettings.xml \
-        file://0001-add-openNFR.patch \	
+	file://0001-add-openNFR.patch \
         "
 
 S = "${WORKDIR}/git"
@@ -35,4 +30,5 @@ FILES_${PN} = " \
     /usr/share/kodi/system \
     "
 
+inherit autotools
 INSANE_SKIP += "file-deps"
