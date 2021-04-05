@@ -1,8 +1,8 @@
 DESCRIPTION = "Enigma2 plugin to launch and play media from Kodi"
 AUTHOR = "Maroš Ondrášek <mx3ldev@gmail.com>"
 LICENSE = "GPLv2"
-SRC_URI[md5sum] = "bfeccca75bdc3581bfc2d91abf0b3eca"
-SRC_URI[sha256sum] = "82cec3bc475b3ae37ca7476773622b1e7da1497873624fe1af8495a25118f742"
+SRC_URI[md5sum] = "a9ad3a6c8edd05f386e3eaa3b258ac2c"
+SRC_URI[sha256sum] = "c2d209b0e56635a093f91c5174dc98b7ae97d0dab4539bdcf89930f32093fc69"
 
 PACKAGE_ARCH = "${MACHINEBUILD}"
 
