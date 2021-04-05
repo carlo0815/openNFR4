@@ -2,7 +2,7 @@ diff --git a/src/plugin/plugin.py b/src/plugin/plugin.py
 index bae2114..1d83af9 100644
 --- a/src/plugin/plugin.py
 +++ b/src/plugin/plugin.py
-@ -420,10 +420,10 @@ class KodiLauncher(Screen):
+@ -869,10 +869,10 @@ class KodiLauncher(Screen):
         def psCallback(data, retval, extraArgs):
             FBLock()
             kodiProc = None
