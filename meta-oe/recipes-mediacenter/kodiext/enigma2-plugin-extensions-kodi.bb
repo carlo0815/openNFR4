@@ -1,8 +1,7 @@
 DESCRIPTION = "Enigma2 plugin to launch and play media from Kodi"
 AUTHOR = "Maroš Ondrášek <mx3ldev@gmail.com>"
 LICENSE = "GPLv2"
-SRC_URI[md5sum] = "a9ad3a6c8edd05f386e3eaa3b258ac2c"
-SRC_URI[sha256sum] = "c2d209b0e56635a093f91c5174dc98b7ae97d0dab4539bdcf89930f32093fc69"
+LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 PACKAGE_ARCH = "${MACHINEBUILD}"
 
@@ -12,8 +11,8 @@ RDEPENDS_${PN} += "virtual/kodi kodi-addons-meta"
 
 RRECOMMENDS_${PN} = "${@bb.utils.contains("MACHINE_FEATURES", "no-subssupport", "" , "enigma2-plugin-extensions-subssupport", d)}"
 
-SRCREV = "491bf29f3810d1beef20484b7886bcd0724aabc6"
-SRC_URI = "https://github.com/oe-alliance/kodiext.git;protocol=https;branch=python3 \
+SRCREV = "fb3546a8e5496ff3d8d9035eb10a876ef1e4b807"
+SRC_URI = "git://github.com/oe-alliance/kodiext.git;protocol=https;branch=python3 \
 	file://advancedsettings.xml \
 	"
 
