@@ -3,7 +3,6 @@ DESCRIPTION = "Control your receiver with a browser"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://README;firstline=10;lastline=12;md5=9c14f792d0aeb54e15490a28c89087f7"
 
-
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 BRANCH="master"
@@ -30,8 +29,8 @@ inherit gitpkgv ${@bb.utils.contains("PYTHON_PN", "python", "distutils-openplugi
 DISTUTILS_INSTALL_ARGS = "--root=${D} --install-lib=${libdir}/enigma2/python/Plugins"
 
 SRCREV = "${AUTOREV}"
-PV = "1.3.9+git${SRCPV}"
-PKGV = "1.3.9+git${GITPKGV}"
+PV = "1.4.6+git${SRCPV}"
+PKGV = "1.4.6+git${GITPKGV}"
 
 SRC_URI = "git://github.com/E2OpenPlugins/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
            file://transcoding.py \
