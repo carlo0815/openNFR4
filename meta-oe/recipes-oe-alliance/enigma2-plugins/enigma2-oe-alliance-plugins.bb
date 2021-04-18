@@ -135,7 +135,7 @@ PR = "r1"
 
 SRC_URI = "${OEA_PLUGINS_URI} \
     file://f1-multitranscoding.patch \
-    #file://record_nfr.patch \
+    file://record_nfr.patch \
     "
 
 EXTRA_OECONF = " \
