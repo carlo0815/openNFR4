@@ -4,14 +4,17 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 DEPENDS = "enigma2 uchardet openssl"
-RDEPENDS_${PN} = "enigma2 uchardet openssl exteplayer3"
+RDEPENDS_${PN} = "enigma2 uchardet openssl exteplayer3 python-json"
 RCONFLICTS_${PN} = "enigma2-plugin-extensions-serviceapp"
 RREPLACES_${PN} = "enigma2-plugin-extensions-serviceapp"
 
 SRCREV = "${AUTOREV}"
+SRCREV_opennfr = "02956ea6b05a0186667582f9f25491f18334d31b"
+SRCREV_openeight = "02956ea6b05a0186667582f9f25491f18334d31b"
+SRCREV_opendroid = "02956ea6b05a0186667582f9f25491f18334d31b"
+SRCREV_openspa = "02956ea6b05a0186667582f9f25491f18334d31b"
 SRC_URI = " \
-    git://github.com/torwald12/serviceapp.git;branch=6.4 \
-    file://0001-serviceapp-add-setQpipMode-function-recently-added-f.patch \
+    git://github.com/mx3L/serviceapp.git;branch=develop \
     "
 
 S = "${WORKDIR}/git"
@@ -23,7 +26,7 @@ CXXFLAGS_append = " -std=c++11"
 PV = "0.5+git${SRCPV}"
 PKGV = "0.5+git${GITPKGV}"
 
-PR = "r5"
+PR = "r0"
 
 EXTRA_OECONF = "\
 	BUILD_SYS=${BUILD_SYS} \
