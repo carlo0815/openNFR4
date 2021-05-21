@@ -25,8 +25,6 @@ RDEPENDS_${PN} = "\
     enigma2-plugin-extensions-imdb \
     enigma2-plugin-extensions-customsubservices \ 
     enigma2-plugin-extensions-tvheadend \
-    \
-    enigma2-plugin-systemplugins-fastscan \
     enigma2-plugin-systemplugins-softwaremanager \
     enigma2-plugin-systemplugins-hotplug \    
     ${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "enigma2-plugin-extensions-openwebif-themes enigma2-plugin-extensions-openwebif-terminal", d)} \
