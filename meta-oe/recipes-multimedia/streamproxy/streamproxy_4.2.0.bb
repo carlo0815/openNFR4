@@ -7,7 +7,7 @@ inherit autotools gitpkgv
 SRCREV = "${AUTOREV}"
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
-SRC_URI="git://github.com/openNFR-Team/streamproxy.git.git;protocol=git"
+SRC_URI="git://github.com/openNFR-Team/streamproxy.git;protocol=git"
 
 pkg_postinst_${PN}() {
 #!/bin/sh
