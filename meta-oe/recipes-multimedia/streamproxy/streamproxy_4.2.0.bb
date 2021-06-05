@@ -1,46 +1,30 @@
-SUMMARY = "streamproxy manages streaming data to a PC using enigma2"
-LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://COPYING;md5=f0aaf194252e9628e87131efe6deafa2"
-SRCREV = "d9396c07f1ddfcbacec70350604fea0d3ccae821"
+DESCRIPTION = "Streamproxy for live and file streaming and transcoding"
+MAINTAINER = "Test"
+DEPENDS = "boost"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+require conf/license/license-close.inc
 
-inherit autotools gitpkgv
-SRCREV = "${AUTOREV}"
-PV = "1.0+git${SRCPV}"
-PKGV = "1.0+git${GITPKGV}"
-SRC_URI="git://github.com/openNFR-Team/streamproxy.git;protocol=git"
+inherit gitpkgv
 
-pkg_postinst_${PN}() {
-#!/bin/sh
-LINE='8001\t\tstream\ttcp6\tnowait\troot\t/usr/bin/streamproxy\t\tstreamproxy'
+PV = "2+git${SRCPV}"
+PKGV = "2+git${GITPKGV}"
+RDEPENDS_${PN} = "enigma2-plugin-systemplugins-transcodingsetup"
 
-if grep -q '^8001' $D/etc/inetd.conf; then
-	# Remove old entries for port 8001 (user fixes or previous installs)
-	grep -v '^[#\s]*8001' $D/etc/inetd.conf > $D/etc/inetd.tmp
-	mv $D/etc/inetd.tmp $D/etc/inetd.conf
-fi
+SRC_URI = "git://github.com/eriksl/streamproxy.git;protocol=git"
+FILES_${PN} = "${bindir}/streamproxy ${sysconfdir}/init.d/streamproxy.sh ${sysconfdir}/enigma2/streamproxy.conf"
+CONFFILES_${PN} = "${sysconfdir}/enigma2/streamproxy.conf"
+S = "${WORKDIR}/git"
 
-if grep -q '^8002' $D/etc/inetd.conf; then
-	# Add before port 8002 if it exists
-	sed -i "s#^[#\s]*8002#${LINE}\n8002#" $D/etc/inetd.conf
-else
-	# Just append
-	echo -e "${LINE}" >> $D/etc/inetd.conf
-fi
+inherit autotools
 
-if [ -z "$D" -a -f "/etc/init.d/inetd.busybox" ]; then
-	/etc/init.d/inetd.busybox restart
-fi
+do_install_append() {
+	install -m 755 -d ${D}${sysconfdir}/init.d/
+	install -m 755 ${S}/src/streamproxy.sh ${D}${sysconfdir}/init.d/
+	install -m 755 -d ${D}${sysconfdir}/enigma2/
+	install -m 644 ${S}/src/streamproxy.conf ${D}${sysconfdir}/enigma2/
 }
 
-pkg_prerm_${PN}() {
-#!/bin/sh
-if grep -q '^[#\s]*8001' $D/etc/inetd.conf; then
-	grep -v '^[#\s]*8001' $D/etc/inetd.conf > $D/etc/inetd.tmp
-	mv $D/etc/inetd.tmp $D/etc/inetd.conf
-fi
+INITSCRIPT_NAME = "streamproxy.sh"
+INITSCRIPT_PARAMS = "defaults 30 70"
 
-if [ -z "$D" -a -f "/etc/init.d/inetd.busybox" ]; then
-	/etc/init.d/inetd.busybox restart
-fi
-}
-
+inherit update-rc.d
