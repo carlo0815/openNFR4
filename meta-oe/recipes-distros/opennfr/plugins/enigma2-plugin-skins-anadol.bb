@@ -20,9 +20,6 @@ FILES_${PN} = "/"
 
 S = "${WORKDIR}/git/Anadol"
 
-do_compile_append() {
-python -O -m compileall ${S}
-}
 
 do_install() {
     install -d ${D}${libdir}
