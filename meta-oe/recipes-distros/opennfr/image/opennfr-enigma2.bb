@@ -14,6 +14,7 @@ inherit packagegroup
 DEPENDS = "opennfr-feeds opennfr-3rdparty-plugins 3rd-party-feed-configs lzo eplayer5"
 
 RDEPENDS_${PN} = "\
+    enigma-kernel-module \
     enigma2-plugin-extensions-autotimer \
     enigma2-plugin-extensions-epgsearch \
     enigma2-plugin-extensions-mediaplayer \
