@@ -18,7 +18,6 @@ RRECOMMENDS_${PN} = "\
     opennfr-3rdparty-plugins \
     oe-alliance-skins \
     enigma2-display-skins \
-    openatv-picons-meta \
     enigma2-skins \
     enigma2-pliplugins \
     enigma2-plugin-extensions-project-valerie \
