@@ -10,11 +10,11 @@ PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 VER="1.0"
 
-RDEPENDS_${PN} = "enigma2-plugin-skincomponents-weathercomponent, enigma2-plugin-systemplugins-weathercomponenthandler"
+RDEPENDS:${PN} = "enigma2-plugin-skincomponents-weathercomponent, enigma2-plugin-systemplugins-weathercomponenthandler"
 
 SRC_URI="git://github.com/stein17/Skins-for-openNFR.git;protocol=git"
 
-FILES_${PN} = "/"
+FILES:${PN} = "/"
 
 
 
@@ -29,7 +29,7 @@ do_install() {
     chmod -R a+rX ${D}/usr/share/enigma2/
 }
 
-pkg_postinst_${PN} () {
+pkg_postinst:${PN} () {
 #!/bin/sh
 echo "                                                          "
 echo "    Anadol Skin Full HD by stein17 successful installed.  "
@@ -37,7 +37,7 @@ echo "                                                          "
 exit 0
 }
 
-pkg_postrm_${PN} () {
+pkg_postrm:${PN} () {
 #!/bin/sh
 rm -rf /usr/share/enigma2/Anadol
 rm -rf ${libdir}/enigma2/python/Components/Converter/AND*
@@ -48,7 +48,7 @@ echo "                                                          "
 exit 0
 }
 
-pkg_preinst_${PN} () {
+pkg_preinst:${PN} () {
 #!/bin/sh                                                       
 rm -rf /usr/share/enigma2/Anadol
 rm -rf ${libdir}/enigma2/python/Components/Converter/AND*
@@ -59,7 +59,7 @@ echo "                                                                          
 exit 0
 }
 
-pkg_prerm_${PN} () {
+pkg_prerm:${PN} () {
 #!/bin/sh
 echo "                                                           "
 echo " Anadol Skin Full HD by stein17 is now being removed...    "
