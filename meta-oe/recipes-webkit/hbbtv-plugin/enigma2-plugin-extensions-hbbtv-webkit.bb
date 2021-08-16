@@ -4,7 +4,7 @@ PRIORITY = "required"
 LICENSE = "CLOSED"
 require conf/license/license-close.inc
 
-RDEPENDS_${PN} = "dumpait-legacy \
+RDEPENDS:${PN} = "dumpait-legacy \
     ${@bb.utils.contains('TUNE_FEATURES', 'aarch64', 'lib32-webkit-hbbtv-plugin' , 'webkit-hbbtv-plugin', d)} \
 "
 
@@ -18,7 +18,7 @@ PV = "${PKGVERSION}-${SRCPV}"
 PKGV = "${PKGVERSION}-${GITPKGV}"
 PR = "r0"
 
-INSANE_SKIP_${PN} += "already-stripped arch"
+INSANE_SKIP:${PN} += "already-stripped arch"
 
 SRC_URI = "git://github.com/oe-alliance/enigma2-plugin-extensions-hbbtv-webkit.git;protocol=https;branch=dev"
 
@@ -29,7 +29,7 @@ do_package_qa() {
 
 DESTDIR = "enigma2/python/Plugins/Extensions/HbbTV"
 
-do_install_append() {
+do_install:append() {
     install -d ${D}${libdir}/${DESTDIR}
     
     # Python Files
@@ -37,4 +37,4 @@ do_install_append() {
     python -O -m compileall ${D}${libdir}/${DESTDIR}
 }
 
-FILES_${PN} = "/"
+FILES:${PN} = "/"
