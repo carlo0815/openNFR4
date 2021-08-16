@@ -16,14 +16,14 @@ SRC_URI = "http://dev.nachtfalke.biz/nfr/downloads/gb-hbbtv-qt-${SRCDATE}.tar.gz
 SRC_URI[md5sum] = "e34d0e28ee5b311c162060c38dc93390"
 SRC_URI[sha256sum] = "e29f8b19e01dfe0f66440e6242ed2ae971ebb2bfcc2b70af12f5aa0edeb0b0eb"
 
-RDEPENDS_${PN}  = "qtwebkit virtual/libgles2"
-RDEPENDS_${PN} += "gb-v3ddriver-${MACHINE}"
+RDEPENDS:${PN}  = "qtwebkit virtual/libgles2"
+RDEPENDS:${PN} += "gb-v3ddriver-${MACHINE}"
 
 S = "${WORKDIR}"
 
 PLUGINPATH = "${libdir}/enigma2/python/Plugins/Extensions/HbbTV"
 
-FILES_${PN} = "${bindir} ${libdir}/mozilla/plugins/libhbbtvbrowserplugin.so ${PLUGINPATH}/*.py"
+FILES:${PN} = "${bindir} ${libdir}/mozilla/plugins/libhbbtvbrowserplugin.so ${PLUGINPATH}/*.py"
 
 do_configure_prepend () {
     sed 's/reader.doDump()/#reader.doDump()/g' -i ${S}/plugin/plugin.py
@@ -40,7 +40,7 @@ do_install(){
 }
 
 
-pkg_postinst_ontarget_${PN}(){
+pkg_postinst_ontarget:${PN}(){
 #!/bin/sh
 ln -sf /usr/share/fonts /usr/lib/fonts
 
@@ -56,4 +56,4 @@ exit 0
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
-INSANE_SKIP_${PN} += "already-stripped file-rdeps ldflags"
+INSANE_SKIP:${PN} += "already-stripped file-rdeps ldflags"
