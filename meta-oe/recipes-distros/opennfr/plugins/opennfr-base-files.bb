@@ -19,22 +19,22 @@ SRC_URI[formuler4.md5sum] = "c29e74780f9bd1e2ca957e9cdd613437"
 SRC_URI[formuler4.sha256sum] = "0f8e5505c044a44932eea1574d6f0f0d197be6e1ab81632f4023beb52caa7939"
 
 
-SRC_URI_append_formuler1 += " \
+SRC_URI:append:formuler1 += " \
 http://source.mynonpublic.com/formuler/formuler1tc-drivers-al-4.10.6-20170419.zip;name=formuler1  \
 " 
-SRC_URI_append_formuler3 += " \
+SRC_URI:append:formuler3 += " \
 http://source.mynonpublic.com/formuler/formuler3ip-drivers-al-4.10.6-20170419.zip;name=formuler3  \
 "
-SRC_URI_append_formuler4 += "  \
+SRC_URI:append:formuler4 += "  \
 http://source.mynonpublic.com/formuler/formuler4ip-drivers-al-4.10.6-20170419.zip;name=formuler4  \
 "
  
 
-FILES_${PN} = "/*"
+FILES:${PN} = "/*"
 
 INHIBIT_PACKAGE_STRIP = "1"
  
-ALLOW_EMPTY_${PN} = "1"
+ALLOW:EMPTY:${PN} = "1"
 
 PR = "r13"
 
@@ -44,7 +44,7 @@ do_install() {
 }
 
 
-do_install_append_mipsel() {
+do_install:append:mipsel() {
     install -d ${D}/media
     mkdir -p ${D}/media/hdd
     mkdir -p ${D}/media/usb
@@ -58,7 +58,7 @@ do_install_append_mipsel() {
     mv ${D}${libdir}/enigma2/python/Components/Converter/bitratecalc.so_mips ${D}${libdir}/enigma2/python/Components/Converter/bitratecalc.so
 }
 
-do_install_append_sh4() {
+do_install:append:sh4() {
     install -d ${D}/media
     mkdir -p ${D}/media/hdd
     mkdir -p ${D}/media/usb
@@ -70,19 +70,19 @@ do_install_append_sh4() {
     mv ${D}${libdir}/enigma2/python/Components/Converter/bitratecalc.so_sh4 ${D}${libdir}/enigma2/python/Components/Converter/bitratecalc.so
 }
 
-do_install_append_formuler1() {
+do_install:append:formuler1() {
 install -d ${D}/${sysconfdir}/extratc
 install -d ${D}/${sysconfdir}/modules-load.d
 install -m 755 ${WORKDIR}/formuler1tc_dvb.ko ${D}/${sysconfdir}/extratc/formuler1_4.ko
 echo "formuler1_4" >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf_tc
 }
-do_install_append_formuler3() {
+do_install:append:formuler3() {
 install -d ${D}/${sysconfdir}/extraip
 install -d ${D}/${sysconfdir}/modules-load.d
 install -m 755 ${WORKDIR}/formuler3ip_dvb.ko ${D}/${sysconfdir}/extraip/formuler3_4.ko
 echo "formuler3_4" >> ${D}/${sysconfdir}/modules-load.d/_${MACHINE}.conf_ip
 }
-do_install_append_formuler4() {
+do_install:append:formuler4() {
 install -d ${D}/${sysconfdir}/extraip
 install -d ${D}/${sysconfdir}/modules-load.d
 install -m 755 ${WORKDIR}/formuler4ip_dvb.ko ${D}/${sysconfdir}/extraip/formuler4_4.ko
