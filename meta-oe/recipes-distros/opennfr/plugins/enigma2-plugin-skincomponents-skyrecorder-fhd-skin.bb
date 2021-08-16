@@ -18,7 +18,7 @@ SRC_URI="git://github.com/stein17/Skins-for-Plugins-by-stein17.git"
 
 S = "${WORKDIR}/git/Skyrecorder-FHD-Skins-by-stein17"
 
-FILES_${PN} = "/"
+FILES:${PN} = "/"
 
 
 do_install() {
@@ -28,7 +28,7 @@ do_install() {
     cp -rp ${S}/tmp ${D}/
 }
 
-pkg_postinst_${PN} () {
+pkg_postinst:${PN} () {
 #!/bin/sh
 
 mv /tmp/stein/SkyAddedEdit.py ${libdir}/enigma2/python/Plugins/Extensions/skyrecorder/SkyAddedEdit.py
@@ -48,7 +48,7 @@ echo "                                                                          
 exit 0
 }
 
-pkg_postrm_${PN} () {
+pkg_postrm:${PN} () {
 #!/bin/sh
 
 mv ${libdir}/enigma2/python/Plugins/Extensions/skyrecorder/SkyAddedEdit.py_orig ${libdir}/enigma2/python/Plugins/Extensions/skyrecorder/SkyAddedEdit.py
@@ -81,7 +81,7 @@ echo ""
 exit 0
 }
 
-pkg_preinst_${PN} () {
+pkg_preinst:${PN} () {
 #!/bin/sh
 rm -rf ${libdir}/enigma2/python/Plugins/Extensions/skyrecorder/skins/ax_blue_fhd
 rm -rf ${libdir}/enigma2/python/Plugins/Extensions/skyrecorder/skins/blue_line_fhd
@@ -104,7 +104,7 @@ echo "                                                                          
 exit 0
 }
 
-pkg_prerm_${PN} () {
+pkg_prerm:${PN} () {
 #!/bin/sh
 
 
