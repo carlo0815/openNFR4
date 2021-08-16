@@ -18,7 +18,7 @@ SRC_URI="git://github.com/stein17/Skins-for-Plugins-by-stein17.git"
 
 S = "${WORKDIR}/git/Mediaportal-Smoke-HD-Skin"
 
-FILES_${PN} = "${libdir}"
+FILES:${PN} = "${libdir}"
 
 do_install() {
     install -d ${D}${libdir}
