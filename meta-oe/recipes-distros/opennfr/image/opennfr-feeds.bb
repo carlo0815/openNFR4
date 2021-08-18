@@ -50,10 +50,10 @@ RRECOMMENDS:${PN} = "\
     enigma2-plugin-extensions-chocholousek-picons \
     " 
 
-RRECOMMENDS:${PN}_append_gb800solo = "enigma2-plugin-extensions-gbipboxclient"
-RRECOMMENDS:${PN}_append_gb7325 = "enigma2-plugin-extensions-gbipboxclient"
-RRECOMMENDS:${PN}_append_gb7358 = "enigma2-plugin-extensions-gbipboxclient"
-RRECOMMENDS:${PN}_append_gb7362 = "enigma2-plugin-extensions-gbipboxclient"
-RRECOMMENDS:${PN}_append_gb73625 = "enigma2-plugin-extensions-gbipboxclient"
-RRECOMMENDS:${PN}_append_gb7356 = "enigma2-plugin-extensions-gbipboxclient"
-RRECOMMENDS:${PN}_append_gb7252 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS:${PN}:append_gb800solo = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS:${PN}:append_gb7325 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS:${PN}:append_gb7358 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS:${PN}:append_gb7362 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS:${PN}:append_gb73625 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS:${PN}:append_gb7356 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS:${PN}:append_gb7252 = "enigma2-plugin-extensions-gbipboxclient"
