@@ -8,79 +8,79 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=8e37f34d0e40d32ea2bc90ee812c9131"
 PACKAGES_DYNAMIC = "enigma2-plugin-(?!oealliance-).*"
 
 PACKAGES += " \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'operahbbtv', 'enigma2-plugin-extensions-hbbtv ' , ' ', d)} \
-    enigma2-plugin-extensions-lcd4linux \
-    "
+	${@bb.utils.contains('MACHINE_FEATURES', 'operahbbtv', 'enigma2-plugin-extensions-hbbtv ' , ' ', d)} \
+	enigma2-plugin-extensions-lcd4linux \
+	"
 
 PROVIDES += " \
-    enigma2-plugin-extensions-autotimer \
-    enigma2-plugin-extensions-btdevicesmanager \
-    enigma2-plugin-systemplugins-abmcustommiximporter \
-    enigma2-plugin-systemplugins-aboutboxbranding \
-    enigma2-plugin-systemplugins-blindscan \
-    enigma2-plugin-systemplugins-channelsimporter \
-    enigma2-plugin-extensions-dlnabrowser \
-    enigma2-plugin-extensions-dlnaserver \
-    enigma2-plugin-systemplugins-firmwareupgrade \
-    enigma2-plugin-systemplugins-fpgaupgrade \
-    enigma2-plugin-systemplugins-vfdcontrol \
-    enigma2-plugin-extensions-streamtv \
-    enigma2-plugin-systemplugins-tempfancontrol \
-    enigma2-plugin-systemplugins-fancontrol \
-    enigma2-plugin-systemplugins-remotecontrolcode \
-    enigma2-plugin-extensions-webbrowser \
-    enigma2-plugin-extensions-openuitzendinggemist \
-    enigma2-plugin-systemplugins-satipclient \
-    enigma2-plugin-systemplugins-bluetoothsetup \
-    enigma2-plugin-extensions-chromium \
-    enigma2-plugin-extensions-tunerserver \
-    enigma2-plugin-extensions-libvupldemo \
-    enigma2-plugin-extensions-witaispeechtotext \
-    enigma2-plugin-extensions-webkithbbtv \
-    enigma2-plugin-extensions-stalkerclient \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'operahbbtv', 'enigma2-plugin-extensions-hbbtv ' , ' ', d)} \
-    enigma2-plugin-systemplugins-transcodingsetup \
-    enigma2-plugin-systemplugins-micomupgrade \
-    enigma2-plugin-systemplugins-multitranscodingsetup \
-    enigma2-plugin-extensions-ondemand \
-    enigma2-plugin-extensions-fempa \
-    enigma2-plugin-extensions-lcd4linux \
-    enigma2-plugin-extensions-piconsupdater \
-    enigma2-plugin-extensions-remotechannelstreamconverter \
-    enigma2-plugin-extensions-tmdb \
-    enigma2-plugin-extensions-tvspielfilm \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'legacykernel', '' , 'enigma2-plugin-systemplugins-wirelessaccesspoint', d)} \
-    ${@bb.utils.contains('MACHINE', 'spark7162', 'enigma2-plugin-systemplugins-uniontunertype ' , ' ', d)} \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'sh4booster', 'enigma2-plugin-systemplugins-sh4boostercontrol' , ' ', d)} \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'aml-plugins', 'enigma2-plugin-extensions-rcuselect enigma2-plugin-extensions-rezap' , ' ', d)} \
-     "
+	enigma2-plugin-extensions-autotimer \
+	enigma2-plugin-extensions-btdevicesmanager \
+	enigma2-plugin-systemplugins-abmcustommiximporter \
+	enigma2-plugin-systemplugins-aboutboxbranding \
+	enigma2-plugin-systemplugins-blindscan \
+	enigma2-plugin-systemplugins-channelsimporter \
+	enigma2-plugin-extensions-dlnabrowser \
+	enigma2-plugin-extensions-dlnaserver \
+	enigma2-plugin-systemplugins-firmwareupgrade \
+	enigma2-plugin-systemplugins-fpgaupgrade \
+	enigma2-plugin-systemplugins-vfdcontrol \
+	enigma2-plugin-extensions-streamtv \
+	enigma2-plugin-systemplugins-tempfancontrol \
+	enigma2-plugin-systemplugins-fancontrol \
+	enigma2-plugin-systemplugins-remotecontrolcode \
+	enigma2-plugin-extensions-webbrowser \
+	enigma2-plugin-extensions-openuitzendinggemist \
+	enigma2-plugin-systemplugins-satipclient \
+	enigma2-plugin-systemplugins-bluetoothsetup \
+	enigma2-plugin-extensions-chromium \
+	enigma2-plugin-extensions-tunerserver \
+	enigma2-plugin-extensions-libvupldemo \
+	enigma2-plugin-extensions-witaispeechtotext \
+	enigma2-plugin-extensions-webkithbbtv \
+	enigma2-plugin-extensions-stalkerclient \
+	${@bb.utils.contains('MACHINE_FEATURES', 'operahbbtv', 'enigma2-plugin-extensions-hbbtv ' , ' ', d)} \
+	enigma2-plugin-systemplugins-transcodingsetup \
+	enigma2-plugin-systemplugins-micomupgrade \
+	enigma2-plugin-systemplugins-multitranscodingsetup \
+	enigma2-plugin-extensions-ondemand \
+	enigma2-plugin-extensions-fempa \
+	enigma2-plugin-extensions-lcd4linux \
+	enigma2-plugin-extensions-piconsupdater \
+	enigma2-plugin-extensions-remotechannelstreamconverter \
+	enigma2-plugin-extensions-tmdb \
+	enigma2-plugin-extensions-tvspielfilm \
+	${@bb.utils.contains('MACHINE_FEATURES', 'legacykernel', '' , 'enigma2-plugin-systemplugins-wirelessaccesspoint', d)} \
+	${@bb.utils.contains('MACHINE', 'spark7162', 'enigma2-plugin-systemplugins-uniontunertype ' , ' ', d)} \
+	${@bb.utils.contains('MACHINE_FEATURES', 'sh4booster', 'enigma2-plugin-systemplugins-sh4boostercontrol' , ' ', d)} \
+	${@bb.utils.contains('MACHINE_FEATURES', 'aml-plugins', 'enigma2-plugin-extensions-rcuselect enigma2-plugin-extensions-rezap' , ' ', d)} \
+	 "
 
 DEPENDS = "\
-    ${@bb.utils.contains('MACHINE_FEATURES', 'blindscan-dvbc', 'virtual/blindscan-dvbc' , '', d)} \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'blindscan-dvbs', 'virtual/blindscan-dvbs' , '', d)} \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'transcoding', 'virtual/transtreamproxy' , '', d)} \
-    ${PYTHON_PN}-dnspython ${PYTHON_PN}-beautifulsoup4 ${PYTHON_PN}-lxml ${PYTHON_PN}-simplejson ${PYTHON_PN}-pyamf ${PYTHON_PN}-icalendar ${PYTHON_PN}-pyusb ${PYTHON_PN}-six-native \
-    djmount \
-    dpflib \
-    rtmpdump \
-    minidlna \
-    hddtemp \
-    ppp \
-    usbmodeswitch \
-    usbmodeswitch-data \
-    usbutils \
-    satipclient \
-    bluez-conf \
-    bluez-hidd \
-    bluez-alsa \
-    ${@bb.utils.contains('MACHINE_FEATURES', 'legacykernel', '' , 'hostapd bridge-utils', d)} \
-    wvdial wvstreams \
-    ${@bb.utils.contains("MACHINE_FEATURES", "chromiumos", "chromium-browser", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "gbbluetooth", "gb-bluetooth-util", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "vubluetooth", "vuplus-bluetooth-util", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "webkithbbtv", "vuplus-webkithbbtv-dumpait webkit-hbbtv-browser", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "vuglesdemo", "libvupl-example-cube", "", d)} \
-    "
+	${@bb.utils.contains('MACHINE_FEATURES', 'blindscan-dvbc', 'virtual/blindscan-dvbc' , '', d)} \
+	${@bb.utils.contains('MACHINE_FEATURES', 'blindscan-dvbs', 'virtual/blindscan-dvbs' , '', d)} \
+	${@bb.utils.contains('MACHINE_FEATURES', 'transcoding', 'virtual/transtreamproxy' , '', d)} \
+	${PYTHON_PN}-dnspython ${PYTHON_PN}-beautifulsoup4 ${PYTHON_PN}-lxml ${PYTHON_PN}-simplejson ${PYTHON_PN}-pyamf ${PYTHON_PN}-icalendar ${PYTHON_PN}-pyusb ${PYTHON_PN}-six-native \
+	djmount \
+	dpflib \
+	rtmpdump \
+	minidlna \
+	hddtemp \
+	ppp \
+	usbmodeswitch \
+	usbmodeswitch-data \
+	usbutils \
+	satipclient \
+	bluez-conf \
+	bluez-hidd \
+	bluez-alsa \
+	${@bb.utils.contains('MACHINE_FEATURES', 'legacykernel', '' , 'hostapd bridge-utils', d)} \
+	wvdial wvstreams \
+	${@bb.utils.contains("MACHINE_FEATURES", "chromiumos", "chromium-browser", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "gbbluetooth", "gb-bluetooth-util", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "vubluetooth", "vuplus-bluetooth-util", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "webkithbbtv", "vuplus-webkithbbtv-dumpait webkit-hbbtv-browser", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "vuglesdemo", "libvupl-example-cube", "", d)} \
+	"
 
 
 
@@ -163,19 +163,19 @@ PKGV = "${IMAGE_VERSION}+git${GITPKGV}"
 PR = "r1"
 
 SRC_URI = "${OEA_PLUGINS_URI} \
-    file://f1-multitranscoding.patch \
-    file://record_nfr.patch \
-    "
+	file://f1-multitranscoding.patch \
+	file://record_nfr.patch \
+	"
 
 EXTRA_OECONF = " \
-    BUILD_SYS=${BUILD_SYS} \
-    HOST_SYS=${HOST_SYS} \
-    STAGING_INCDIR=${STAGING_INCDIR} \
-    STAGING_LIBDIR=${STAGING_LIBDIR} \
-    --with-boxtype=${MACHINE} \
-    --with-arch=${TARGET_ARCH} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "aml-plugins", "--with-amlplugins" , "", d)} \
-    "
+	BUILD_SYS=${BUILD_SYS} \
+	HOST_SYS=${HOST_SYS} \
+	STAGING_INCDIR=${STAGING_INCDIR} \
+	STAGING_LIBDIR=${STAGING_LIBDIR} \
+	--with-boxtype=${MACHINE} \
+	--with-arch=${TARGET_ARCH} \
+	${@bb.utils.contains("MACHINE_FEATURES", "aml-plugins", "--with-amlplugins" , "", d)} \
+	"
 
 ALLOW_EMPTY:${PN} = "1"
 PACKAGES += "${PN}-meta"
@@ -184,12 +184,12 @@ FILES:${PN}-meta = "${datadir}/meta"
 S = "${WORKDIR}/git"
 
 python populate_packages:prepend() {
-    enigma2_plugindir = bb.data.expand('${libdir}/enigma2/python/Plugins', d)
-    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/[a-zA-Z0-9_]+.*$', 'enigma2-plugin-%s', '%s', recursive=True, match_path=True, prepend=True)
-    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.la$', 'enigma2-plugin-%s-dev', '%s (development)', recursive=True, match_path=True, prepend=True)
-    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.a$', 'enigma2-plugin-%s-staticdev', '%s (static development)', recursive=True, match_path=True, prepend=True)
-    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/(.*/)?\.debug/.*$', 'enigma2-plugin-%s-dbg', '%s (debug)', recursive=True, match_path=True, prepend=True)
-    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\/.*\.po$', 'enigma2-plugin-%s-po', '%s (translations)', recursive=True, match_path=True, prepend=True)
+	enigma2_plugindir = bb.data.expand('${libdir}/enigma2/python/Plugins', d)
+	do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/[a-zA-Z0-9_]+.*$', 'enigma2-plugin-%s', '%s', recursive=True, match_path=True, prepend=True)
+	do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.la$', 'enigma2-plugin-%s-dev', '%s (development)', recursive=True, match_path=True, prepend=True)
+	do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.a$', 'enigma2-plugin-%s-staticdev', '%s (static development)', recursive=True, match_path=True, prepend=True)
+	do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/(.*/)?\.debug/.*$', 'enigma2-plugin-%s-dbg', '%s (debug)', recursive=True, match_path=True, prepend=True)
+	do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\/.*\.po$', 'enigma2-plugin-%s-po', '%s (translations)', recursive=True, match_path=True, prepend=True)
 }
 
 do_package_qa() {
