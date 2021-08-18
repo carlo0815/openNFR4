@@ -18,7 +18,7 @@ FILES:${PN} = "${libdir} /usr/share"
 
 S = "${WORKDIR}/git/Ultimate-HD-Skin-4NFR"
 
-do_compile_append() {
+do_compile:append() {
 python -O -m compileall ${S}
 }
 
