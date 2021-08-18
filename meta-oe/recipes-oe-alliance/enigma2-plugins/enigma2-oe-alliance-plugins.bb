@@ -167,8 +167,6 @@ SRC_URI = "${OEA_PLUGINS_URI} \
     file://record_nfr.patch \
     "
 
-SRC_URI = "${OEA_PLUGINS_URI}"
-
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
     HOST_SYS=${HOST_SYS} \
