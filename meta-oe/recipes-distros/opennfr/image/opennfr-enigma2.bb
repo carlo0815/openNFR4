@@ -39,8 +39,7 @@ RDEPENDS:${PN} = "\
     \
     enigma2-plugin-opennfrskins-smokedefault-hd \
     enigma2-plugin-opennfrskins-utopia-hd \
-    opennfr-base-files \
-	nfr4xmultiboot \
+    nfr4xmultiboot \
     \
     ${@bb.utils.contains("MACHINE_FEATURES", "boxmodel", "boxmodel" , "", d)} \
 "
