@@ -11,7 +11,7 @@ PR = "r40"
 
 inherit packagegroup
 
-DEPENDS = "opennfr-feeds opennfr-3rdparty-plugins 3rd-party-feed-configs lzo eplayer5"
+DEPENDS = "3rd-party-feed-configs lzo eplayer5"
 
 RDEPENDS:${PN} = "\
     enigma-kernel-module \
