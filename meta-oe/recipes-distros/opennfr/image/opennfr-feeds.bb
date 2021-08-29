@@ -21,11 +21,9 @@ RRECOMMENDS:${PN} = "\
     enigma2-display-skins \
     enigma2-skins \
     enigma2-pliplugins \
-    enigma2-plugin-extensions-project-valerie \
     enigma2-plugin-extensions-epgimport \
     curlftpfs \
     enigma2-plugin-extensions-enhancedmoviecenter \
-    enigma2-plugin-extensions-cooltvguide \
     enigma2-plugin-extensions-bmediacenter \
     enigma2-plugin-extensions-mainmenu2 \
     enigma2-plugin-skincomponents-bmediacenter-ax-blue-skin \
@@ -50,6 +48,9 @@ RRECOMMENDS:${PN} = "\
     enigma2-plugin-extensions-gbipboxclient \
     enigma2-plugin-extensions-chocholousek-picons \
     " 
+# remove close cant update to py3
+#    enigma2-plugin-extensions-cooltvguide
+#    enigma2-plugin-extensions-project-valerie
 
 RRECOMMENDS:${PN}:append_gb800solo = "enigma2-plugin-extensions-gbipboxclient"
 RRECOMMENDS:${PN}:append_gb7325 = "enigma2-plugin-extensions-gbipboxclient"
