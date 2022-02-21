@@ -14,7 +14,7 @@ PKGV = "2.0+git${GITPKGV}"
 VER ="2.0"
 PR = "r2"
 
-SRC_URI="git://github.com/stein17/Skins-for-Plugins-by-stein17.git"
+SRC_URI="git://github.com/stein17/Skins-for-Plugins-by-stein17.git;protocol=https"
 
 S = "${WORKDIR}/git/Mediaportal-Smoke-HD-Skin"
 
