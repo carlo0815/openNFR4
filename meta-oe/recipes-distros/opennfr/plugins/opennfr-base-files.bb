@@ -7,7 +7,7 @@ PACKAGE_ARCH := "${MACHINE_ARCH}"
 
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://github.com/carlo0815/openNFR-base.git"
+SRC_URI = "git://github.com/carlo0815/openNFR-base.git;protocol=https"
 
 SRC_URI[formuler1.md5sum] = "43989826c0d376db159ce42c3f9dcdbb"
 SRC_URI[formuler1.sha256sum] = "e41116da6709346a3314db90124bec14343c5bd8ffa56e4d16f507a16577b08b"
