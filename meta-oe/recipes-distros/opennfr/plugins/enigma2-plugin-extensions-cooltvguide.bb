@@ -13,7 +13,7 @@ VER ="7.7"
 PR = "r0"
 
 
-SRC_URI="git://github.com/openNFR-Team/enigma2-plugin-extensions-cooltvguide.git"
+SRC_URI="git://github.com/openNFR-Team/enigma2-plugin-extensions-cooltvguide.git;protocol=https"
 
 S = "${WORKDIR}/git"
 
