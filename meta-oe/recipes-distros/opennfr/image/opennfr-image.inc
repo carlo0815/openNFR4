@@ -16,15 +16,13 @@ IMAGE_INSTALL = " \
     opennfr-base \
     packagegroup-base-smbfs-client \
     packagegroup-base-smbfs-server \
-    packagegroup-base-nfs \
+    packagegroup-base-nfs \ 
 "
 
 export IMAGE_BASENAME = "opennfr-image"
 IMAGE_LINGUAS = ""
 
 IMAGE_FEATURES += "package-management"
-
-INHIBIT_DEFAULT_DEPS = "1"
 
 inherit image
 
@@ -38,12 +36,32 @@ rootfs_postprocess() {
     ln -s opkg usr/bin/ipkg || true
     ln -s opkg-cl usr/bin/ipkg-cl || true
     ln -s libcrypto.so.1.0.2 usr/lib/libcrypto.so.0.9.8 || true
-    
-}
+    cd $curdir
+    set -x
 
-python do_package_index() {
-    from oe.rootfs import generate_index_files
-    generate_index_files(d)
+
+    if [ ! -z "${DEPLOY_KEEP_PACKAGES}" ]; then
+        return
+    fi
+
+    packagedirs="${DEPLOY_DIR_IPK}"
+    for arch in $ipkgarchs; do
+        packagedirs="$packagedirs ${DEPLOY_DIR_IPK}/$arch"
+    done
+
+    multilib_archs="${MULTILIB_ARCHS}"
+    for arch in $multilib_archs; do
+        packagedirs="$packagedirs ${DEPLOY_DIR_IPK}/$arch"
+    done
+
+    for pkgdir in $packagedirs; do
+        if [ -e $pkgdir/ ]; then
+            for i in ${unused}; do
+                rm -f $pkgdir/$i;
+            done;
+        fi
+    done
+    
 }
 
 ROOTFS_POSTPROCESS_COMMAND += "rootfs_postprocess; "
