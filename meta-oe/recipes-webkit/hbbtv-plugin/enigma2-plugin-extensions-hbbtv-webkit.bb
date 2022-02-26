@@ -37,4 +37,6 @@ do_install:append() {
     python -O -m compileall ${D}${libdir}/${DESTDIR}
 }
 
+require conf/python/python3-compileall.inc
+
 FILES:${PN} = "/"
