@@ -14,9 +14,6 @@ do_rootfs[deptask] = "do_rm_work"
 
 IMAGE_INSTALL = " \
     opennfr-base \
-    packagegroup-base-smbfs-client \
-    packagegroup-base-smbfs-server \
-    packagegroup-base-nfs \ 
 "
 
 export IMAGE_BASENAME = "opennfr-image"
