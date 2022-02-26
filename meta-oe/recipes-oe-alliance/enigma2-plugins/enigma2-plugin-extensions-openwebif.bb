@@ -1,7 +1,7 @@
 MODULE = "OpenWebif"
 DESCRIPTION = "Control your receiver with a browser"
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://README;firstline=10;lastline=12;md5=9c14f792d0aeb54e15490a28c89087f7"
+LIC_FILES_CHKSUM = "file://README;firstline=10;lastline=12;md5=26abba37d1c2fcbf96a087ceb8e1db86"
 
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
@@ -33,7 +33,7 @@ SRCREV = "${AUTOREV}"
 PV = "1.4.6+git${SRCPV}"
 PKGV = "1.4.6+git${GITPKGV}"
 
-SRC_URI = "git://github.com/E2OpenPlugins/e2openplugin-${MODULE}.git;protocol=git;branch=${BRANCH} \
+SRC_URI = "git://github.com/E2OpenPlugins/e2openplugin-${MODULE}.git;protocol=https;branch=${BRANCH} \
            file://transcoding.py \
            file://0001-revert-to-formuler1.patch \
 	   file://0001-add-fileupload.patch"
