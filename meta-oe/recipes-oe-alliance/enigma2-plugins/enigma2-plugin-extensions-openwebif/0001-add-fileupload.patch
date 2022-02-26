@@ -20,8 +20,8 @@ index 2116a2e..cd1bb47 100644
 +		url1 = "http://%s:8000" %request.getRequestHostname()
 +		extras.append({'key': url1, 'description': _("FileLoad"), 'nw': '1'})		                
  
- 		try:
- 			from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
- 			extras.append({'key': 'ajax/at', 'description': _('AutoTimer')})
- 		except ImportError:
+ 		if HASAUTOTIMER:
+			extras.append({'key': 'ajax/at', 'description': _('AutoTimers')})
+
+		extras.append({'key': 'ajax/bqe', 'description': _('BouquetEditor')})
 
