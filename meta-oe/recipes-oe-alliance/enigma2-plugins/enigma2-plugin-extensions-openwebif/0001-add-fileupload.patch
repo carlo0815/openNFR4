@@ -1,7 +1,7 @@
 diff --git a/plugin/controllers/base.py b/plugin/controllers/base.py
 --- a/plugin/controllers/base.py
 +++ b/plugin/controllers/base.py
-@@ -357,6 +357,9 @@ def prepareMainTemplate(self, request):
+@@ -357,5 +357,8 @@ def prepareMainTemplate(self, request):
 			elif variant == "ncam":
 				extras.append({'key': url, 'description': _("NCam Webinterface"), 'nw': '1'})
 
