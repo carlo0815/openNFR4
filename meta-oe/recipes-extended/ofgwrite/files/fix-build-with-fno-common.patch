@@ -43,7 +43,7 @@ index 10ecbc3..3102272 100644
  int flash_kernel  = 0;
  int flash_rootfs  = 0;
  int no_write      = 0;
-@@ -27,6 +49,9 @@ char rootfs_filename[1000];
+@@ -27,6 +50,9 @@ char rootfs_filename[1000];
  char rootfs_mount_point[1000];
  enum RootfsTypeEnum rootfs_type;
  int stop_e2_needed = 1;
