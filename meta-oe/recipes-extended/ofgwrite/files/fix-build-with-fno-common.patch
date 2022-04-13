@@ -12,7 +12,7 @@ diff --git a/ofgwrite.c b/ofgwrite.c
 index 10ecbc3..3102272 100644
 --- a/ofgwrite.c
 +++ b/ofgwrite.c
-@@ -14,7 +14,30 @@
+@@ -14,7 +14,29 @@
  #include <unistd.h>
  #include <errno.h>
  
