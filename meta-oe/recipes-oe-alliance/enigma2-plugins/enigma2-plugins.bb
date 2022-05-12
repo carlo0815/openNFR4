@@ -14,7 +14,7 @@ inherit autotools-brokensep gitpkgv ${PYTHON_PN}native pkgconfig gettext ${PYTHO
 SRCREV = "${AUTOREV}"
 PV = "${IMAGE_VERSION}+git${SRCPV}"
 PKGV = "${IMAGE_VERSION}+git${GITPKGV}"
-PR = "r3"
+PR = "r4"
 
 SRC_URI = "${ENIGMA2_PLUGINS_URI} file://pluginnotwanted.patch"
 SRC_URI:append:openatv = " file://EPGSearch.patch"
@@ -70,9 +70,10 @@ DEPENDS = "enigma2 \
     ${PYTHON_PN}-mutagen \
     ${PYTHON_PN}-twisted \
     ${PYTHON_PN}-daap \
-    ${PYTHON_PN}-google-api-client \
+    ${PYTHON_PN}-google-api-python-client \
     ${PYTHON_PN}-httplib2 \
     ${PYTHON_PN}-youtube-dl \
+    ${PYTHON_PN}-yt-dlp \
     ${PYTHON_PN}-six-native \
     dvdbackup \
     libav \
