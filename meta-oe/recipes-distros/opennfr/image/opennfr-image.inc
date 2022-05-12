@@ -14,8 +14,6 @@ WORKDIR = "${TMPDIR}/work/${MULTIMACH_TARGET_SYS}/${PN}/${EXTENDPE}${PV}"
 
 do_rootfs[deptask] = "do_rm_work"
 
-SSTATE_DUPWHITELIST += "${DEPLOY_DIR_IMAGE}"
-
 IMAGE_INSTALL = " \
     opennfr-base \
     packagegroup-base-smbfs-client \
