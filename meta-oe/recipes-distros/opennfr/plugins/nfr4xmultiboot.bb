@@ -14,7 +14,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS = "freetype"
 
-SRC_URI = "git://github.com/carlo0815/bootmanger.git;protocol=https"
+SRC_URI = "git://github.com/carlo0815/bootmanger.git;protocol=https;branch=master"
 
 inherit autotools-brokensep pkgconfig
 
