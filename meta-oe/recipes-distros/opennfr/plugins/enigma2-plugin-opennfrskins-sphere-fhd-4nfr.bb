@@ -14,7 +14,7 @@ VER ="2.1"
 PR = "r2"
 
 
-SRC_URI="git://github.com/carlo0815/skins-sphere-fhd.git;protocol=https"
+SRC_URI="git://github.com/carlo0815/skins-sphere-fhd.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
 
