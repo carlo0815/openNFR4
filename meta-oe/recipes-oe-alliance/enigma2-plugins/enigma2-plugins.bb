@@ -12,11 +12,12 @@ PROVIDES = "${PN} \
 inherit autotools-brokensep gitpkgv ${PYTHON_PN}native pkgconfig gettext ${PYTHON_PN}-dir
 
 SRCREV = "${AUTOREV}"
-PV = "${IMAGE_VERSION}+git${SRCPV}"
-PKGV = "${IMAGE_VERSION}+git${GITPKGV}"
+PV = "${IMAGE_VERSION}+gitr${SRCPV}"
+PKGV = "${IMAGE_VERSION}+gitr${GITPKGV}"
 PR = "r4"
 
-SRC_URI = "${ENIGMA2_PLUGINS_URI} file://pluginnotwanted.patch"
+SRC_URI = "${ENIGMA2_PLUGINS_URI} file://pluginnotwanted.patch \
+        file://ax-python-devel-dont-check-for-distutils.patch"
 SRC_URI:append:openatv = " file://EPGSearch.patch"
 SRC_URI:append:opennfr = " file://EPGSearch.patch"
 
@@ -135,7 +136,7 @@ python populate_packages:prepend() {
             elif line.startswith('Conflicts: '):
                 d.setVar('RCONFLICTS:' + full_package, ' '.join(line[11:].split(', ')))
             elif line.startswith('Maintainer: '):
-                d.setVar('MAINTAINER:' + full_package, line[12:])
+                d.setVar('MAINTAINER_' + full_package, line[12:])
 
     mydir = d.getVar('D', True) + "/../git/"
     for package in d.getVar('PACKAGES', d, 1).split():
