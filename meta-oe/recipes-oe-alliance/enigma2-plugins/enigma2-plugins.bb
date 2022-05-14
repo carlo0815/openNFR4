@@ -58,7 +58,7 @@ FILES:${PN}-src += " /usr/lib/enigma2/python/Components/Converter/EventPosition.
 FILES:${PN}-src += " /usr/lib/enigma2/python/Components/WeatherMSN.py /usr/lib/enigma2/python/Components/Converter/MSNWeather.py /usr/lib/enigma2/python/Components/Sources/MSNWeather.py /usr/lib/enigma2/python/Components/Renderer/MSNWeatherPixmap.py"
 FILES:${PN}-src += " /usr/lib/enigma2/python/Components/Converter/RefToPiconName.py"
 
-PACKAGES += "${PN}-meta ${PN}-build-dependencies "
+PACKAGES += "${PN}-meta ${PN}-build-dependencies"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 S = "${WORKDIR}/git"
