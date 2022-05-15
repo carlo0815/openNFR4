@@ -8,7 +8,22 @@ PATH="/usr/local/bin:/usr/bin:/bin"
 [ "$HOME" != "/home/root" ] || PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
 
 # Set the prompt for bash and ash (no other shells known to be in use here)
-[ -z "$PS1" ] || PS1='openNFR@\h:\w\$ '
+[ -z "$PS1" ] || PS1='
+
+
+                                    888b    888 8888888888 8888888b.  
+                                    8888b   888 888        888   Y88b 
+                                    88888b  888 888        888    888 
+ .d88b.  88888b.   .d88b.  88888b.  888Y88b 888 8888888    888   d88P 
+d88..88b 888 .88b d8P  Y8b 888 .88b 888 Y88b888 888        8888888P.  
+888  888 888  888 88888888 888  888 888  Y88888 888        888 T88b   
+Y88..88P 888 d88P Y8b.     888  888 888   Y8888 888        888  T88b  
+ .Y88P.  88888P.   .Y8888  888  888 888    Y888 888        888   T88b 
+         888                                                          
+         888                                                          
+         888                                                          
+
+openNFR@\h:\w\$ '
 
 if [ -d /etc/profile.d ]; then
 	for i in /etc/profile.d/*.sh; do
