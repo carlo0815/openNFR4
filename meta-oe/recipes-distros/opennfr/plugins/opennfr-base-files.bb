@@ -6,8 +6,9 @@ require conf/license/license-gplv2.inc
 PACKAGE_ARCH := "${MACHINE_ARCH}"
 
 SRCREV = "${AUTOREV}"
-
-SRC_URI = "git://github.com/carlo0815/openNFR-base.git;protocol=https"
+SRC_URI = "file://profile_1 file://profile_1.png file://profile_2 file://profile_2.png file://profile_3 file://profile_3.png file://profile_4 file://profile_4.png file://profile_5 file://profile_5.png file://profile_6 file://profile_6.png file://profile_org file://profile_org.png\
+"
+SRC_URI += "git://github.com/carlo0815/openNFR-base.git;protocol=https"
 
 SRC_URI[formuler1.md5sum] = "43989826c0d376db159ce42c3f9dcdbb"
 SRC_URI[formuler1.sha256sum] = "e41116da6709346a3314db90124bec14343c5bd8ffa56e4d16f507a16577b08b"
@@ -41,6 +42,22 @@ PR = "r13"
 S="${WORKDIR}/git/files"
 
 do_install() {
+    install -d ${D}/etc
+    install -d ${D}/etc/profile_files
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_1
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_1.png    
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_2    
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_2.png    
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_3    
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_3.png    
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_4
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_4.png
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_5
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_5.png    
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_6
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_6.png
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_org
+    install -m 0644 profile_1 ${D}/etc/profile_files/profile_org.png 
 }
 
 
